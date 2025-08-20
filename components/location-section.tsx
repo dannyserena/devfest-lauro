@@ -128,13 +128,13 @@ export function LocationSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex-1">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex-1 cursor-pointer">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Abrir no Google Maps
               </Button>
               <Button
                 variant="outline"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-medium bg-transparent flex-1"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-medium bg-transparent flex-1 cursor-pointer"
               >
                 Compartilhar Localização
               </Button>

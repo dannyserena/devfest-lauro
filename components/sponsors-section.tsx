@@ -147,7 +147,7 @@ export function SponsorsSection() {
 
           {/* CTA for Companies */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium cursor-pointer">
               <Mail className="w-4 h-4 mr-2" />
               Seja um Patrocinador!
             </Button>
@@ -226,13 +226,13 @@ export function SponsorsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 variant="secondary"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer"
               >
                 Download do Media Kit
               </Button>
               <Button
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium bg-transparent cursor-pointer"
               >
                 Falar com a Organização
               </Button>

@@ -163,13 +163,13 @@ export function OrganizersSection() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium flex-1">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium flex-1 cursor-pointer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Visite nosso site
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1"
+                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 cursor-pointer"
                   >
                     Junte-se ao grupo
                   </Button>
@@ -218,13 +218,13 @@ export function OrganizersSection() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium flex-1">
+                  <Button className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium flex-1 cursor-pointer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Conheça a iniciativa
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1"
+                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 cursor-pointer"
                   >
                     Participe da rede
                   </Button>
@@ -245,13 +245,13 @@ export function OrganizersSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 variant="secondary"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer"
               >
                 Participar do GDG
               </Button>
               <Button
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-full font-medium bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-full font-medium bg-transparent cursor-pointer"
               >
                 Conhecer WTM
               </Button>
