@@ -26,11 +26,11 @@ export function LocationSection() {
                   <div>
                     <p className="font-medium text-gray-900">Endereço Completo</p>
                     <p className="text-gray-600">
-                      Rua Doutor Antônio Monteiro Tourinho, s/n
+                      Av. Luiz Tarquínio Pontes, 938
                       <br />
-                      Centro, Lauro de Freitas - BA
+                      Jardim Aeroporto, Senai, Lauro de Freitas - BA
                       <br />
-                      CEP: 42700-000
+                      CEP: 42702-000
                     </p>
                   </div>
                 </div>
@@ -52,9 +52,9 @@ export function LocationSection() {
                   <div>
                     <p className="font-medium text-gray-900">Contato do Local</p>
                     <p className="text-gray-600">
-                      (71) 3288-8000
+                      (71) 3287-8058
                       <br />
-                      senai@fieb.org.br
+                      cacsenailauro@fieb.org.br
                     </p>
                   </div>
                 </div>
