@@ -147,15 +147,18 @@ export function SponsorsSection() {
 
           {/* CTA for Companies */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium cursor-pointer">
+            <a
+              href="mailto:gdglaurodefreitas@gmail.com"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium cursor-pointer inline-flex items-center"
+            >
               <Mail className="w-4 h-4 mr-2" />
               Seja um Patrocinador!
-            </Button>
+            </a>
             <span className="text-sm text-gray-500">Entre em contato para conhecer nossos planos</span>
           </div>
         </div>
 
-        {/* Sponsors by Level */}
+         {/* Sponsors by Level */}
         <div className="space-y-16">
           {Object.entries(sponsorLevels).map(([level, config]) => {
             const levelSponsors = groupedSponsors[level]
@@ -224,18 +227,19 @@ export function SponsorsSection() {
               patrocínio com benefícios exclusivos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="secondary"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer"
+              <a
+                href="/media-kit/MIDIA-KIT-Devfest-Lauro-2025.pdf"
+                download
+                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer inline-flex items-center"
               >
                 Download do Media Kit
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium bg-transparent cursor-pointer"
+              </a>
+              <a
+                href="mailto:gdglaurodefreitas@gmail.com"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium bg-transparent cursor-pointer inline-flex items-center"
               >
                 Falar com a Organização
-              </Button>
+              </a>
             </div>
           </div>
         </div>
