@@ -128,16 +128,24 @@ export function LocationSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex-1 cursor-pointer">
+              <a
+                href="https://www.google.com/maps/place/SENAI+Lauro+de+Freitas/@-12.8898912,-38.3155542,17z/data=!3m1!4b1!4m6!3m5!1s0x7163df92ba8b131:0x4e9638c8e8f832f3!8m2!3d-12.8898964!4d-38.3129793!16s%2Fg%2F1tkb5991?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex-1 flex items-center justify-center"
+              >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Abrir no Google Maps
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-medium bg-transparent flex-1 cursor-pointer"
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-medium bg-transparent flex-1 flex items-center justify-center"
               >
                 Compartilhar Localização
-              </Button>
+              </a>
             </div>
 
             {/* Nearby Places */}

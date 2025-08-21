@@ -163,16 +163,23 @@ export function OrganizersSection() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium flex-1 cursor-pointer">
+                  <a
+                    href="https://gdg.community.dev/gdg-lauro-de-freitas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center"
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Visite nosso site
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 cursor-pointer"
+                  </a>
+                  <a
+                    href="https://gdg.community.dev/gdg-lauro-de-freitas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 text-center"
                   >
                     Junte-se ao grupo
-                  </Button>
+                  </a>
                 </div>
               </div>
             </CardContent>
@@ -218,16 +225,24 @@ export function OrganizersSection() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium flex-1 cursor-pointer">
+                  <a
+                    href="https://developers.google.com/womentechmakers?hl=pt-br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium flex-1 flex items-center justify-center"
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Conheça a iniciativa
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 cursor-pointer"
+                  </a>
+
+                  <a
+                    href="https://developers.google.com/womentechmakers/members?hl=pt-br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 text-center"
                   >
                     Participe da rede
-                  </Button>
+                  </a>
                 </div>
               </div>
             </CardContent>
@@ -243,18 +258,22 @@ export function OrganizersSection() {
               comunidades locais.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="secondary"
+              <a
+                href="https://developers.google.com/community/gdg"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer"
               >
                 Participar do GDG
-              </Button>
-              <Button
-                variant="outline"
+              </a>
+              <a
+                href="https://developers.google.com/womentechmakers?hl=pt-br"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-full font-medium bg-transparent cursor-pointer"
               >
                 Conhecer WTM
-              </Button>
+              </a>
             </div>
           </div>
         </div>
