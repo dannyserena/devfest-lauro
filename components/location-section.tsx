@@ -26,11 +26,11 @@ export function LocationSection() {
                   <div>
                     <p className="font-medium text-gray-900">Endereço Completo</p>
                     <p className="text-gray-600">
-                      Rua Doutor Antônio Monteiro Tourinho, s/n
+                      Av. Luiz Tarquínio Pontes, 938
                       <br />
-                      Centro, Lauro de Freitas - BA
+                      Jardim Aeroporto, Senai, Lauro de Freitas - BA
                       <br />
-                      CEP: 42700-000
+                      CEP: 42702-000
                     </p>
                   </div>
                 </div>
@@ -52,9 +52,9 @@ export function LocationSection() {
                   <div>
                     <p className="font-medium text-gray-900">Contato do Local</p>
                     <p className="text-gray-600">
-                      (71) 3288-8000
+                      (71) 3287-8058
                       <br />
-                      senai@fieb.org.br
+                      cacsenailauro@fieb.org.br
                     </p>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export function LocationSection() {
           <div className="space-y-6">
             <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8234567890123!2d-38.3234567890123!3d-12.8234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSENAI%20Lauro%20de%20Freitas!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.543302!2d-38.3155542!3d-12.8898912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7163df92ba8b131%3A0x4e9638c8e8f832f3!2sSENAI%20Lauro%20de%20Freitas!5e0!3m2!1spt-BR!2sbr!4v1724270000000!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -127,17 +127,16 @@ export function LocationSection() {
               ></iframe>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex-1">
+            <div className="flex justify-end">
+              <a
+                href="https://www.google.com/maps/place/SENAI+Lauro+de+Freitas/@-12.8898912,-38.3155542,17z/data=!3m1!4b1!4m6!3m5!1s0x7163df92ba8b131:0x4e9638c8e8f832f3!8m2!3d-12.8898964!4d-38.3129793!16s%2Fg%2F1tkb5991?entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium flex items-center justify-center"
+              >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Abrir no Google Maps
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-medium bg-transparent flex-1"
-              >
-                Compartilhar Localização
-              </Button>
+              </a>
             </div>
 
             {/* Nearby Places */}

@@ -112,7 +112,13 @@ export function SpeakersSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               variant="outline"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-2 rounded-full font-medium bg-transparent"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-2 rounded-full font-medium bg-transparent cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSegy1WKqkF4q8EVptpPoWdHsj-68WGivlaQlx5tdCq5n2VIAA/viewform",
+                  "_blank"
+                )
+              }
             >
               <FileText className="w-4 h-4 mr-2" />
               Call for Papers - Seja um Palestrante!

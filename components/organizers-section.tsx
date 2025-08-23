@@ -1,6 +1,5 @@
-import { ExternalLink, Users, Heart, Code, Linkedin, Github, Twitter } from "lucide-react"
+import { ExternalLink, Users, Heart, Code, Linkedin, Github, Instagram } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 const organizers = [
@@ -8,66 +7,111 @@ const organizers = [
     name: "Danielle Teixeira",
     role: "Embaixadora WTM & Organizer GDG",
     bio: "Líder apaixonada por diversidade e inclusão na tecnologia, promovendo oportunidades para mulheres no setor tech.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/danielle.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/danielle-teixeira-93493376/",
+      github: "https://github.com/dannyserena",
+      instagram: "https://www.instagram.com/dannyserena/",
+    },
   },
   {
     name: "Flavio Escobar",
     role: "Organizador GDG",
     bio: "Desenvolvedor experiente e entusiasta de tecnologias Google, dedicado ao crescimento da comunidade local.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/flavio.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/flavioescobar",
+      github: "https://github.com/flavioescobar",
+      instagram: "https://www.instagram.com/flavioescobar1/",
+    },
   },
   {
     name: "Michele Teixeira",
-    role: "Organizadora",
+    role: "Organizadora GDG",
     bio: "Profissional de tecnologia comprometida com o desenvolvimento da comunidade tech em Lauro de Freitas.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/michele.png",
+    social: {
+      linkedin: "https://www.linkedin.com/in/michele-teixeira-b375b3257/",
+      instagram: "https://www.instagram.com/chelinhateixeira/",
+    },
   },
   {
     name: "Edy Borges",
     role: "Organizador GDG",
     bio: "Desenvolvedor e mentor, focado em compartilhar conhecimento e inspirar novos talentos na área de tecnologia.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/edy.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/ediaimoborges/",
+      github: "https://github.com/edyonil",
+      instagram: "https://www.instagram.com/edyoniloficial/",
+    },
   },
   {
     name: "Marcelo Rangel",
-    role: "Organizador",
+    role: "Organizador GDG",
     bio: "Especialista em tecnologia com paixão por eventos e networking, contribuindo para o ecossistema tech local.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/marcelo.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/marcelorangel/",
+      github: "https://github.com/mrangelba",
+      instagram: "https://www.instagram.com/mrangelba.dev/",
+    },
   },
   {
     name: "Lucas Lion",
-    role: "Desenvolvedor Fullstack",
-    bio: "Desenvolvedor fullstack experiente, contribuindo com expertise técnica e visão prática para o evento.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    role: "Embaixador DevFest",
+    bio: "Profissional dedicado ao crescimento e desenvolvimento da comunidade tech em Lauro de Freitas.",
+    image: "/organizers/lucas.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/lucas-lion-122b15189/",
+      github: "https://github.com/Lucas-Lion",
+      instagram: "https://www.instagram.com/lucas_lionv/",
+    },
   },
   {
     name: "Matheus Maia",
-    role: "Organizador",
+    role: "Embaixador DevFest",
     bio: "Profissional de tecnologia dedicado ao fortalecimento da comunidade desenvolvedora regional.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/matheus.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/matheus-maia-832b97222",
+      github: "https://github.com/MatheusDLM",
+      instagram: "https://www.instagram.com/matheus.maia100/",
+    },
   },
   {
-    name: "Nadson",
-    role: "Organizador",
-    bio: "Entusiasta de tecnologia comprometido com a organização de eventos de qualidade para a comunidade.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    name: "Nadson Santos",
+    role: "Embaixador DevFest",
+    bio: "Profissional dedicado ao crescimento e desenvolvimento da comunidade tech em Lauro de Freitas.",
+    image: "/organizers/nadson.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/nadson-souza/",
+      github: "https://github.com/Nadson-Santos",
+      instagram: "https://www.instagram.com/nadsonsdsantos/",
+    },
   },
   {
-    name: "Amanda",
-    role: "Organizadora",
+    name: "Amanda Melquiades",
+    role: "Embaixador DevFest",
     bio: "Profissional dedicada ao crescimento e desenvolvimento da comunidade tech em Lauro de Freitas.",
-    image: "/placeholder.svg?height=200&width=200",
-    social: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/organizers/amanda.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/amanda-victoria-554363161/",
+      github: "https://github.com/avmsantos",
+      instagram: "https://www.instagram.com/avmsantos/",
+    },
   },
-]
+  {
+    name: "Gabriel Santos",
+    role: "Embaixador DevFest",
+    bio: "Profissional dedicado ao crescimento e desenvolvimento da comunidade tech em Lauro de Freitas.",
+    image: "/organizers/gabriel.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/gabrielsritta/",
+      github: "https://github.com/gabrielfst30",
+    },
+  },
+];
 
 export function OrganizersSection() {
   return (
@@ -100,21 +144,28 @@ export function OrganizersSection() {
                 <div className="flex justify-center gap-3">
                   <a
                     href={organizer.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition-colors"
                   >
                     <Linkedin className="w-4 h-4" />
                   </a>
+
                   <a
                     href={organizer.social.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
-                    href={organizer.social.twitter}
-                    className="p-2 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition-colors"
+                    href={organizer.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-pink-100 text-pink-600 rounded-full hover:bg-pink-200 transition-colors"
                   >
-                    <Twitter className="w-4 h-4" />
+                    <Instagram className="w-4 h-4" />
                   </a>
                 </div>
               </CardContent>
@@ -163,16 +214,23 @@ export function OrganizersSection() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium flex-1">
+                  <a
+                    href="https://gdg.community.dev/gdg-lauro-de-freitas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center"
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Visite nosso site
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1"
+                  </a>
+                  <a
+                    href="https://gdg.community.dev/gdg-lauro-de-freitas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 text-center"
                   >
                     Junte-se ao grupo
-                  </Button>
+                  </a>
                 </div>
               </div>
             </CardContent>
@@ -218,16 +276,24 @@ export function OrganizersSection() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium flex-1">
+                  <a
+                    href="https://developers.google.com/womentechmakers?hl=pt-br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium flex-1 flex items-center justify-center"
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Conheça a iniciativa
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1"
+                  </a>
+
+                  <a
+                    href="https://developers.google.com/womentechmakers/members?hl=pt-br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded-full font-medium bg-transparent flex-1 text-center"
                   >
                     Participe da rede
-                  </Button>
+                  </a>
                 </div>
               </div>
             </CardContent>
@@ -243,18 +309,22 @@ export function OrganizersSection() {
               comunidades locais.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="secondary"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium"
+              <a
+                href="https://developers.google.com/community/gdg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer"
               >
                 Participar do GDG
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-full font-medium bg-transparent"
+              </a>
+              <a
+                href="https://developers.google.com/womentechmakers?hl=pt-br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-full font-medium bg-transparent cursor-pointer"
               >
                 Conhecer WTM
-              </Button>
+              </a>
             </div>
           </div>
         </div>
