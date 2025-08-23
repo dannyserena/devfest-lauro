@@ -15,9 +15,9 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
-        <SpeakersSection />
-        <AgendaSection />
-        <SponsorsSection />
+        {/* <SpeakersSection /> */}
+        {/* <AgendaSection /> */}
+        {/* <SponsorsSection /> */}
         <LocationSection />
         <OrganizersSection />
       </main>

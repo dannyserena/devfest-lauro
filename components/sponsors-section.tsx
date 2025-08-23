@@ -232,7 +232,14 @@ export function SponsorsSection() {
                 download
                 className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer inline-flex items-center"
               >
-                Download do Media Kit
+                Download do Media Kit - PT-BR
+              </a>
+              <a
+                href="/media-kit/MIDIA-KIT-Devfest-Lauro-2025-EN.pdf"
+                download
+                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium cursor-pointer inline-flex items-center"
+              >
+                Download do Media Kit - EN-EN
               </a>
               <a
                 href="mailto:gdglaurodefreitas@gmail.com"
