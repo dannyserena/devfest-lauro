@@ -103,17 +103,18 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg cursor-pointer"
               onClick={() => window.open("https://www.sympla.com.br", "_blank")}
             >
               Comprar Ingresso no Sympla
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-full font-semibold text-lg bg-transparent"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-full font-semibold text-lg bg-transparent cursor-pointer"
             >
-              Saiba Mais
+              <a href="#sobre">Saiba Mais</a>
             </Button>
           </div>
         </div>

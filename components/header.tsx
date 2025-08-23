@@ -24,11 +24,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Image
-              src="/images/devfest-logo.png"
-              alt="DevFest Lauro de Freitas"
-              width={200}
-              height={40}
-              className="h-8 w-auto"
+              src="/images/gdg-logo.png"
+              alt="GDG Lauro de Freitas"
+              width={500}
+              height={120}
+              className="h-16 w-auto"
               priority
             />
           </div>
