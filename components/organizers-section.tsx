@@ -205,7 +205,7 @@ export function OrganizersSection() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Heart className="w-5 h-5 text-red-500" />
-                    <span className="text-gray-700">Eventos mensais desde 2020</span>
+                    <span className="text-gray-700">Eventos trimestrais desde 2018</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Code className="w-5 h-5 text-green-600" />

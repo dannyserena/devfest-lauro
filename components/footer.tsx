@@ -92,7 +92,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+                <a href="https://drive.google.com/file/d/1IQInJnawBFFcCwBa9n0GqsL009JonQ-C/view?usp=sharing" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1">
                   Código de Conduta
                   <ExternalLink className="w-3 h-3" />
                 </a>
