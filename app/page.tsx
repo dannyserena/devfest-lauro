@@ -15,7 +15,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
-        {/* <SpeakersSection /> */}
+        <SpeakersSection />
         {/* <AgendaSection /> */}
         {/* <SponsorsSection /> */}
         <LocationSection />

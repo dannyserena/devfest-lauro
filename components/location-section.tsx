@@ -99,9 +99,9 @@ export function LocationSection() {
               <h4 className="text-xl font-bold text-gray-900 mb-4">Infraestrutura do Local</h4>
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-700">
                 <div>
-                  <p>✓ Auditório para 300 pessoas</p>
-                  <p>✓ 3 salas de workshop</p>
-                  <p>✓ Laboratório de informática</p>
+                  <p>✓ Auditório para 200 pessoas</p>
+                  <p>✓ Salas e laboratórios de informática</p>
+                  <p>✓ 2 trilhas de aprendizado</p>
                 </div>
                 <div>
                   <p>✓ Wi-Fi de alta velocidade</p>

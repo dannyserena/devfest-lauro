@@ -102,7 +102,7 @@ export function SpeakersSection() {
     <section id="palestrantes" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Conheça Nossos Especialistas!</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Conheça Nossos Palestrantes!</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             Profissionais renomados da indústria tech compartilharão seus conhecimentos e experiências em palestras e
             workshops práticos.
