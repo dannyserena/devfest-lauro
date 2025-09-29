@@ -28,6 +28,7 @@ export function Header() {
               alt="GDG Lauro de Freitas"
               width={500}
               height={120}
+              quality={100}
               className="h-16 w-auto"
               priority
             />
