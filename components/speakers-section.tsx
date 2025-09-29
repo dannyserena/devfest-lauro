@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Twitter, ExternalLink, Users, FileText } from "lucide-react"
+import { Github, Linkedin, Twitter, ExternalLink, Users, FileText, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 
 interface Speaker {
   id: string
@@ -97,6 +97,31 @@ const speakers: Speaker[] = [
 
 export function SpeakersSection() {
   const [selectedSpeaker, setSelectedSpeaker] = useState<Speaker | null>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+
+  // Carousel Effect
+  useEffect(() => {
+    if (!isAutoPlaying) return
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % speakers.length)
+    }, 4000) // Change every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, speakers.length])
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % speakers.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + speakers.length) % speakers.length)
+  }
+
+  const toggleAutoPlay = () => {
+    setIsAutoPlaying(!isAutoPlaying)
+  }
 
   return (
     <section id="palestrantes" className="py-20 bg-gray-50">
@@ -127,44 +152,193 @@ export function SpeakersSection() {
           </div>
         </div>
 
-        {/* Speakers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {speakers.map((speaker) => (
-            <Card
-              key={speaker.id}
-              className="group cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg"
-              onClick={() => setSelectedSpeaker(speaker)}
-            >
-              <CardContent className="p-6 text-center">
-                <div className="relative mb-4">
-                  <img
-                    src={speaker.image || "/placeholder.svg"}
-                    alt={speaker.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                      Confirmado
+        {/* Speakers Carousel */}
+        <div className="relative mb-12">
+          {/* Desktop: Featured Carousel */}
+          <div className="hidden md:block">
+            {/* Controls */}
+            <div className="flex justify-center items-center gap-4 mb-8">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={prevSlide}
+                className="rounded-full w-10 h-10 p-0"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleAutoPlay}
+                className="rounded-full w-10 h-10 p-0"
+              >
+                {isAutoPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={nextSlide}
+                className="rounded-full w-10 h-10 p-0"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+
+            {/* Featured Speaker in Center */}
+            <div className="flex justify-center items-center min-h-[500px] relative overflow-visible py-8">
+              {speakers.map((speaker, index) => {
+                const isActive = index === currentIndex
+                const isNext = index === (currentIndex + 1) % speakers.length
+                const isPrev = index === (currentIndex - 1 + speakers.length) % speakers.length
+                
+                let position = 'translate-x-[200%]'
+                let scale = 'scale-75'
+                let zIndex = 'z-0'
+                let opacity = 'opacity-0'
+                
+                if (isActive) {
+                  position = 'translate-x-0'
+                  scale = 'scale-100'
+                  zIndex = 'z-30'
+                  opacity = 'opacity-100'
+                } else if (isNext) {
+                  position = 'translate-x-[80%]'
+                  scale = 'scale-100'
+                  zIndex = 'z-20'
+                  opacity = 'opacity-70'
+                } else if (isPrev) {
+                  position = '-translate-x-[80%]'
+                  scale = 'scale-100'
+                  zIndex = 'z-20'
+                  opacity = 'opacity-70'
+                }
+
+                return (
+                  <Card
+                    key={speaker.id}
+                    className={`absolute cursor-pointer transition-all duration-700 ease-in-out transform bg-white border-0 w-80 ${position} ${scale} ${zIndex} ${opacity} ${
+                      isActive 
+                        ? 'shadow-2xl ring-4 ring-blue-500/30' 
+                        : 'shadow-lg hover:shadow-xl'
+                    }`}
+                    onClick={() => {
+                      if (!isActive) setCurrentIndex(index)
+                      else setSelectedSpeaker(speaker)
+                    }}
+                  >
+                    <CardContent className="p-6 text-center">
+                      <div className="relative mb-4">
+                        <img
+                          src={speaker.image || "/placeholder.svg"}
+                          alt={speaker.name}
+                          className="w-24 h-24 mx-auto rounded-full object-cover border-4 border-white shadow-lg transition-all duration-300"
+                        />
+                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                          <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            {isActive ? '✨ Em Destaque' : 'Confirmado'}
+                          </div>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">
+                        {speaker.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        {speaker.title}
+                      </p>
+                      <p className="text-sm font-medium text-blue-600 mb-3">
+                        {speaker.company}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1 justify-center mb-4">
+                        {speaker.tags.slice(0, 2).map((tag) => (
+                          <Badge key={tag} variant="secondary" className="text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+
+                      <p className="text-sm text-gray-700 font-medium line-clamp-2 mb-4">
+                        {speaker.talkTitle}
+                      </p>
+
+                      {isActive && (
+                        <Button 
+                          size="sm"
+                          className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white cursor-pointer"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setSelectedSpeaker(speaker)
+                          }}
+                        >
+                          Ver Detalhes
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
+
+            {/* Indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+              {speakers.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? 'bg-gradient-to-r from-blue-500 to-green-500 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile: Grid layout */}
+          <div className="md:hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {speakers.map((speaker) => (
+                <Card
+                  key={speaker.id}
+                  className="group cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg"
+                  onClick={() => setSelectedSpeaker(speaker)}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="relative mb-4">
+                      <img
+                        src={speaker.image || "/placeholder.svg"}
+                        alt={speaker.name}
+                        className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                          Confirmado
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{speaker.name}</h3>
-                <p className="text-sm text-gray-600 mb-2">{speaker.title}</p>
-                <p className="text-sm font-medium text-blue-600 mb-3">{speaker.company}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{speaker.name}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{speaker.title}</p>
+                    <p className="text-sm font-medium text-blue-600 mb-3">{speaker.company}</p>
 
-                <div className="flex flex-wrap gap-1 justify-center mb-4">
-                  {speaker.tags.slice(0, 2).map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
+                    <div className="flex flex-wrap gap-1 justify-center mb-4">
+                      {speaker.tags.slice(0, 2).map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
 
-                <p className="text-sm text-gray-700 font-medium line-clamp-2">{speaker.talkTitle}</p>
-              </CardContent>
-            </Card>
-          ))}
+                    <p className="text-sm text-gray-700 font-medium line-clamp-2">{speaker.talkTitle}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* More Speakers Coming */}
