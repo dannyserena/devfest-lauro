@@ -49,7 +49,7 @@ export function Header() {
           <div className="hidden sm:block">
             <Button
               className="bg-devfest-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium"
-              onClick={() => window.open("https://www.sympla.com.br", "_blank")}
+              onClick={() => window.open("https://www.sympla.com.br/evento/devfest-lauro-de-freitas-2025/3117685", "_blank")}
             >
               Comprar Ingresso
             </Button>
@@ -77,7 +77,7 @@ export function Header() {
               ))}
               <Button
                 className="bg-devfest-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium mt-4"
-                onClick={() => window.open("https://www.sympla.com.br", "_blank")}
+                onClick={() => window.open("https://www.sympla.com.br/evento/devfest-lauro-de-freitas-2025/3117685", "_blank")}
               >
                 Comprar Ingresso
               </Button>
