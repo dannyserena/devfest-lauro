@@ -102,7 +102,7 @@ const organizers = [
     },
   },
   {
-    name: "Gabriel Santos",
+    name: "Gabriel Santa Ritta",
     role: "Embaixador DevFest",
     bio: "Profissional dedicado ao crescimento e desenvolvimento da comunidade tech em Lauro de Freitas.",
     image: "/organizers/gabriel.jpeg",
