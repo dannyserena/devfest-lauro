@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Twitter, ExternalLink, Users, FileText, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
+import { Github, Linkedin, Twitter, Instagram, ExternalLink, Users, FileText, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 
 interface Speaker {
   id: string
@@ -19,7 +19,7 @@ interface Speaker {
   social: {
     linkedin?: string
     github?: string
-    twitter?: string
+    instagram?: string
     website?: string
   }
   tags: string[]
@@ -28,71 +28,111 @@ interface Speaker {
 const speakers: Speaker[] = [
   {
     id: "1",
-    name: "Ana Silva",
-    title: "Senior Frontend Developer",
-    company: "Google",
-    bio: "Ana é uma desenvolvedora frontend sênior com mais de 8 anos de experiência em React, TypeScript e arquiteturas modernas. Atualmente trabalha no Google e é ativa na comunidade open source.",
-    talkTitle: "O Futuro do React: Server Components e Suspense",
-    talkDescription:
-      "Uma exploração profunda dos React Server Components e como eles estão revolucionando o desenvolvimento web moderno.",
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Lucas Lion",
+    title: "Analista de Sistemas",
+    company: "Netra Tecnologia",
+    bio: "Sou Lucas Lion, analista de sistemas na NETRA com três anos de experiência em tecnologia e foco fullstack. Atuo desde 2024 como analista, após dois anos em suporte técnico desenvolvendo soluções para usuários. Estou concluindo ADS, treinando no Fullcycle, apaixonado por PHP e já representei a comunidade como embaixador no RogaDX 2025 e atualmente no DevFest Lauro de Freitas 2025.",
+    talkTitle: "Conventional Commits: Facilitando colaboração e versionamento com commits estruturados",
+    talkDescription: "Nesta palestra mostra como os Conventional Commits ajudam a padronizar mensagens, resolver problemas comuns de versionamento e melhorar a colaboração em equipe. Serão explicados os tipos de commits, benefícios, formas de implementação e ferramentas de apoio.",
+    image: "/speakers/lucas.jpeg",
     social: {
-      linkedin: "https://linkedin.com/in/anasilva",
-      github: "https://github.com/anasilva",
-      twitter: "https://twitter.com/anasilva",
+      linkedin: "https://www.linkedin.com/in/lucas-lion-122b15189/",
+      github: "https://github.com/Lucas-Lion",
+      instagram: "https://www.instagram.com/lucas_lionv/",
     },
-    tags: ["React", "TypeScript", "Frontend"],
+    tags: [],
   },
   {
     id: "2",
-    name: "Carlos Santos",
-    title: "Cloud Architect",
-    company: "Microsoft",
-    bio: "Carlos é arquiteto de soluções cloud com especialização em Azure e Kubernetes. Palestrante internacional e autor de diversos artigos sobre DevOps e infraestrutura.",
-    talkTitle: "Kubernetes na Prática: Do Zero à Produção",
+    name: "Breno Holanda",
+    title: "Cientista de Dados",
+    company: "Sistema Jornal do Commercio de Comunicação",
+    bio: "Cientista de Dados e Professor Universitário. Atuo com Ciências de Dados focado em Inteligência Artificial e Machine Learning. Sou apaixonado pelo Sport Club do Recife e, nas horas vagas, gosto de assistir aos jogos do meu time e explorar novos hobbies ligados à tecnologia e inovação.",
+    talkTitle: "Aplicando LLMs em projetos reais: Um agente de IA via WhatsApp",
     talkDescription:
-      "Um workshop hands-on sobre como implementar e gerenciar aplicações em Kubernetes em ambiente de produção.",
-    image: "/placeholder.svg?height=300&width=300",
+    "Nesta palestra, você vai conhecer a arquitetura de um agente de IA que responde perguntas em linguagem natural via WhatsApp, gera queries SQL com OpenAI GPT-5 e consulta um banco de dados MySQL em tempo real. Um projeto prático que mostra como LLMs podem ser aplicadas de forma eficiente em fluxos de atendimento e consulta de dados.",
+    image: "/speakers/breno.jpeg",
     social: {
-      linkedin: "https://linkedin.com/in/carlossantos",
-      github: "https://github.com/carlossantos",
+      linkedin: "https://www.linkedin.com/in/brenoholanda/",
     },
-    tags: ["Kubernetes", "DevOps", "Cloud"],
+    tags: [],
   },
   {
     id: "3",
-    name: "Mariana Costa",
-    title: "AI/ML Engineer",
-    company: "OpenAI",
-    bio: "Mariana é engenheira de machine learning especializada em processamento de linguagem natural. Doutora em Ciência da Computação e pesquisadora ativa em IA.",
-    talkTitle: "IA Generativa: Construindo Aplicações Inteligentes",
+    name: "Elienaide Machado",
+    title: "CEO na SS Software",
+    company: "SS Software",
+    bio: "Filha caçula de um casal com 5 filhas, a mais independente que cedo pensou em morar sozinha, em viajar, mas muito apegada a família. Esposa dedicada, profissional exemplar com foco na qualidade de entregas e satisfação do cliente. Tia amada e querida dos sobrinhos. Amo praia, bons restaurantes e estar com a família.",
+    talkTitle: "Do Zero ao Lançamento: Como construir um software de sucesso para o varejo",
     talkDescription:
-      "Como integrar modelos de IA generativa em aplicações web e mobile, com exemplos práticos e cases de uso.",
-    image: "/placeholder.svg?height=300&width=300",
+      "Nesta palestra mostra como criar software vai além do código, exigindo validação de mercado, equipe e visão de negócio. Com base no case do Themis Lojas, serão abordados desafios, estratégias e lições aprendidas para transformar ideias em produtos reais.",
+    image: "/speakers/elienaide.jpeg",
     social: {
-      linkedin: "https://linkedin.com/in/marianacosta",
-      github: "https://github.com/marianacosta",
-      website: "https://marianacosta.dev",
+      linkedin: "https://www.linkedin.com/in/elienaide-machado-8874b234",
     },
-    tags: ["AI/ML", "Python", "NLP"],
+    tags: [],
   },
   {
     id: "4",
-    name: "Rafael Oliveira",
-    title: "Mobile Developer",
-    company: "Nubank",
-    bio: "Rafael é desenvolvedor mobile sênior com experiência em Flutter, React Native e desenvolvimento nativo. Contribuidor ativo para projetos open source.",
-    talkTitle: "Flutter vs React Native: Escolhendo a Stack Certa",
+    name: "Ives Túlio",
+    title: "Professor Pesquisador",
+    company: "CIMATEC | FIAP",
+    bio: "Professor pesquisador com sólida formação acadêmica e trajetória multidisciplinar, que integra a Química Computacional,  o campo da Inteligência Artificial e ensino. Formado em Química pela UFBA, possuo Doutorado e Mestrado pela mesma instituição e experiência profissional  no desenvolvimento de soluções tecnológicas baseadas em IA, pesquisa científica, ensino básico e superiror. Meu objetivo é contribuir com desenvolvimento e análise de projetos estratégicos, aliando rigor científico, experiência prática e compromisso com a educação e a pesquisa de excelência",
+    talkTitle: "Build with ADK: Construindo Agentes de IA.",
     talkDescription:
-      "Uma comparação técnica detalhada entre as principais frameworks de desenvolvimento mobile multiplataforma.",
-    image: "/placeholder.svg?height=300&width=300",
+      "Este workshop tem como objetivo introduzir os conceitos fundamentais sobre agentes de inteligência artificial e demonstrar, de forma prática, como desenvolver soluções utilizando o Agent Development Kit do Google. Na parte teórica, serão apresentados os principais conceitos, componentes e plataformas de desenvolvimento, e na parte prática construiremos três protótipos: um agente conversacional, um agente com ferramentas integradas e um agente com capacidade de busca no Google. Ao final, os participantes terão experiência prática para aplicar agentes de IA em diferentes contextos.",
+    image: "/speakers/ives.jpeg",
     social: {
-      linkedin: "https://linkedin.com/in/rafaeloliveira",
-      github: "https://github.com/rafaeloliveira",
-      twitter: "https://twitter.com/rafaeloliveira",
+      linkedin: "https://www.linkedin.com/in/ivestulio/",
     },
-    tags: ["Flutter", "React Native", "Mobile"],
+    tags: [],
   },
+  {
+    id: "5",
+    name: "Rebecca Tatini",
+    title: "Product Designer Specialist",
+    company: "GFT | Banco Safra",
+    bio: "Product Designer Specialist na GFT, consultora no Banco Safra há 4 anos. Com 9 anos de experiência em UX, UI, research e estratégia de produto, atuo em projetos digitais web e mobile, com entregas de ponta a ponta e uso de IA e vibe coding. Economista pela UFOP, pós-graduada em Product Management pela BBI of Chicago e mestranda em Antropologia na UFBA. Também trabalho com identidade visual e sou membro do GDG e WTM Google, unindo tecnologia, comportamento e visão de negócio em cada projeto.",
+    talkTitle: "Além do prompt: Reposicionamento estratégico de UX na era de IA.",
+    talkDescription:
+    "Esta palestra vai explorar como a inteligência artificial está impactando profundamente o papel do UX — passando de uma corrida por funcionalidades para a criação de experiências transformadoras e estratégicas. Vamos navegar pelos estágios dessa evolução, discutir por que o UX deve assumir liderança nesse processo e mostrar o papel do profissional de UX como protagonista na criação de experiências humanas. Uma palestra para reposicionar o UX como diferencial competitivo na era da inteligência artificial — se apropriando, com consciência e intenção, das ferramentas e possibilidades que a IA oferece nessa jornada.",
+    image: "/speakers/rebecca.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/rebeccatatini/",
+    },
+    tags: [],
+  },
+  {
+    id: "6",
+    name: "Caio Moura",
+    title: "CTO na Zeki",
+    company: "Zeki",
+    bio: "Sou dev com mais de 10 anos explorando o universo de desenvolvimento, otimizando processos e criando soluções nem sempre escaláveis, mas sempre eficazes para cada desafio. Trabalhei muitos anos em software house, e atualmente empreendo no Zeki, uma Martek Soteropolitana que ajuda empresários varejistas a automatizar o pós venda com inteligência.",
+    talkTitle: "Deploy Sob Medida: Da Startup à Enterprise",
+    talkDescription:
+    "Nessa talk vou falar sobre formas de fazer deploy de uma aplicação pra diferentes tipos de projeto, desde um MVP, startups até projetos enterprise. Vou passar por todas as formas que eu ja fiz deploy e dar um roadmap de como escolher qual ferramenta escolher para cada tipo de projeto/cliente. Hoje eu uso Firebase, Cloud Run, VM do google cloud, Kubernetes.",
+    image: "/speakers/caio.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/caiobdmoura/",
+    },
+    tags: [],
+  },
+  {
+    id: "7",
+    name: "Luiz Siqueira e Moises Falcão",
+    title: "Engenheiros de Software",
+    company: "Sistema Jornal do Commercio de Comunicação",
+    bio: "Luiz Siqueira, com mais de 10 anos de experiência em desenvolvimento de software, Luiz Siqueira é engenheiro de software, formado em Ciência da Computação e pós-graduado em Arquitetura Full Cycle. Atua como Coordenador de Engenharia de Software no Sistema Jornal do Commercio de Comunicação (SJCC), É cofundador da Nlake e do papodedev.com.br. Moisés Falcão, profissional com 25 anos de atuação em tecnologia, inovação e produtos digitais. É gerente de Inovação e Tecnologia no Sistema Jornal do Commercio de Comunicação, CPO na nLake e cofundador do PapoDeDev. Também é autor da newsletter e podcast Agilidade Executiva.",
+    talkTitle: "Devs que voam: A Arte de construir equipes fora da curva",
+    talkDescription:
+    "Nesta palestra, Moisés Falcão e Luiz Siqueira compartilham aprendizados práticos sobre a formação de times de engenharia de software maduros, conectando suas trajetórias pessoais ao desenvolvimento de equipes de alta performance nas empresas em que atuam. A partir de experiências reais, os palestrantes mostram como decisões técnicas, cultura organizacional e foco em resultado caminham juntos — revelando o que funcionou, o que falhou e como essas vivências moldaram lideranças mais conscientes e times mais eficazes.",
+    image: "/speakers/luiz-moises.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/luizs/",
+      instagram: "https://www.instagram.com/luizsiqueira.s/",
+    },
+    tags: [],
+  }
 ]
 
 export function SpeakersSection() {
