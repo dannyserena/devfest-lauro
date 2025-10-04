@@ -95,7 +95,7 @@ const speakers: Speaker[] = [
     bio: "Product Designer Specialist na GFT, consultora no Banco Safra há 4 anos. Com 9 anos de experiência em UX, UI, research e estratégia de produto, atuo em projetos digitais web e mobile, com entregas de ponta a ponta e uso de IA e vibe coding. Economista pela UFOP, pós-graduada em Product Management pela BBI of Chicago e mestranda em Antropologia na UFBA. Também trabalho com identidade visual e sou membro do GDG e WTM Google, unindo tecnologia, comportamento e visão de negócio em cada projeto.",
     talkTitle: "Além do prompt: Reposicionamento estratégico de UX na era de IA.",
     talkDescription:
-    "Nesta palestra, você vai conhecer a arquitetura de um agente de IA que responde perguntas em linguagem natural via WhatsApp, gera queries SQL com OpenAI GPT-5 e consulta um banco de dados MySQL em tempo real. Um projeto prático que mostra como LLMs podem ser aplicadas de forma eficiente em fluxos de atendimento e consulta de dados.",
+    "Esta palestra vai explorar como a inteligência artificial está impactando profundamente o papel do UX — passando de uma corrida por funcionalidades para a criação de experiências transformadoras e estratégicas. Vamos navegar pelos estágios dessa evolução, discutir por que o UX deve assumir liderança nesse processo e mostrar o papel do profissional de UX como protagonista na criação de experiências humanas. Uma palestra para reposicionar o UX como diferencial competitivo na era da inteligência artificial — se apropriando, com consciência e intenção, das ferramentas e possibilidades que a IA oferece nessa jornada.",
     image: "/speakers/rebecca.jpeg",
     social: {
       linkedin: "https://www.linkedin.com/in/rebeccatatini/",
