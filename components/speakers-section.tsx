@@ -34,7 +34,7 @@ const speakers: Speaker[] = [
     bio: "Sou Lucas Lion, analista de sistemas na NETRA com três anos de experiência em tecnologia e foco fullstack. Atuo desde 2024 como analista, após dois anos em suporte técnico desenvolvendo soluções para usuários. Estou concluindo ADS, treinando no Fullcycle, apaixonado por PHP e já representei a comunidade como embaixador no RogaDX 2025 e atualmente no DevFest Lauro de Freitas 2025.",
     talkTitle: "Conventional Commits: Facilitando colaboração e versionamento com commits estruturados",
     talkDescription: "Nesta palestra mostra como os Conventional Commits ajudam a padronizar mensagens, resolver problemas comuns de versionamento e melhorar a colaboração em equipe. Serão explicados os tipos de commits, benefícios, formas de implementação e ferramentas de apoio.",
-    image: "/speakers/lucas.jpeg",
+    image: "/speakers/lucas-lion.jpeg",
     social: {
       linkedin: "https://www.linkedin.com/in/lucas-lion-122b15189/",
       github: "https://github.com/Lucas-Lion",
@@ -130,6 +130,86 @@ const speakers: Speaker[] = [
     social: {
       linkedin: "https://www.linkedin.com/in/luizs/",
       instagram: "https://www.instagram.com/luizsiqueira.s/",
+    },
+    tags: [],
+  },
+  {
+    id: "8",
+    name: "Ana Dias",
+    title: "Senior Android Engineer",
+    company: "Teachable",
+    bio: "Desenvolvedora mobile há mais de 6 anos e apaixonada por tecnologia e educação, Ana é a prova de que desenvolver um app vai muito além de escolher entre Compose ou XML. É preciso estratégia, arquitetura sólida e experiência real.",
+    talkTitle: "Android em 2025: Estratégias para Construir e Publicar um App",
+    talkDescription:
+    "Ana vai compartilhar a experiência real do desenvolvimento do app Teachable, mostrando como o projeto evoluiu desde o MVP até a publicação na Google Play. Na talk, ela abordará as decisões arquiteturais que garantiram a escalabilidade do app, os desafios e aprendizados do processo de produção e o passo a passo para lançar um aplicativo com sucesso.",
+    image: "/speakers/ana.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/ana-souza-dias",
+      instagram: "https://www.instagram.com/anabaiana_/",
+    },
+    tags: [],
+  },
+  {
+    id: "9",
+    name: "Kaique Dias Pereira",
+    title: "Analista de MiS",
+    company: "TEL Centro de Contatos",
+    bio: "Kaique, Analista de MIS na TEL, é um entusiasta por tecnologia e adora transformar ideias em produtos de impacto. Ele vai compartilhar sua visão prática, mostrando como extrair valor máximo de seus dados.",
+    talkTitle: "Analise e Gereciamento de Dados com DuckDB",
+    talkDescription:
+    "Kaique mostrará como analisar, metrificar e padronizar dados de forma eficiente para gerar insights estratégicos. Você aprenderá a explorar múltiplas fontes de dados, a usar SQL com ferramentas como o DuckDB para criar relatórios inteligentes e a desenvolver uma mentalidade analítica capaz de transformar informações em resultados reais para o negócio.",
+    image: "/speakers/kaique.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/kaique-dias-aa1055212",
+      github: "https://github.com/diaszin",
+    },
+    tags: [],
+  },
+  {
+    id: "10",
+    name: "Phil",
+    title: "Fundador da DeTrash",
+    company: "DeTrash",
+    bio: "Kaique é fundador da DeTrash, empresa pioneira em finanças regenerativas com blockchain, responsável pela primeira solução global para gestão sustentável de resíduos usando essa tecnologia. Desde 2021, atua desenhando e orientando projetos em blockchain e é palestrante reconhecido em eventos de destaque na América Latina sobre o tema.",
+    talkTitle: "Construindo ReFi com Blockchain",
+    talkDescription:
+    "Phil apresentará como usar o blockchain para criar soluções em Finanças Regenerativas (ReFi), unindo tecnologia e sustentabilidade. Na talk, ele explicará os princípios para construir produtos baseados em blockchain, mostrará como o ReFi gera impacto ambiental e social real e detalhará o caso da Rede Recy da DeTrash, a primeira solução global de gestão sustentável de resíduos em blockchain.",
+    image: "/speakers/phil.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/philipptvoh",
+      github: "https://github.com/detrash",
+      instagram: "https://www.instagram.com/whosphilipp"
+    },
+    tags: [],
+  },
+  {
+    id: "10",
+    name: "Lucas Carapiá",
+    title: "Chainlink Advocate",
+    company: "",
+    bio: "Advogado e professor especializado em Direito dos Criptoativos e Blockchain, atua com regulação, inovação e impacto tecnológico no mercado e no sistema jurídico. Trabalha para aproximar o direito do ecossistema de tecnologia, participando de projetos de educação e consultoria. É entusiasta de blockchain, smart contracts, tokenização e Web3, e acredita no poder da inovação para transformar negócios e instituições.",
+    talkTitle: "Segurança Jurídica e Inovação: caminhos para desenvolver a partir do ecossistema regulado de Blockchain e Criptoativos",
+    talkDescription:
+    "Nesta palestra, Lucas mostrará como a regulação é peça-chave para garantir segurança jurídica e impulsionar oportunidades no universo do blockchain e dos criptoativos. Ele explicará o novo cenário regulatório, o impacto de tecnologias como smart contracts e tokenização e como compreender o lado jurídico é essencial para desenvolver projetos de forma segura, escalável e sustentável.",
+    image: "/speakers/lucas-carapia.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/lucascarapia/",
+      instagram: "https://www.instagram.com/lcarapia/"
+    },
+    tags: [],
+  },
+  {
+    id: "11",
+    name: "Mari cid",
+    title: "Head de Design",
+    company: "Sistema Jornal do Commercio de Comunicação",
+    bio: "Mari Cid é Product Designer com trajetória no mercado de comunicação desde 2012. Atua com foco em UX, design estratégico e liderança de times criativos. Sua abordagem une empatia, visão de produto e foco em resultados — transformando problemas complexos em soluções reais para pessoas e negócios, com criatividade aplicada de forma prática e orientada ao impacto.",
+    talkTitle: "Gestão de produto fora da bolha: os bastidores da inovação em empresas tradicionais",
+    talkDescription:
+    "Mari vai compartilhar sua experiência inovando em um grande grupo de mídia tradicional, mostrando como equilibrar negócios e inovação, adaptar processos ao digital e criar uma cultura de produto em ambientes tradicionais. Sua palestra revela como transformar desafios em aprendizados e como a gestão de produto é essencial para a transformação digital e o impacto real nas empresas.",
+    image: "/speakers/mari.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/mariana-cid/",
     },
     tags: [],
   }
@@ -443,16 +523,6 @@ export function SpeakersSection() {
                             <Github className="w-4 h-4" />
                           </a>
                         )}
-                        {selectedSpeaker.social.twitter && (
-                          <a
-                            href={selectedSpeaker.social.twitter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2 bg-blue-100 text-blue-400 rounded-full hover:bg-blue-200 transition-colors"
-                          >
-                            <Twitter className="w-4 h-4" />
-                          </a>
-                        )}
                         {selectedSpeaker.social.website && (
                           <a
                             href={selectedSpeaker.social.website}
@@ -463,6 +533,16 @@ export function SpeakersSection() {
                             <ExternalLink className="w-4 h-4" />
                           </a>
                         )}
+                        {selectedSpeaker.social.instagram && (
+                        <a
+                          href={selectedSpeaker.social.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 bg-pink-100 text-pink-600 rounded-full hover:bg-pink-200 transition-colors"
+                        >
+                          <Instagram className="w-4 h-4" />
+                        </a>
+                      )}
                       </div>
                     </div>
                   </div>
