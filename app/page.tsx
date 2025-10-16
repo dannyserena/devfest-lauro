@@ -17,7 +17,7 @@ export default function HomePage() {
         <AboutSection />
         <SpeakersSection />
         {/* <AgendaSection /> */}
-        {/* <SponsorsSection /> */}
+        <SponsorsSection />
         <LocationSection />
         <OrganizersSection />
       </main>
