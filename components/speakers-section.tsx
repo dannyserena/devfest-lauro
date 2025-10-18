@@ -268,7 +268,7 @@ export function SpeakersSection() {
               <FileText className="w-4 h-4 mr-2" />
               Call for Papers - Seja um Palestrante!
             </Button>
-            <span className="text-sm text-gray-500">Inscrições abertas até 15/10/2025</span>
+            <span className="text-sm text-gray-500">Inscrições prorrogadas até 19/10/2025</span>
           </div>
         </div>
 
