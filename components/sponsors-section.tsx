@@ -14,67 +14,74 @@ interface Sponsor {
 const sponsors: Sponsor[] = [
   {
     name: "Google",
-    logo: "/placeholder.svg?height=120&width=200",
+    logo: "/sponsors/googleDev.png?height=120&width=200",
     website: "https://google.com",
     level: "diamond",
   },
+  // {
+  //   name: "Microsoft",
+  //   logo: "/placeholder.svg?height=120&width=200",
+  //   website: "https://microsoft.com",
+  //   level: "platinum",
+  // },
+  // {
+  //   name: "AWS",
+  //   logo: "/placeholder.svg?height=120&width=200",
+  //   website: "https://aws.amazon.com",
+  //   level: "platinum",
+  // },
+  // {
+  //   name: "Vercel",
+  //   logo: "/placeholder.svg?height=100&width=180",
+  //   website: "https://vercel.com",
+  //   level: "gold",
+  // },
+  // {
+  //   name: "GitHub",
+  //   logo: "/placeholder.svg?height=100&width=180",
+  //   website: "https://github.com",
+  //   level: "gold",
+  // },
+  // {
+  //   name: "JetBrains",
+  //   logo: "/placeholder.svg?height=100&width=180",
+  //   website: "https://jetbrains.com",
+  //   level: "gold",
+  // },
+  // {
+  //   name: "Code Aces",
+  //   logo: "/sponsors/codeAces.jpeg?height=80&width=160",
+  //   website: "https://codeaces.com.br/",
+  //   level: "silver",
+  // },
+  // {
+  //   name: "iFood",
+  //   logo: "/placeholder.svg?height=80&width=160",
+  //   website: "https://ifood.com.br",
+  //   level: "silver",
+  // },
+  // {
+  //   name: "Stone",
+  //   logo: "/placeholder.svg?height=80&width=160",
+  //   website: "https://stone.com.br",
+  //   level: "silver",
+  // },
   {
-    name: "Microsoft",
-    logo: "/placeholder.svg?height=120&width=200",
-    website: "https://microsoft.com",
-    level: "platinum",
-  },
-  {
-    name: "AWS",
-    logo: "/placeholder.svg?height=120&width=200",
-    website: "https://aws.amazon.com",
-    level: "platinum",
-  },
-  {
-    name: "Vercel",
-    logo: "/placeholder.svg?height=100&width=180",
-    website: "https://vercel.com",
-    level: "gold",
-  },
-  {
-    name: "GitHub",
-    logo: "/placeholder.svg?height=100&width=180",
-    website: "https://github.com",
-    level: "gold",
-  },
-  {
-    name: "JetBrains",
-    logo: "/placeholder.svg?height=100&width=180",
-    website: "https://jetbrains.com",
-    level: "gold",
-  },
-  {
-    name: "Nubank",
-    logo: "/placeholder.svg?height=80&width=160",
-    website: "https://nubank.com.br",
-    level: "silver",
-  },
-  {
-    name: "iFood",
-    logo: "/placeholder.svg?height=80&width=160",
-    website: "https://ifood.com.br",
-    level: "silver",
-  },
-  {
-    name: "Stone",
-    logo: "/placeholder.svg?height=80&width=160",
-    website: "https://stone.com.br",
-    level: "silver",
+    name: "Code Aces",
+    logo: "/sponsors/codeAces.png?height=80&width=160",
+    website: "https://codeaces.com.br/",
+    level: "bronze",
   },
   {
     name: "SENAI Bahia",
-    logo: "/placeholder.svg?height=60&width=140",
-    website: "https://senai.ba.gov.br",
+    logo: "/sponsors/senai.png?height=80&width=160",
+    website: "https://www.senaibahia.com.br/",
     level: "apoio",
   },
   {
-    name: "Prefeitura de Lauro de Freitas",
-    logo: "/placeholder.svg?height=60&width=140",
+    name: "FIAP",
+    logo: "/sponsors/fiap.png?height=80&width=160",
+    website: "https://www.fiap.com.br/",
     level: "apoio",
   },
 ]
@@ -184,7 +191,11 @@ export function SponsorsSection() {
                         ? "grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto"
                         : level === "gold"
                           ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto"
-                          : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto"
+                          : levelSponsors.length === 1
+                            ? "grid-cols-1 max-w-xs mx-auto"
+                            : levelSponsors.length === 2
+                              ? "grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto" 
+                              : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto" 
                   }`}
                 >
                   {levelSponsors.map((sponsor, index) => (
@@ -210,6 +221,7 @@ export function SponsorsSection() {
                         </div>
                       </CardContent>
                     </Card>
+                    // /sponsors/googleDev.png
                   ))}
                 </div>
               </div>
