@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users } from "lucide-react"
+import VideoPlayer from "./video-player"
 
 export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -37,7 +38,8 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 pt-16"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 pt-16"
+
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -45,6 +47,10 @@ export function HeroSection() {
         <div className="absolute top-40 right-20 w-16 h-16 bg-red-500 rounded-full"></div>
         <div className="absolute bottom-40 left-20 w-12 h-12 bg-yellow-500 rounded-full"></div>
         <div className="absolute bottom-20 right-10 w-24 h-24 bg-green-500 rounded-full"></div>
+      </div>
+
+       <div className="relative z-10 w-full flex justify-center mb-8">
+        <VideoPlayer />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
