@@ -183,12 +183,12 @@ const speakers: Speaker[] = [
     tags: [],
   },
   {
-    id: "10",
+    id: "11",
     name: "Lucas Carapiá",
     title: "Chainlink Advocate",
     company: "",
     bio: "Advogado e professor especializado em Direito dos Criptoativos e Blockchain, atua com regulação, inovação e impacto tecnológico no mercado e no sistema jurídico. Trabalha para aproximar o direito do ecossistema de tecnologia, participando de projetos de educação e consultoria. É entusiasta de blockchain, smart contracts, tokenização e Web3, e acredita no poder da inovação para transformar negócios e instituições.",
-    talkTitle: "Segurança Jurídica e Inovação: caminhos para desenvolver a partir do ecossistema regulado de Blockchain e Criptoativos",
+    talkTitle: "Segurança Jurídica e Inovação: caminhos para desenvolver a partir do ecossistema regulado de Blockchain e Criptoativos.",
     talkDescription:
     "Nesta palestra, Lucas mostrará como a regulação é peça-chave para garantir segurança jurídica e impulsionar oportunidades no universo do blockchain e dos criptoativos. Ele explicará o novo cenário regulatório, o impacto de tecnologias como smart contracts e tokenização e como compreender o lado jurídico é essencial para desenvolver projetos de forma segura, escalável e sustentável.",
     image: "/speakers/lucas-carapia.jpeg",
@@ -198,21 +198,105 @@ const speakers: Speaker[] = [
     },
     tags: [],
   },
-  {
-    id: "11",
-    name: "Mari cid",
-    title: "Head de Design",
-    company: "Sistema Jornal do Commercio de Comunicação",
-    bio: "Mari Cid é Product Designer com trajetória no mercado de comunicação desde 2012. Atua com foco em UX, design estratégico e liderança de times criativos. Sua abordagem une empatia, visão de produto e foco em resultados — transformando problemas complexos em soluções reais para pessoas e negócios, com criatividade aplicada de forma prática e orientada ao impacto.",
-    talkTitle: "Gestão de produto fora da bolha: os bastidores da inovação em empresas tradicionais",
+    {
+    id: "12",
+    name: "Ramon Mota",
+    title: "Android Developer",
+    company: "Zup Innovation",
+    bio:"Soteropolitano e torcedor do Bahêa, é um Android Developer na Zup com mais de 14 anos de experiência em desenvolvimento de software, sendo 8 deles dedicados à criação de aplicativos Android. É Especialista em Computação Ubíqua pelo IFBA. Nas horas livres, é forrozeiro, praticante de jiu-jítsu e surfista júnior, além de criador de conteúdo no @ramonmluz.dev.",
+    talkTitle: "Do Paradigma Imperativo ao Declarativo -  Migrando o App do Android View para Jetpack Compose.",
     talkDescription:
-    "Mari vai compartilhar sua experiência inovando em um grande grupo de mídia tradicional, mostrando como equilibrar negócios e inovação, adaptar processos ao digital e criar uma cultura de produto em ambientes tradicionais. Sua palestra revela como transformar desafios em aprendizados e como a gestão de produto é essencial para a transformação digital e o impacto real nas empresas.",
-    image: "/speakers/mari.jpeg",
+    "Nesta palestra, Ramon irá abordar os conceitos relacionados a diferença entre o paradigma imperativo do Android View e o declarativo do Jetpack Compose, através de um exemplo prático da migração de um aplicativo existente, escrito em Android View, para o Jetpack Compose.",
+    image: "/speakers/ramon.jpeg",
     social: {
-      linkedin: "https://www.linkedin.com/in/mariana-cid/",
+      linkedin: "https://www.linkedin.com/in/ramonmluz/",
+      instagram: "https://www.instagram.com/ramonmluz.dev/"
     },
     tags: [],
-  }
+  },
+    {
+    id: "13",
+    name: "Yan Falcão",
+    title: "Desenvolvedor Mobile II",
+    company: "Ília",
+    bio:"Soteropolitano, apaixonado por fotografia e desenvolvimento mobile. Atualmente, tenho desenvolvido um gosto por idiomas. Formado pelo IFBA, descobri o desenvolvimento meio por acaso, mas ele ficou e abriu novos caminhos.",
+    talkTitle: " Acessibilidade visual com Android Compose: contraste, escala de texto e boas práticas.",
+    talkDescription:
+    "Seu app é acessível para seus pais e avós? E para você, daqui a alguns anos? Vamos explorar como contraste, escalonamento de texto e boas práticas podem transformar a experiência de pessoas com diferentes necessidades visuais.",
+    image: "/speakers/yan.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/yan-santos-falcao/",
+      github: "https://github.com/yanfalcao",
+      instagram: "https://www.instagram.com/yansfalcao/"
+    },
+    tags: [],
+  },
+    {
+    id: "14",
+    name: "Loren Cavalcante",
+    title: "Analista de dados",
+    company: "Ford Brasil",
+    bio:"Sou desenvolvedora e analista de dados desde 2022, com experiência em projetos freelance para pequenas empresas, onde aprofundei meu entendimento sobre métricas, custos e produtividade.",
+    talkTitle: "Sem dados, sem inteligência: O verdadeiro motor da IA e do Machine Learning.",
+    talkDescription:
+    "O objetivo desta palestra é explorar como a qualidade dos dados é o verdadeiro alicerce da Inteligência Artificial e do Machine Learning. Antes de qualquer modelo sofisticado, existe um processo essencial: coletar, limpar e compreender os dados. ",
+    image: "/speakers/loren.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/lorencavalcante/",
+      instagram: "https://www.instagram.com/sadsaturn.23/?next=%2F"
+    },
+    tags: [],
+  },
+    {
+    id: "15",
+    name: "Kenneth Rohde Christiansen",
+    title: "Engenheiro Principal e GDE ",
+    company: "Intel Corporation",
+    bio: "Kenneth Rohde Christiansen é engenheiro principal na equipe de Engenharia da Plataforma Web da Intel. Em sua função, Kenneth lidera diversas iniciativas para garantir que a plataforma web funcione a favor da Intel — tornando-se uma verdadeira plataforma de desenvolvimento de aplicações, impulsionando o uso do Windows e do Chrome OS, operando de forma otimizada em dispositivos Intel e expondo todo o potencial do hardware aos desenvolvedores.",
+    talkTitle: "O PC com IA e a era da web moderna.",
+    talkDescription:
+   "Na Intel, lideramos o avanço da inovação, com roteiros de hardware planejados com grande antecedência. Nossa missão se estende à plataforma web, garantindo que ela aproveite rapidamente as novas capacidades do hardware. Desde a habilitação de novos formatos até o uso de aceleradores de hardware, estamos comprometidos em aprimorar a experiência na web.",
+    image: "/speakers/kenneth.jpeg",
+    social: {
+      linkedin: "",
+      instagram: ""
+    },
+    tags: [],
+  },
+    {
+    id: "16",
+    name: "Gabriel Sampaio",
+    title: " Founder da Gabuldev e GDE Flutter.",
+    company: "Gabuldev",
+    bio: "Fundador da Gabuldev, Especialista em Desenvolvimento Mobile no WillBank, é reconhecido como Google Developer Expert em Flutter & Dart, Engenheiro de Computação e meio maratonista (21km).",
+    talkTitle: "Monetize seu App Flutter: Stripe, Play Store e App Store na Prática.",
+    talkDescription:
+    "Na Intel, lideramos o avanço da inovação, com roteiros de hardware planejados com grande antecedência. Nossa missão se estende à plataforma web, garantindo que ela aproveite rapidamente as novas capacidades do hardware. Desde a habilitação de novos formatos até o uso de aceleradores de hardware, estamos comprometidos em aprimorar a experiência na web.",
+    image: "/speakers/gabriel.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/gabuldev/",
+      github: "https://github.com/gabuldev",
+      instagram: "https://www.instagram.com/gabul.dev/",
+      website: "https://www.youtube.com/gabuldev"
+    },
+    tags: [],
+  },
+      {
+    id: "17",
+    name: "Tainah Teixeira",
+    title: "Analista de Dados de Qualidade Pleno.",
+    company: "Grupo Boticário",
+    bio: "Pós Graduada em Gestão da Qualidade com foco na área de dados e na gestão de reclamações do Grupo Boticário atualmente, tenho aptidão com ferramentas Google em específico Appshet e Looker. Vencedora do Hackathon 2024.",
+    talkTitle: "A transformação digital não é exclusividade dos times tech. Ela acontece onde a estratégia encontra a ferramenta certa.",
+    talkDescription:
+    " A transformação digital não é exclusividade dos times tech. Ela acontece onde a estratégia encontra a ferramenta certa. Descubra a história real e inspiradora de como uma profissional da área de Qualidade no Grupo Boticário — sem background técnico formal — se tornou uma embaixadora da cultura de dados e da eficiência operacional.",
+    image: "/speakers/tainah.jpeg",
+    social: {
+      linkedin: "",
+      instagram: ""
+    },
+    tags: [],
+  },
 ]
 
 export function SpeakersSection() {
