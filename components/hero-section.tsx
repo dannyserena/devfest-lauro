@@ -173,13 +173,14 @@ export function HeroSection() {
           )}
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-3">
             <Button
               size="lg"
+              disabled
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg cursor-pointer"
               onClick={() => window.open("https://www.sympla.com.br/evento/devfest-lauro-de-freitas-2025/3117685", "_blank")}
             >
-              Comprar Ingresso no Sympla
+              Ingressos Esgotados
             </Button>
             <Button
               asChild

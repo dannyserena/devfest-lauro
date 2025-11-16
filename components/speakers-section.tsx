@@ -403,6 +403,7 @@ export function SpeakersSection() {
           {/* CFP Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
+              disabled
               variant="outline"
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-2 rounded-full font-medium bg-transparent cursor-pointer"
               onClick={() =>
@@ -415,9 +416,6 @@ export function SpeakersSection() {
               <FileText className="w-4 h-4 mr-2" />
               Call for Papers - Seja um Palestrante!
             </Button>
-            <span className="text-sm text-gray-500">
-              Inscrições prorrogadas até 19/10/2025
-            </span>
           </div>
         </div>
 
