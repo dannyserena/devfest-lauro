@@ -631,14 +631,14 @@ export function SpeakersSection() {
         </div>
 
         {/* More Speakers Coming */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <div className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200">
             <Users className="w-5 h-5 text-blue-600" />
             <span className="text-gray-700 font-medium">
               Mais palestrantes serão anunciados em breve!
             </span>
           </div>
-        </div>
+        </div> */}
 
         {/* Speaker Modal */}
         <Dialog
