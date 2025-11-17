@@ -74,7 +74,7 @@ const organizers = [
     social: {
       linkedin: "https://www.linkedin.com/in/gabrielsritta/",
       github: "https://github.com/gabrielfst30",
-      x: "https://x.com/gabrielfst30"
+      x: "https://x.com/gabrielfst30",
     },
   },
   {
@@ -119,6 +119,33 @@ const organizers = [
       linkedin: "https://www.linkedin.com/in/amanda-victoria-554363161/",
       github: "https://github.com/avmsantos",
       instagram: "https://www.instagram.com/avmsantos/",
+    },
+  },
+  {
+    name: "Natali Correira",
+    role: "Embaixadora DevFest",
+    bio: "Product Owner @OllieDigital",
+    image: "/organizers/natali.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/natali-correia-1813058a/",
+    },
+  },
+  {
+    name: "Andreia Escobar",
+    role: "Embaixadora DevFest",
+    bio: "",
+    image: "/organizers/andreia.jpeg",
+    social: {
+      linkedin: "",
+    },
+  },
+  {
+    name: "Daniele Siqueira",
+    role: "Embaixadora DevFest",
+    bio: "",
+    image: "/organizers/daniele.jpeg",
+    social: {
+      linkedin: "",
     },
   },
 ];
