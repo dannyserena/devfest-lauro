@@ -142,10 +142,11 @@ const organizers = [
   {
     name: "Daniele Siqueira",
     role: "Embaixadora DevFest",
-    bio: "",
+    bio: "Financial Manager @colegioAnalise",
     image: "/organizers/daniele.jpeg",
     social: {
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/daniele-oliveira-1b6173229/",
+      instagram: "https://www.instagram.com/danni.siq/",
     },
   },
 ];
