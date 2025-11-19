@@ -5,6 +5,22 @@ import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users } from "lucide-react"
 import VideoPlayer from "./video-player"
 
+type EventStatus = "before" | "today" | "after"
+
+const getEventStatus = (now: Date, eventDate: Date): EventStatus => {
+  const sameDay = now.toDateString() === eventDate.toDateString()
+
+  if (sameDay) {
+    return "today"
+  }
+
+  if (now < eventDate) {
+    return "before"
+  }
+
+  return "after"
+}
+
 export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -13,24 +29,34 @@ export function HeroSection() {
     seconds: 0,
   })
 
+  const [eventStatus, setEventStatus] = useState<EventStatus>("before")
+
   useEffect(() => {
     const eventDate = new Date("2025-11-29T09:00:00-03:00")
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime()
-      const distance = eventDate.getTime() - now
+    const updateTime = () => {
+      const now = new Date()
+      const status = getEventStatus(now, eventDate)
 
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000),
-        })
-      } else {
+      setEventStatus(status)
+
+      if (status !== "before") {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+        return
       }
-    }, 1000)
+
+      const distance = eventDate.getTime() - now.getTime()
+
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+      })
+    }
+
+    updateTime()
+    const timer = setInterval(updateTime, 1000)
 
     return () => clearInterval(timer)
   }, [])
@@ -39,7 +65,6 @@ export function HeroSection() {
     <section
       id="inicio"
       className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 pt-16"
-
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -49,7 +74,7 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-10 w-24 h-24 bg-green-500 rounded-full"></div>
       </div>
 
-       <div className="relative z-10 w-full flex justify-center mb-8">
+      <div className="relative z-10 w-full flex justify-center mb-8">
         <VideoPlayer />
       </div>
 
@@ -85,34 +110,77 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Countdown Timer */}
-          <div className="mb-12">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Contagem Regressiva</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-md mx-auto">
-              {[
-                { label: "Dias", value: timeLeft.days },
-                { label: "Horas", value: timeLeft.hours },
-                { label: "Minutos", value: timeLeft.minutes },
-                { label: "Segundos", value: timeLeft.seconds },
-              ].map((item) => (
-                <div key={item.label} className="bg-white rounded-lg shadow-lg p-4 border border-gray-200">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-600">
-                    {item.value.toString().padStart(2, "0")}
+          {/* BEFORE: Contagem Regressiva */}
+          {eventStatus === "before" && (
+            <div className="mb-12">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Contagem Regressiva</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-md mx-auto">
+                {[
+                  { label: "Dias", value: timeLeft.days },
+                  { label: "Horas", value: timeLeft.hours },
+                  { label: "Minutos", value: timeLeft.minutes },
+                  { label: "Segundos", value: timeLeft.seconds },
+                ].map((item) => (
+                  <div key={item.label} className="bg-white rounded-lg shadow-lg p-4 border border-gray-200">
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600">
+                      {item.value.toString().padStart(2, "0")}
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">{item.label}</div>
                   </div>
-                  <div className="text-sm text-gray-600 font-medium">{item.label}</div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* TODAY: Banner "É hoje!" */}
+          {eventStatus === "today" && (
+            <div className="mb-12">
+              <div className="inline-block bg-green-100 border border-green-300 rounded-2xl px-6 py-4 shadow-md">
+                <h3 className="text-2xl font-bold text-green-700 mb-1">É hoje! 🎉</h3>
+                <p className="text-sm sm:text-base text-green-800">
+                  O DevFest Lauro de Freitas 2025 está acontecendo agora. Bem-vindo(a) ao evento! 🚀
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* AFTER: Banner de agradecimento + álbum */}
+          {eventStatus === "after" && (
+            <div className="mb-12">
+              <div className="bg-white border border-blue-100 rounded-2xl px-6 py-6 shadow-md max-w-xl mx-auto">
+                <h3 className="text-2xl font-bold text-blue-700 mb-2">
+                  Obrigado por participar do DevFest Lauro de Freitas 2025 💙
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700 mb-4">
+                  Foi incrível ter você com a gente! Em breve as fotos oficiais estarão disponíveis no álbum
+                  compartilhado.
+                </p>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-semibold cursor-pointer"
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/",
+                      "_blank"
+                    )
+                  }
+                >
+                  Ver álbum de fotos (em breve)
+                </Button>
+              </div>
+            </div>
+          )}
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-3">
             <Button
               size="lg"
+              disabled
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg cursor-pointer"
               onClick={() => window.open("https://www.sympla.com.br/evento/devfest-lauro-de-freitas-2025/3117685", "_blank")}
             >
-              Comprar Ingresso no Sympla
+              Ingressos Esgotados
             </Button>
             <Button
               asChild
