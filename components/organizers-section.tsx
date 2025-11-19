@@ -133,10 +133,10 @@ const organizers = [
   {
     name: "Andreia Escobar",
     role: "Embaixadora DevFest",
-    bio: "",
+    bio: "Marketing Director @CodeAces",
     image: "/organizers/andreia.jpeg",
     social: {
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/silvaandreia/",
     },
   },
   {
