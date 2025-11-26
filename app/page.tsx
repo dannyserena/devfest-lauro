@@ -7,6 +7,7 @@ import { SponsorsSection } from "@/components/sponsors-section"
 import { LocationSection } from "@/components/location-section"
 import { OrganizersSection } from "@/components/organizers-section"
 import { Footer } from "@/components/footer"
+import { MobileSection } from "@/components/mobile-section"
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
+        <MobileSection />
         <SpeakersSection />
         <AgendaSection />
         <SponsorsSection />

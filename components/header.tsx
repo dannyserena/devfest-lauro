@@ -11,6 +11,7 @@ export function Header() {
   const navItems = [
     { href: "#inicio", label: "Início" },
     { href: "#sobre", label: "Sobre o Evento" },
+    { href: "#aplicativo", label: "Aplicativo" },
     { href: "#palestrantes", label: "Palestrantes" },
     { href: "#agenda", label: "Agenda" },
     { href: "#patrocinadores", label: "Patrocinadores" },

@@ -53,6 +53,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#aplicativo" className="text-gray-300 hover:text-white transition-colors">
+                  Aplicativo
+                </a>
+              </li>
+              <li>
                 <a href="#palestrantes" className="text-gray-300 hover:text-white transition-colors">
                   Palestrantes
                 </a>
