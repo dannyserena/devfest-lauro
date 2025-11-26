@@ -21,7 +21,7 @@ const agendaItems: AgendaItem[] = [
   {
     id: "1",
     time: "08:00 - 09:00",
-    title: "Credenciamento e Café de Boas-Vindas",
+    title: "Credenciamento",
     speaker: "Equipe de Organização",
     type: "networking",
     track: "geral",
