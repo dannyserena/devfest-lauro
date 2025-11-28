@@ -27,7 +27,7 @@ const agendaItems: AgendaItem[] = [
     track: "geral",
     location: "Hall de Entrada",
     description:
-      "Recepção dos participantes com credenciamento e café especial para iniciar o evento.",
+      "Recepção dos participantes com credenciamento.",
     duration: "60 min",
   },
   {
