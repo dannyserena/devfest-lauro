@@ -26,8 +26,7 @@ const agendaItems: AgendaItem[] = [
     type: "networking",
     track: "geral",
     location: "Hall de Entrada",
-    description:
-      "Recepção dos participantes com credenciamento.",
+    description: "Recepção dos participantes com credenciamento.",
     duration: "60 min",
   },
   {
@@ -181,13 +180,13 @@ const agendaItems: AgendaItem[] = [
     id: "15",
     time: "12:35 - 13:05",
     title:
-      "Do Paradigma Imperativo ao Declarativo - Migrando o App do Android View para Jetpack Compose",
-    speaker: "Ramon Mota",
+      "Acessibilidade visual com Android Compose: contraste, escala de texto e boas práticas",
+    speaker: "Yan Falcão",
     type: "palestra",
     track: "techB",
     location: "Laboratório 1° Andar (Tech B)",
     description:
-      "Migração de aplicações Android clássicas para Jetpack Compose com foco em arquitetura e prática.",
+      "Como garantir acessibilidade visual em apps Android usando Jetpack Compose.",
     duration: "30 min",
   },
   {
@@ -316,13 +315,13 @@ const agendaItems: AgendaItem[] = [
     id: "26",
     time: "15:25 - 15:55",
     title:
-      "Acessibilidade visual com Android Compose: contraste, escala de texto e boas práticas",
-    speaker: "Yan Falcão",
+      "Do Paradigma Imperativo ao Declarativo - Migrando o App do Android View para Jetpack Compose",
+    speaker: "Ramon Mota",
     type: "palestra",
     track: "techB",
     location: "Laboratório 1° Andar (Tech B)",
     description:
-      "Como garantir acessibilidade visual em apps Android usando Jetpack Compose.",
+      "Migração de aplicações Android clássicas para Jetpack Compose com foco em arquitetura e prática.",
     duration: "30 min",
   },
   {
