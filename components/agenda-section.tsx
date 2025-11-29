@@ -176,19 +176,7 @@ const agendaItems: AgendaItem[] = [
       "Como usar Flutter e Realidade Aumentada para criar apps gamificados e experiências imersivas.",
     duration: "30 min",
   },
-  {
-    id: "15",
-    time: "12:35 - 13:05",
-    title:
-      "Acessibilidade visual com Android Compose: contraste, escala de texto e boas práticas",
-    speaker: "Yan Falcão",
-    type: "palestra",
-    track: "techB",
-    location: "Laboratório 1° Andar (Tech B)",
-    description:
-      "Como garantir acessibilidade visual em apps Android usando Jetpack Compose.",
-    duration: "30 min",
-  },
+  
   {
     id: "16",
     time: "13:10 - 14:10",
@@ -241,6 +229,19 @@ const agendaItems: AgendaItem[] = [
   },
   {
     id: "20",
+    time: "15:25 - 15:55",
+    title:
+      "Acessibilidade visual com Android Compose: contraste, escala de texto e boas práticas",
+    speaker: "Yan Falcão",
+    type: "palestra",
+    track: "techB",
+    location: "Laboratório 1° Andar (Tech B)",
+    description:
+      "Como garantir acessibilidade visual em apps Android usando Jetpack Compose.",
+    duration: "30 min",
+  },
+  {
+    id: "21",
     time: "14:45 - 14:50",
     title: "Intervalo de Transição",
     speaker: "Equipe de Organização",
@@ -251,7 +252,7 @@ const agendaItems: AgendaItem[] = [
     duration: "5 min",
   },
   {
-    id: "21",
+    id: "22",
     time: "14:55 - 15:20",
     title:
       "A transformação digital não é exclusividade dos times tech. Ela acontece onde a estratégia encontra a ferramenta certa",
@@ -264,7 +265,7 @@ const agendaItems: AgendaItem[] = [
     duration: "30 min",
   },
   {
-    id: "22",
+    id: "23",
     time: "14:55 - 15:20",
     title:
       "Conventional Commits: Facilitando colaboração e versionamento com commits estruturados",
@@ -277,7 +278,7 @@ const agendaItems: AgendaItem[] = [
     duration: "30 min",
   },
   {
-    id: "23",
+    id: "24",
     time: "15:20 - 15:25",
     title: "Intervalo de Transição",
     speaker: "Equipe de Organização",
@@ -288,7 +289,7 @@ const agendaItems: AgendaItem[] = [
     duration: "5 min",
   },
   {
-    id: "24",
+    id: "25",
     time: "15:25 - 15:55",
     title: "Construindo ReFi com Blockchain",
     speaker: "Phil",
@@ -300,7 +301,7 @@ const agendaItems: AgendaItem[] = [
     duration: "30 min",
   },
   {
-    id: "25",
+    id: "26",
     time: "15:25 - 15:55",
     title: "Aplicando LLMs em projetos reais: Um agente de IA via WhatsApp",
     speaker: "Breno Holanda",
@@ -309,19 +310,6 @@ const agendaItems: AgendaItem[] = [
     location: "Sala 16 (Tech A)",
     description:
       "Arquitetura de um agente de IA que responde em linguagem natural via WhatsApp integrado a banco de dados.",
-    duration: "30 min",
-  },
-  {
-    id: "26",
-    time: "15:25 - 15:55",
-    title:
-      "Do Paradigma Imperativo ao Declarativo - Migrando o App do Android View para Jetpack Compose",
-    speaker: "Ramon Mota",
-    type: "palestra",
-    track: "techB",
-    location: "Laboratório 1° Andar (Tech B)",
-    description:
-      "Migração de aplicações Android clássicas para Jetpack Compose com foco em arquitetura e prática.",
     duration: "30 min",
   },
   {
@@ -338,6 +326,19 @@ const agendaItems: AgendaItem[] = [
   {
     id: "28",
     time: "16:35 - 17:15",
+    title:
+      "Do Paradigma Imperativo ao Declarativo - Migrando o App do Android View para Jetpack Compose",
+    speaker: "Ramon Mota",
+    type: "palestra",
+    track: "techB",
+    location: "Laboratório 1° Andar (Tech B)",
+    description:
+      "Migração de aplicações Android clássicas para Jetpack Compose com foco em arquitetura e prática.",
+    duration: "30 min",
+  },
+  {
+    id: "29",
+    time: "16:35 - 17:15",
     title: "Devs que voam: A arte de construir equipes fora da curva",
     speaker: "Luiz Siqueira e Moises Falcão",
     type: "palestra",
@@ -348,7 +349,7 @@ const agendaItems: AgendaItem[] = [
     duration: "40 min",
   },
   {
-    id: "29",
+    id: "30",
     time: "17:20 - 17:40",
     title: "Sorteios e Encerramento",
     speaker: "Equipe de Organização",
