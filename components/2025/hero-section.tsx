@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users } from "lucide-react"
-import VideoPlayer from "./video-player"
+import VideoPlayer from "@/components/video-player"
 
 type EventStatus = "before" | "today" | "after"
 

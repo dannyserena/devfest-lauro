@@ -1,8 +1,3 @@
-// TEMPORÁRIO (Sprint 2026 · Story #13 substitui este arquivo):
-// enquanto os componentes de components/2026/* não existem, a home espelha
-// a edição 2025 para a homepage nunca ficar quebrada durante a migração.
-// Ver Sprint plan: histórias #5-#13 (header/hero/trilhas/manifesto/local/
-// patrocinadores/footer 2026) substituirão este conteúdo.
 import { Header } from "@/components/2025/header"
 import { HeroSection } from "@/components/2025/hero-section"
 import { AboutSection } from "@/components/2025/about-section"
@@ -14,7 +9,7 @@ import { OrganizersSection } from "@/components/2025/organizers-section"
 import { Footer } from "@/components/2025/footer"
 import { MobileSection } from "@/components/2025/mobile-section"
 
-export default function HomePage() {
+export default function DevFest2025Page() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

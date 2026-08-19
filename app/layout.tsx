@@ -4,8 +4,8 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DevFest 2025",
-  description: "Created with v0",
+  title: "DevFest Lauro de Freitas",
+  description: "DevFest Lauro de Freitas — GDG Lauro de Freitas.",
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
