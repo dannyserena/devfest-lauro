@@ -253,7 +253,7 @@ const agendaItems: AgendaItem[] = [
   },
   {
     id: "22",
-    time: "14:55 - 15:2",
+    time: "14:50 - 15:20",
     title:
       "A transformação digital não é exclusividade dos times tech. Ela acontece onde a estratégia encontra a ferramenta certa",
     speaker: "Tainah Teixeira",
@@ -266,7 +266,7 @@ const agendaItems: AgendaItem[] = [
   },
   {
     id: "23",
-    time: "14:55 - 15:20",
+    time: "14:50 - 15:20",
     title:
       "Conventional Commits: Facilitando colaboração e versionamento com commits estruturados",
     speaker: "Lucas Lion",
