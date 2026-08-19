@@ -74,6 +74,44 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+/* DevFest 2026 — tema escuro + cores das trilhas (Build/Secure/Scale).
+   Escopado em .theme-2026 para não vazar para /2025 (que usa os
+   tokens claros de :root acima). Reaproveita os MESMOS nomes de
+   variável do shadcn (--background, --primary, --card, ...) para que
+   os componentes de components/ui/* (Button, Card, Badge) funcionem
+   automaticamente dentro do tema 2026 sem nenhuma alteração. */
+.theme-2026 {
+  --background: oklch(0.145 0.01 264);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.19 0.015 264);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.19 0.015 264);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.82 0.16 85);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.24 0.015 264);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.24 0.015 264);
+  --muted-foreground: oklch(0.65 0.01 264);
+  --accent: oklch(0.24 0.015 264);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.6 0.21 25);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.82 0.16 85);
+}
+
+/* Cores fixas das trilhas — sempre disponíveis como utilitários
+   Tailwind (bg-trilha-build, text-trilha-secure, border-trilha-scale),
+   independente de tema, pois representam a identidade da marca 2026. */
+@theme {
+  --color-trilha-build: #f4b400;
+  --color-trilha-secure: #ea4335;
+  --color-trilha-scale: #4285f4;
+  --color-trilha-community: #34a853;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
