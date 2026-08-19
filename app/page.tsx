@@ -1,19 +1,18 @@
-// EM CONSTRUÇÃO (Sprint 2026 · Stories #10-#13 substituem o restante):
-// Header, Hero, Manifesto, Trilhas e Legacy2025 já são componentes
-// reais de components/2026/*. Sponsors/Location/Organizers/Footer
-// abaixo ainda são a edição 2025 "emprestada" temporariamente, só
-// para a home nunca ficar em branco durante a migração — serão
-// trocadas por Local, Patrocinadores CTA e Footer 2026 nas próximas
-// histórias.
+import type { Metadata } from "next"
 import { Header } from "@/components/2026/header"
 import { HeroSection } from "@/components/2026/hero-section"
 import { ManifestoSection } from "@/components/2026/manifesto-section"
 import { TrilhasSection } from "@/components/2026/trilhas-section"
 import { Legacy2025Section } from "@/components/2026/legacy-2025-section"
-import { SponsorsSection } from "@/components/2025/sponsors-section"
-import { LocationSection } from "@/components/2025/location-section"
-import { OrganizersSection } from "@/components/2025/organizers-section"
-import { Footer } from "@/components/2025/footer"
+import { LocalSection } from "@/components/2026/local-section"
+import { SponsorsCtaSection } from "@/components/2026/sponsors-cta-section"
+import { Footer } from "@/components/2026/footer"
+
+export const metadata: Metadata = {
+  title: "DevFest Lauro de Freitas 2026",
+  description:
+    "Build. Secure. Scale. Developers and Builders in the Agentic Era — 21 de novembro de 2026, SENAI Lauro de Freitas.",
+}
 
 export default function HomePage() {
   return (
@@ -24,9 +23,8 @@ export default function HomePage() {
         <ManifestoSection />
         <TrilhasSection />
         <Legacy2025Section />
-        <SponsorsSection />
-        <LocationSection />
-        <OrganizersSection />
+        <LocalSection />
+        <SponsorsCtaSection />
       </main>
       <Footer />
     </div>
