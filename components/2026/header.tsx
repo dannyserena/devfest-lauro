@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react"
+import { ArrowUpRight, ChevronDown, Menu, Moon, Sun, X } from "lucide-react"
+import { useTheme2026 } from "@/components/2026/theme-scope"
 
 const navItems = [
   { href: "#trilhas", label: "Trilhas" },
@@ -14,6 +15,7 @@ const navItems = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const { theme, toggle } = useTheme2026()
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10)
@@ -25,7 +27,7 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 border-b transition-all ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-white/[0.08]"
+          ? "bg-background/80 backdrop-blur-md border-foreground/[0.08]"
           : "bg-transparent border-transparent"
       }`}
     >
@@ -59,21 +61,21 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-2 rounded-full text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-white/[0.06] transition"
+                className="px-3.5 py-2 rounded-full text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-foreground/[0.06] transition"
               >
                 {item.label}
               </a>
             ))}
 
             <div className="relative group ml-1">
-              <button className="px-3.5 py-2 rounded-full text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-white/[0.06] flex items-center gap-1 transition">
+              <button className="px-3.5 py-2 rounded-full text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-foreground/[0.06] flex items-center gap-1 transition">
                 Edições Anteriores
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </button>
               <div className="absolute top-full left-0 mt-2 w-40 p-1 rounded-xl bg-card border border-border opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
                 <Link
                   href="/2025"
-                  className="flex items-center justify-between px-3 py-2 rounded-lg text-[13px] hover:bg-white/[0.06] text-foreground/80 hover:text-foreground"
+                  className="flex items-center justify-between px-3 py-2 rounded-lg text-[13px] hover:bg-foreground/[0.06] text-foreground/80 hover:text-foreground"
                 >
                   2025 <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
@@ -83,6 +85,13 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
+          <button
+            onClick={toggle}
+            className="w-9 h-9 rounded-full bg-foreground/[0.08] flex items-center justify-center text-foreground hover:bg-foreground/[0.14] transition"
+            aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
           <a
             href="#ingressos"
             className="hidden md:inline-flex h-9 px-5 rounded-full bg-trilha-build text-black text-[13.5px] font-bold tracking-[-0.01em] items-center hover:brightness-110 transition"
@@ -91,7 +100,7 @@ export function Header() {
           </a>
           <button
             onClick={() => setIsMenuOpen((v) => !v)}
-            className="lg:hidden w-9 h-9 rounded-full bg-white/[0.08] flex items-center justify-center text-foreground"
+            className="lg:hidden w-9 h-9 rounded-full bg-foreground/[0.08] flex items-center justify-center text-foreground"
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -100,7 +109,7 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-background/95 backdrop-blur-md px-6 py-6 space-y-4">
+        <div className="lg:hidden border-t border-foreground/10 bg-background/95 backdrop-blur-md px-6 py-6 space-y-4">
           {navItems.map((item) => (
             <a
               key={item.href}

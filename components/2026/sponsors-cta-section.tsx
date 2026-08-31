@@ -18,7 +18,7 @@ export function SponsorsCtaSection() {
           <div className="flex flex-col gap-3 shrink-0">
             <a
               href="mailto:gdg@laurodefreitas.dev?subject=Media%20Kit%20DevFest%202026"
-              className="h-12 px-7 rounded-full bg-black text-trilha-build font-bold text-[14px] inline-flex items-center justify-center hover:bg-card transition"
+              className="h-12 px-7 rounded-full bg-black text-trilha-build font-bold text-[14px] inline-flex items-center justify-center hover:brightness-125 transition"
             >
               Baixar media kit
             </a>

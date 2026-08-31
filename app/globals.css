@@ -74,13 +74,64 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-/* DevFest 2026 — tema escuro + cores das trilhas (Build/Secure/Scale).
-   Escopado em .theme-2026 para não vazar para /2025 (que usa os
-   tokens claros de :root acima). Reaproveita os MESMOS nomes de
-   variável do shadcn (--background, --primary, --card, ...) para que
-   os componentes de components/ui/* (Button, Card, Badge) funcionem
-   automaticamente dentro do tema 2026 sem nenhuma alteração. */
+/* DevFest 2026 — tema claro (padrão) + escuro opcional, e cores das
+   trilhas (Build/Secure/Scale). Escopado em .theme-2026 para não
+   vazar para /2025 (que usa os tokens claros de :root acima).
+   Reaproveita os MESMOS nomes de variável do shadcn (--background,
+   --primary, --card, ...) para que os componentes de
+   components/ui/* (Button, Card, Badge) funcionem automaticamente
+   dentro do tema 2026 sem nenhuma alteração.
+
+   O claro é a base (abaixo). O escuro é um override em
+   .theme-2026-dark .theme-2026 — essa classe é aplicada no <html>
+   pelo toggle em components/2026/theme-scope.tsx, separada da classe
+   genérica .dark do shadcn (linha 42) para não afetar /2025 quando o
+   visitante liga o modo escuro na home 2026. */
 .theme-2026 {
+  --background: oklch(0.97 0.006 264);
+  --foreground: oklch(0.18 0.014 264);
+  --card: oklch(0.995 0.002 264);
+  --card-foreground: oklch(0.18 0.014 264);
+  --popover: oklch(0.995 0.002 264);
+  --popover-foreground: oklch(0.18 0.014 264);
+  --primary: oklch(0.6 0.16 85);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.92 0.006 264);
+  --secondary-foreground: oklch(0.18 0.014 264);
+  --muted: oklch(0.92 0.006 264);
+  --muted-foreground: oklch(0.45 0.012 264);
+  --accent: oklch(0.92 0.006 264);
+  --accent-foreground: oklch(0.18 0.014 264);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0 0 0 / 9%);
+  --input: oklch(0 0 0 / 9%);
+  --ring: oklch(0.6 0.16 85);
+
+  /* Gradiente de marca (Build→Secure→Scale) recalibrado para o fundo
+     claro: os tons originais (#F4B400/#FF7A1A/#EA4335/#4285F4) foram
+     pensados para contraste sobre preto e ficam ilegíveis sobre branco,
+     então aqui usamos as variantes ~700 do próprio Google, mais escuras,
+     mantendo o mesmo arco de cor. */
+  --brand-gradient: linear-gradient(
+    100deg,
+    #8a6100 0%,
+    #d9480f 35%,
+    #c5221f 50%,
+    #1967d2 100%
+  );
+
+  /* Cores das trilhas quando usadas como TEXTO (badges, wordmarks) em
+     vez de preenchimento/ícone — no claro precisam ser escurecidas
+     (ex: #F4B400 puro é ilegível em branco), no escuro ficam com a
+     cor cheia de novo (ver override abaixo). */
+  --trilha-build-on-surface: color-mix(in srgb, var(--color-trilha-build) 60%, black);
+  --trilha-secure-on-surface: color-mix(in srgb, var(--color-trilha-secure) 60%, black);
+  --trilha-scale-on-surface: color-mix(in srgb, var(--color-trilha-scale) 60%, black);
+  --trilha-community-on-surface: color-mix(in srgb, var(--color-trilha-community) 65%, black);
+}
+
+.theme-2026-dark .theme-2026 {
   --background: oklch(0.145 0.01 264);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.19 0.015 264);
@@ -100,6 +151,19 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 10%);
   --ring: oklch(0.82 0.16 85);
+
+  --brand-gradient: linear-gradient(
+    100deg,
+    #f4b400 0%,
+    #ff7a1a 35%,
+    #ea4335 50%,
+    #4285f4 100%
+  );
+
+  --trilha-build-on-surface: var(--color-trilha-build);
+  --trilha-secure-on-surface: var(--color-trilha-secure);
+  --trilha-scale-on-surface: var(--color-trilha-scale);
+  --trilha-community-on-surface: var(--color-trilha-community);
 }
 
 /* Cores fixas das trilhas — sempre disponíveis como utilitários

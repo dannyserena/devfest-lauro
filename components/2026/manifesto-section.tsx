@@ -25,13 +25,13 @@ export function ManifestoSection() {
       <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 md:gap-16 items-start">
         <div>
           <div className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.16em] text-foreground/40 mb-6">
-            <span className="w-8 h-[1px] bg-white/20" /> MANIFESTO 2026
+            <span className="w-8 h-[1px] bg-foreground/20" /> MANIFESTO 2026
           </div>
           <h2 className="text-[38px] md:text-[56px] leading-[0.95] tracking-[-0.04em] font-bold">
             <span className="text-foreground/30">Em 2025</span> conectamos.
             <br />
             <span className="text-foreground">Em 2026</span>{" "}
-            <span className="bg-[linear-gradient(100deg,#F4B400_0%,#FF7A1A_35%,#EA4335_50%,#4285F4_100%)] bg-clip-text text-transparent">
+            <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">
               construímos.
             </span>
           </h2>
@@ -64,7 +64,7 @@ export function ManifestoSection() {
         </div>
 
         <div className="lg:sticky lg:top-[88px]">
-          <div className="rounded-[24px] p-7 md:p-8 bg-card border border-white/10">
+          <div className="rounded-[24px] p-7 md:p-8 bg-card border border-foreground/10">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-trilha-build/15 grid place-items-center">
                 <Sparkles className="w-4 h-4 text-trilha-build" />
@@ -76,7 +76,7 @@ export function ManifestoSection() {
             <div className="space-y-5">
               {mudancas.map((m) => (
                 <div key={m.t} className="flex gap-3">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-white/10 grid place-items-center shrink-0">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-foreground/10 grid place-items-center shrink-0">
                     <Check className="w-3 h-3 text-foreground" />
                   </div>
                   <div>

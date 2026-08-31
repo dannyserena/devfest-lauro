@@ -3,7 +3,7 @@ import { trilhas } from "@/content/2026/trilhas"
 
 export function TrilhasSection() {
   return (
-    <section id="trilhas" className="border-t border-white/[0.06] bg-card/40">
+    <section id="trilhas" className="border-t border-foreground/[0.06] bg-card/40">
       <div className="mx-auto max-w-[1280px] px-6 py-20 md:py-28">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div>
@@ -21,13 +21,13 @@ export function TrilhasSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-[1px] rounded-[28px] overflow-hidden bg-white/10 p-[1px]">
+        <div className="grid lg:grid-cols-3 gap-[1px] rounded-[28px] overflow-hidden bg-foreground/10 p-[1px]">
           {trilhas.map((t) => {
             const Icon = t.icon
             return (
               <div
                 key={t.id}
-                className="group relative bg-card p-7 md:p-8 flex flex-col min-h-[480px] hover:bg-white/[0.03] transition-colors"
+                className="group relative bg-card p-7 md:p-8 flex flex-col min-h-[480px] hover:bg-foreground/[0.03] transition-colors"
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-[1px] opacity-0 group-hover:opacity-100 transition"
@@ -45,7 +45,7 @@ export function TrilhasSection() {
                   <div
                     className="font-mono text-[11px] font-bold tracking-[0.14em] px-2.5 py-1 rounded-full border"
                     style={{
-                      color: t.color,
+                      color: `var(--trilha-${t.id.toLowerCase()}-on-surface)`,
                       borderColor: `${t.color}30`,
                       backgroundColor: `${t.color}12`,
                     }}
@@ -56,7 +56,7 @@ export function TrilhasSection() {
 
                 <h3
                   className="mt-8 text-[36px] font-[900] tracking-[-0.04em] leading-[0.9]"
-                  style={{ color: t.color }}
+                  style={{ color: `var(--trilha-${t.id.toLowerCase()}-on-surface)` }}
                 >
                   {t.id}
                 </h3>
@@ -72,7 +72,7 @@ export function TrilhasSection() {
                     {t.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-medium tracking-wide text-foreground/70 group-hover:bg-white/[0.08] transition"
+                        className="px-2.5 py-1 rounded-full bg-foreground/[0.06] border border-foreground/10 text-[11px] font-medium tracking-wide text-foreground/70 group-hover:bg-foreground/[0.08] transition"
                       >
                         {tag}
                       </span>
@@ -80,7 +80,7 @@ export function TrilhasSection() {
                   </div>
                   <div className="mt-6 flex items-center gap-2 text-[13px] font-medium text-foreground/40 group-hover:text-foreground/80 transition">
                     Ver grade da trilha
-                    <span className="w-5 h-5 rounded-full bg-white/10 grid place-items-center group-hover:bg-foreground group-hover:text-background transition">
+                    <span className="w-5 h-5 rounded-full bg-foreground/10 grid place-items-center group-hover:bg-foreground group-hover:text-background transition">
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>

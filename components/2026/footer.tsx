@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-background">
+    <footer className="border-t border-foreground/10 bg-background">
       <div className="mx-auto max-w-[1280px] px-6 py-12 md:py-16">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div>
@@ -66,7 +66,7 @@ export function Footer() {
               </div>
             </div>
             <div className="col-span-2 md:col-span-1">
-              <div className="rounded-2xl bg-card border border-white/10 p-4">
+              <div className="rounded-2xl bg-card border border-foreground/10 p-4">
                 <div className="font-mono text-[10px] tracking-[0.12em] text-foreground/30">
                   STATUS DO EVENTO
                 </div>
@@ -85,7 +85,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 font-mono text-[11px] tracking-[0.08em] text-foreground/25">
+        <div className="mt-12 pt-6 border-t border-foreground/10 flex flex-col md:flex-row justify-between gap-3 font-mono text-[11px] tracking-[0.08em] text-foreground/25">
           <span>
             © 2026 GDG Lauro de Freitas • Feito com ♥ e muito café na RMS
           </span>

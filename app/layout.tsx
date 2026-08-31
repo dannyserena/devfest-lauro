@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <style>{`
 html {
@@ -27,8 +27,17 @@ html {
   --font-mono: ${GeistMono.variable};
 }
         `}</style>
+        {/* Aplica a preferência de dark mode da home 2026 antes do
+            primeiro paint, pra não piscar claro->escuro no reload.
+            Conteúdo estático (sem input de usuário) — seguro usar
+            dangerouslySetInnerHTML aqui. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('devfest-2026-theme')==='dark'){document.documentElement.classList.add('theme-2026-dark')}}catch(e){}`,
+          }}
+        />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

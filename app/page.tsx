@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { ThemeScope } from "@/components/2026/theme-scope"
 import { Header } from "@/components/2026/header"
 import { HeroSection } from "@/components/2026/hero-section"
 import { ManifestoSection } from "@/components/2026/manifesto-section"
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="theme-2026 min-h-screen bg-background text-foreground">
+    <ThemeScope>
       <Header />
       <main>
         <HeroSection />
@@ -29,6 +30,6 @@ export default function HomePage() {
         <SponsorsCtaSection />
       </main>
       <Footer />
-    </div>
+    </ThemeScope>
   )
 }

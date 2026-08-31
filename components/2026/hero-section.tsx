@@ -31,7 +31,7 @@ export function HeroSection() {
 
       <div className="relative mx-auto max-w-[1280px] px-6 pt-16 md:pt-24 pb-8">
         <div className="max-w-[1080px]">
-          <div className="inline-flex items-center gap-3 pl-1 pr-4 py-1 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md">
+          <div className="inline-flex items-center gap-3 pl-1 pr-4 py-1 rounded-full bg-foreground/[0.06] border border-foreground/10 backdrop-blur-md">
             <span className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-foreground text-background text-[11px] font-bold tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-trilha-community animate-pulse" />
               CONFIRMADO
@@ -44,7 +44,7 @@ export function HeroSection() {
           <h1 className="mt-8 text-[14vw] md:text-[102px] leading-[0.85] font-[900] tracking-[-0.06em]">
             <span className="block text-foreground">Build.</span>
             <span className="block text-foreground">Secure.</span>
-            <span className="block bg-[linear-gradient(100deg,#F4B400_0%,#FF7A1A_35%,#EA4335_50%,#4285F4_100%)] bg-clip-text text-transparent">
+            <span className="block bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">
               Scale.
             </span>
           </h1>
@@ -71,14 +71,14 @@ export function HeroSection() {
               </a>
               <a
                 href="#patrocinadores"
-                className="inline-flex items-center h-[48px] px-6 rounded-full bg-white/[0.08] border border-white/10 text-foreground font-medium text-[15px] hover:bg-white/[0.12] transition backdrop-blur-md"
+                className="inline-flex items-center h-[48px] px-6 rounded-full bg-foreground/[0.08] border border-foreground/10 text-foreground font-medium text-[15px] hover:bg-foreground/[0.12] transition backdrop-blur-md"
               >
                 Ser patrocinador
               </a>
             </div>
           </div>
 
-          <div className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-[1px] rounded-[20px] overflow-hidden bg-white/10 p-[1px]">
+          <div className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-[1px] rounded-[20px] overflow-hidden bg-foreground/10 p-[1px]">
             {stats.map((s) => (
               <div key={s.k} className="bg-card px-5 py-4 md:px-6 md:py-5">
                 <div className="font-mono text-[10px] tracking-[0.14em] text-foreground/40">
@@ -94,7 +94,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative border-y border-white/[0.06] overflow-hidden">
+      <div className="relative border-y border-foreground/[0.06] overflow-hidden">
         <div className="flex w-max animate-[ticker_30s_linear_infinite]">
           {Array.from({ length: 2 }).map((_, row) => (
             <div key={row} className="flex items-center gap-10 pr-10 py-3">
@@ -104,7 +104,7 @@ export function HeroSection() {
                   className="flex items-center gap-10 font-mono text-[12px] tracking-[0.18em] text-foreground/25"
                 >
                   {w}
-                  <span className="w-1 h-1 rounded-full bg-white/20" />
+                  <span className="w-1 h-1 rounded-full bg-foreground/20" />
                 </span>
               ))}
             </div>

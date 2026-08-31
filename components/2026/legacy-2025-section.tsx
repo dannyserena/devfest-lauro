@@ -5,18 +5,18 @@ import { stats2025 } from "@/content/2026/stats"
 export function Legacy2025Section() {
   return (
     <section className="mx-auto max-w-[1280px] px-6 py-20 md:py-28">
-      <div className="rounded-[28px] overflow-hidden bg-card border border-white/10 p-[1px]">
-        <div className="rounded-[27px] bg-gradient-to-b from-white/[0.04] to-transparent overflow-hidden">
+      <div className="rounded-[28px] overflow-hidden bg-card border border-foreground/10 p-[1px]">
+        <div className="rounded-[27px] bg-gradient-to-b from-foreground/[0.04] to-transparent overflow-hidden">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
             <div className="p-8 md:p-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-trilha-community/15 border border-trilha-community/20 text-trilha-community font-mono text-[11px] tracking-wide">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-trilha-community/15 border border-trilha-community/20 text-[var(--trilha-community-on-surface)] font-mono text-[11px] tracking-wide">
                 <span className="w-1.5 h-1.5 rounded-full bg-trilha-community animate-pulse" />{" "}
                 EDIÇÃO ANTERIOR
               </div>
 
               <h2 className="mt-6 text-[32px] md:text-[44px] font-bold leading-[0.95] tracking-[-0.04em]">
                 2025 foi{" "}
-                <span className="bg-[linear-gradient(100deg,#F4B400_0%,#FF7A1A_35%,#EA4335_50%,#4285F4_100%)] bg-clip-text text-transparent">
+                <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">
                   histórico.
                 </span>
                 <br />
@@ -33,7 +33,7 @@ export function Legacy2025Section() {
                   return (
                     <div
                       key={s.l}
-                      className="rounded-2xl bg-background border border-white/10 p-4"
+                      className="rounded-2xl bg-background border border-foreground/10 p-4"
                     >
                       <Icon className="w-4 h-4 text-foreground/30 mb-3" />
                       <div className="text-[22px] font-black tracking-[-0.03em]">
@@ -56,7 +56,7 @@ export function Legacy2025Section() {
             </div>
 
             <div className="relative bg-background p-3 lg:p-4">
-              <div className="h-full rounded-[18px] overflow-hidden bg-gradient-to-br from-white/[0.05] to-transparent border border-white/10 grid place-items-center p-6">
+              <div className="h-full rounded-[18px] overflow-hidden bg-gradient-to-br from-foreground/[0.05] to-transparent border border-foreground/10 grid place-items-center p-6">
                 <div className="w-full space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="font-mono text-[11px] text-foreground/30 tracking-[0.14em]">
@@ -66,7 +66,7 @@ export function Legacy2025Section() {
                   </div>
                   <Link
                     href="/2025"
-                    className="aspect-[16/10] rounded-xl bg-background border border-white/10 relative overflow-hidden group flex"
+                    className="aspect-[16/10] rounded-xl bg-background border border-foreground/10 relative overflow-hidden group flex"
                   >
                     <div className="absolute inset-0 grid place-items-center">
                       <div className="w-16 h-16 rounded-full bg-foreground text-background grid place-items-center shadow-xl group-hover:scale-105 transition">
@@ -74,7 +74,7 @@ export function Legacy2025Section() {
                       </div>
                     </div>
                     <div className="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
-                      <div className="text-[12px] font-medium text-foreground">
+                      <div className="text-[12px] font-medium text-white">
                         Reveja a página completa da edição 2025
                       </div>
                     </div>

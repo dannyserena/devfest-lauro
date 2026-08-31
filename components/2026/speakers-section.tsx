@@ -43,9 +43,9 @@ export function SpeakersSection() {
           {speakers.map((s) => (
             <div
               key={s.id}
-              className="rounded-2xl overflow-hidden bg-card border border-white/10 group"
+              className="rounded-2xl overflow-hidden bg-card border border-foreground/10 group"
             >
-              <div className="aspect-[4/3] relative bg-white/[0.03]">
+              <div className="aspect-[4/3] relative bg-foreground/[0.03]">
                 <Image
                   src={s.photo}
                   alt={s.name}
@@ -56,7 +56,7 @@ export function SpeakersSection() {
               <div className="p-4">
                 <div
                   className="font-mono text-[10px] font-bold tracking-[0.12em]"
-                  style={{ color: trilhaColor[s.trilha] }}
+                  style={{ color: `var(--trilha-${s.trilha.toLowerCase()}-on-surface)` }}
                 >
                   {s.trilha}
                 </div>
@@ -78,7 +78,7 @@ export function SpeakersSection() {
           {vagasPlaceholder.map((t, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-6 flex flex-col items-center justify-center text-center min-h-[180px]"
+              className="rounded-2xl border border-dashed border-foreground/15 bg-foreground/[0.02] p-6 flex flex-col items-center justify-center text-center min-h-[180px]"
             >
               <div
                 className="w-10 h-10 rounded-full grid place-items-center mb-3"
@@ -88,7 +88,7 @@ export function SpeakersSection() {
               </div>
               <div
                 className="font-mono text-[10px] font-bold tracking-[0.12em]"
-                style={{ color: t.color }}
+                style={{ color: `var(--trilha-${t.id.toLowerCase()}-on-surface)` }}
               >
                 TRILHA {t.id}
               </div>
@@ -100,7 +100,7 @@ export function SpeakersSection() {
         </div>
       )}
 
-      <div className="mt-8 rounded-2xl bg-card border border-white/10 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="mt-8 rounded-2xl bg-card border border-foreground/10 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-[14px] text-foreground/60">
           <span className="text-foreground font-semibold">
             Quer palestrar no DevFest 2026?
