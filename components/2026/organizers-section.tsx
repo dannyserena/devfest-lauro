@@ -12,7 +12,7 @@ const organizers = [
   },
   {
     name: "Women Techmakers Lauro de Freitas",
-    desc: "Iniciativa do Google por representatividade de mulheres em tech.",
+    desc: "Iniciativa do Technovation por representatividade de mulheres em tech.",
     src: "/images/wtm-logo.png",
     href: "https://www.womentechmakers.com/",
   },
@@ -44,11 +44,13 @@ export function OrganizersSection() {
               variants={staggerItem}
               className="flex flex-col items-center gap-4 rounded-2xl bg-card border border-foreground/10 p-8 text-center hover:border-foreground/20 transition"
             >
-              <img
-                src={o.src}
-                alt={o.name}
-                className="h-12 w-auto max-w-[220px] object-contain"
-              />
+              <div className="flex items-center justify-center rounded-lg bg-white px-4 py-3">
+                <img
+                  src={o.src}
+                  alt={o.name}
+                  className="h-12 w-auto max-w-[220px] object-contain"
+                />
+              </div>
               <div>
                 <div className="font-semibold text-[15px] text-foreground">
                   {o.name}

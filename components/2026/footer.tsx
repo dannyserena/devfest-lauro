@@ -73,7 +73,7 @@ export function Footer() {
             </div>
             <div className="col-span-2 md:col-span-1 flex items-center justify-center md:justify-end">
               <img
-                src="/images/2026/android-mascot.png"
+                src="/images/2026/mascote-devfest2026.svg"
                 alt="Mascote Android do DevFest Lauro de Freitas"
                 className="h-32 w-auto object-contain md:h-40"
               />
