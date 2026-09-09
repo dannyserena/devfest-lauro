@@ -1,12 +1,18 @@
 "use client"
 
-import Link from "next/link"
+import { useState } from "react"
 import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 import { stats2025 } from "@/content/2026/stats"
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
+const RECAP_2025_VIDEO_URL = "https://www.youtube.com/embed/Wr0RiuX9dLY"
+const RECAP_2025_INSTAGRAM_URL =
+  "https://www.instagram.com/p/DR52YGNAJbJ/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+
 export function Legacy2025Section() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+
   return (
     <section className="mx-auto max-w-[1280px] px-6 py-20 md:py-28">
       <div className="rounded-[28px] overflow-hidden bg-card border border-foreground/10 p-[1px]">
@@ -69,12 +75,14 @@ export function Legacy2025Section() {
                 })}
               </motion.div>
 
-              <Link
-                href="/2025"
+              <a
+                href={RECAP_2025_INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 h-11 px-5 rounded-full bg-foreground text-background font-semibold text-[14px] hover:opacity-90 transition"
               >
                 <Play className="w-4 h-4" /> Ver como foi 2025
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div
@@ -95,21 +103,34 @@ export function Legacy2025Section() {
                     </div>
                     <div className="w-2 h-2 rounded-full bg-trilha-secure animate-pulse" />
                   </div>
-                  <Link
-                    href="/2025"
-                    className="aspect-[16/10] rounded-xl bg-background border border-foreground/10 relative overflow-hidden group flex"
-                  >
-                    <div className="absolute inset-0 grid place-items-center">
-                      <div className="w-16 h-16 rounded-full bg-foreground text-background grid place-items-center shadow-xl group-hover:scale-105 transition">
-                        <Play className="w-7 h-7 ml-0.5" />
-                      </div>
+                  {isVideoPlaying ? (
+                    <div className="aspect-[16/10] rounded-xl overflow-hidden bg-black">
+                      <iframe
+                        src={`${RECAP_2025_VIDEO_URL}?autoplay=1`}
+                        title="DevFest Lauro de Freitas 2025 — vídeo oficial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
                     </div>
-                    <div className="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
-                      <div className="text-[12px] font-medium text-white">
-                        Reveja a página completa da edição 2025
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setIsVideoPlaying(true)}
+                      className="aspect-[16/10] w-full rounded-xl bg-background border border-foreground/10 relative overflow-hidden group flex"
+                    >
+                      <div className="absolute inset-0 grid place-items-center">
+                        <div className="w-16 h-16 rounded-full bg-foreground text-background grid place-items-center shadow-xl group-hover:scale-105 transition">
+                          <Play className="w-7 h-7 ml-0.5" />
+                        </div>
                       </div>
-                    </div>
-                  </Link>
+                      <div className="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+                        <div className="text-[12px] font-medium text-white">
+                          Reveja a página completa da edição 2025
+                        </div>
+                      </div>
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
