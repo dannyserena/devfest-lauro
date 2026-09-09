@@ -8,12 +8,13 @@ import { SpeakersSection } from "@/components/2026/speakers-section"
 import { Legacy2025Section } from "@/components/2026/legacy-2025-section"
 import { LocalSection } from "@/components/2026/local-section"
 import { SponsorsCtaSection } from "@/components/2026/sponsors-cta-section"
+import { OrganizersSection } from "@/components/2026/organizers-section"
 import { Footer } from "@/components/2026/footer"
 
 export const metadata: Metadata = {
   title: "DevFest Lauro de Freitas 2026",
   description:
-    "Build. Secure. Scale. Developers and Builders in the Agentic Era — 21 de novembro de 2026, SENAI Lauro de Freitas.",
+    "Build. Secure. Scale. Developers and Builders in the Agentic Era — 07 de novembro de 2026, SENAI Lauro de Freitas.",
 }
 
 export default function HomePage() {
@@ -28,6 +29,7 @@ export default function HomePage() {
         <Legacy2025Section />
         <LocalSection />
         <SponsorsCtaSection />
+        <OrganizersSection />
       </main>
       <Footer />
     </ThemeScope>

@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import { AnimatePresence, motion } from "framer-motion"
 import { ArrowUpRight, ChevronDown, Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme2026 } from "@/components/2026/theme-scope"
+import { DevFestLogo } from "@/components/2026/devfest-logo"
+import { INSCRICAO_URL } from "@/content/2026/links"
 
 const navItems = [
   { href: "#trilhas", label: "Trilhas" },
@@ -31,44 +34,33 @@ export function Header() {
           : "bg-transparent border-transparent"
       }`}
     >
-      <div className="mx-auto max-w-[1280px] px-6 h-[68px] flex items-center justify-between">
+      <div className="mx-auto max-w-[1280px] px-6 py-3 md:py-4 flex items-center justify-between">
         <div className="flex items-center gap-10">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex gap-[3px]">
-              <span className="w-2 h-2 rounded-full bg-trilha-scale" />
-              <span className="w-2 h-2 rounded-full bg-trilha-secure" />
-              <span className="w-2 h-2 rounded-full bg-trilha-build" />
-              <span className="w-2 h-2 rounded-full bg-trilha-community" />
+          <Link href="/" className="flex flex-col leading-none group">
+            <div className="flex items-center gap-2">
+              <DevFestLogo className="h-6 w-auto shrink-0 text-foreground" />
+              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-foreground text-background tracking-wide">
+                2026
+              </span>
             </div>
-            <div className="leading-none">
-              <div className="font-black text-[15px] tracking-[-0.02em] flex items-center gap-1.5 text-foreground">
-                DevFest <span className="font-medium text-foreground/60">Lauro</span>
-                <span className="ml-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded bg-foreground text-background tracking-wide">
-                  2026
-                </span>
-              </div>
-              <div className="font-mono text-[9px] tracking-[0.18em] text-foreground/40 mt-0.5">
-                GDG LAURO DE FREITAS
-              </div>
-            </div>
+            <span className="mt-1.5 text-xs font-medium uppercase tracking-wider text-foreground/45">
+              Lauro de Freitas
+            </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
-            <span className="px-3.5 py-2 rounded-full text-[13px] font-medium bg-foreground text-background">
-              DevFest 2026
-            </span>
+          <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-2 rounded-full text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-foreground/[0.06] transition"
+                className="text-[13.5px] font-medium text-foreground/70 hover:text-trilha-build transition-colors"
               >
                 {item.label}
               </a>
             ))}
 
-            <div className="relative group ml-1">
-              <button className="px-3.5 py-2 rounded-full text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-foreground/[0.06] flex items-center gap-1 transition">
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-[13.5px] font-medium text-foreground/70 hover:text-trilha-build transition-colors">
                 Edições Anteriores
                 <ChevronDown className="w-3.5 h-3.5 opacity-60" />
               </button>
@@ -87,13 +79,15 @@ export function Header() {
         <div className="flex items-center gap-3">
           <button
             onClick={toggle}
-            className="w-9 h-9 rounded-full bg-foreground/[0.08] flex items-center justify-center text-foreground hover:bg-foreground/[0.14] transition"
+            className="w-9 h-9 rounded-full bg-foreground/[0.06] backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-foreground/[0.14] transition-colors"
             aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
           >
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <a
-            href="#ingressos"
+            href={INSCRICAO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex h-9 px-5 rounded-full bg-trilha-build text-black text-[13.5px] font-bold tracking-[-0.01em] items-center hover:brightness-110 transition"
           >
             Ingressos
@@ -108,34 +102,55 @@ export function Header() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className="lg:hidden border-t border-foreground/10 bg-background/95 backdrop-blur-md px-6 py-6 space-y-4">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-[16px] font-medium text-foreground/80"
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:hidden overflow-hidden border-t border-foreground/10 bg-background/95 backdrop-blur-md"
+          >
+            <motion.div
+              initial="hidden"
+              animate="show"
+              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05, delayChildren: 0.05 } } }}
+              className="px-6 py-6 space-y-4"
             >
-              {item.label}
-            </a>
-          ))}
-          <Link
-            href="/2025"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-[16px] font-medium text-foreground/50"
-          >
-            Edições Anteriores • 2025
-          </Link>
-          <a
-            href="#ingressos"
-            onClick={() => setIsMenuOpen(false)}
-            className="block mt-2 h-11 px-5 rounded-full bg-trilha-build text-black text-[14px] font-bold items-center justify-center flex"
-          >
-            Ingressos
-          </a>
-        </div>
-      )}
+              {navItems.map((item) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0 } }}
+                  className="block text-[16px] font-medium text-foreground/80"
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+              <motion.div variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0 } }}>
+                <Link
+                  href="/2025"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-[16px] font-medium text-foreground/50"
+                >
+                  Edições Anteriores • 2025
+                </Link>
+              </motion.div>
+              <motion.a
+                href={INSCRICAO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0 } }}
+                className="block mt-2 h-11 px-5 rounded-full bg-trilha-build text-black text-[14px] font-bold items-center justify-center flex"
+              >
+                Ingressos
+              </motion.a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

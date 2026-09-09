@@ -1,6 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import { Play } from "lucide-react"
+import { motion } from "framer-motion"
 import { stats2025 } from "@/content/2026/stats"
+import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
 export function Legacy2025Section() {
   return (
@@ -8,26 +12,44 @@ export function Legacy2025Section() {
       <div className="rounded-[28px] overflow-hidden bg-card border border-foreground/10 p-[1px]">
         <div className="rounded-[27px] bg-gradient-to-b from-foreground/[0.04] to-transparent overflow-hidden">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="p-8 md:p-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-trilha-community/15 border border-trilha-community/20 text-[var(--trilha-community-on-surface)] font-mono text-[11px] tracking-wide">
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
+              variants={staggerContainer(0.1)}
+              className="p-8 md:p-12"
+            >
+              <motion.div
+                variants={staggerItem}
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-trilha-community/15 border border-trilha-community/20 text-[var(--trilha-community-on-surface)] font-mono text-[11px] tracking-wide"
+              >
                 <span className="w-1.5 h-1.5 rounded-full bg-trilha-community animate-pulse" />{" "}
                 EDIÇÃO ANTERIOR
-              </div>
+              </motion.div>
 
-              <h2 className="mt-6 text-[32px] md:text-[44px] font-bold leading-[0.95] tracking-[-0.04em]">
+              <motion.h2
+                variants={fadeUp}
+                className="mt-6 text-[32px] md:text-[44px] font-bold leading-[0.95] tracking-[-0.04em]"
+              >
                 2025 foi{" "}
                 <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">
                   histórico.
                 </span>
                 <br />
                 <span className="text-foreground/40">2026 será lendário.</span>
-              </h2>
-              <p className="mt-4 text-[15px] leading-[1.6] text-foreground/55 max-w-[480px]">
+              </motion.h2>
+              <motion.p
+                variants={staggerItem}
+                className="mt-4 text-[15px] leading-[1.6] text-foreground/55 max-w-[480px]"
+              >
                 Lotamos o SENAI, conectamos a RMS e mostramos que a Bahia
                 produz tecnologia de ponta. A barra subiu.
-              </p>
+              </motion.p>
 
-              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <motion.div
+                variants={staggerItem}
+                className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3"
+              >
                 {stats2025.map((s) => {
                   const Icon = s.icon
                   return (
@@ -45,7 +67,7 @@ export function Legacy2025Section() {
                     </div>
                   )
                 })}
-              </div>
+              </motion.div>
 
               <Link
                 href="/2025"
@@ -53,9 +75,18 @@ export function Legacy2025Section() {
               >
                 <Play className="w-4 h-4" /> Ver como foi 2025
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="relative bg-background p-3 lg:p-4">
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
+              variants={{
+                hidden: { opacity: 0, scale: 0.96 },
+                show: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 } },
+              }}
+              className="relative bg-background p-3 lg:p-4"
+            >
               <div className="h-full rounded-[18px] overflow-hidden bg-gradient-to-br from-foreground/[0.05] to-transparent border border-foreground/10 grid place-items-center p-6">
                 <div className="w-full space-y-4">
                   <div className="flex items-center justify-between">
@@ -81,7 +112,7 @@ export function Legacy2025Section() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,20 +1,26 @@
+"use client"
+
 import Link from "next/link"
+import { motion } from "framer-motion"
+import { fadeUp, viewportOnce } from "@/components/2026/motion"
+import { DevFestLogo } from "@/components/2026/devfest-logo"
 
 export function Footer() {
   return (
     <footer className="border-t border-foreground/10 bg-background">
-      <div className="mx-auto max-w-[1280px] px-6 py-12 md:py-16">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={fadeUp}
+        className="mx-auto max-w-[1280px] px-6 py-12 md:py-16"
+      >
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="flex gap-[3px]">
-                <span className="w-2 h-2 rounded-full bg-trilha-scale" />
-                <span className="w-2 h-2 rounded-full bg-trilha-secure" />
-                <span className="w-2 h-2 rounded-full bg-trilha-build" />
-                <span className="w-2 h-2 rounded-full bg-trilha-community" />
-              </div>
+            <div className="flex items-center gap-2.5">
+              <DevFestLogo className="h-6 w-auto shrink-0 text-foreground" />
               <span className="font-black tracking-[-0.02em]">
-                DevFest Lauro de Freitas
+                Lauro de Freitas
               </span>
             </div>
             <div className="mt-3 text-[13px] leading-[1.5] text-foreground/45 max-w-[320px]">
@@ -52,10 +58,10 @@ export function Footer() {
               </div>
               <div className="space-y-2 text-foreground/60">
                 <a
-                  href="mailto:gdg@laurodefreitas.dev"
+                  href="mailto:gdglaurodefreitas@gmail.com"
                   className="block hover:text-foreground"
                 >
-                  gdg@laurodefreitas.dev
+                  gdglaurodefreitas@gmail.com
                 </a>
                 <a href="#" className="block hover:text-foreground">
                   Seja voluntário
@@ -65,22 +71,12 @@ export function Footer() {
                 </a>
               </div>
             </div>
-            <div className="col-span-2 md:col-span-1">
-              <div className="rounded-2xl bg-card border border-foreground/10 p-4">
-                <div className="font-mono text-[10px] tracking-[0.12em] text-foreground/30">
-                  STATUS DO EVENTO
-                </div>
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-trilha-community animate-pulse" />
-                  <span className="text-[13px] font-medium">
-                    Proposta visual v1 • Sprint em andamento
-                  </span>
-                </div>
-                <div className="mt-3 text-[11px] leading-[1.4] text-foreground/40">
-                  Data: 21 Nov 2026 • Local: SENAI Lauro • 200+ builders
-                  esperados
-                </div>
-              </div>
+            <div className="col-span-2 md:col-span-1 flex items-center justify-center md:justify-end">
+              <img
+                src="/images/2026/android-mascot.png"
+                alt="Mascote Android do DevFest Lauro de Freitas"
+                className="h-32 w-auto object-contain md:h-40"
+              />
             </div>
           </div>
         </div>
@@ -97,7 +93,7 @@ export function Footer() {
             BUILD SECURE SCALE
           </span>
         </div>
-      </div>
+      </motion.div>
     </footer>
   )
 }

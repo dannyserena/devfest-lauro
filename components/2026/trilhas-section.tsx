@@ -1,32 +1,60 @@
+"use client"
+
 import { ArrowUpRight } from "lucide-react"
+import { motion } from "framer-motion"
 import { trilhas } from "@/content/2026/trilhas"
+import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
 export function TrilhasSection() {
   return (
     <section id="trilhas" className="border-t border-foreground/[0.06] bg-card/40">
       <div className="mx-auto max-w-[1280px] px-6 py-20 md:py-28">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          variants={staggerContainer(0.1)}
+          className="flex flex-wrap items-end justify-between gap-6 mb-12"
+        >
           <div>
-            <div className="font-mono text-[11px] tracking-[0.16em] text-foreground/40 mb-4">
+            <motion.div
+              variants={staggerItem}
+              className="font-mono text-[11px] tracking-[0.16em] text-foreground/40 mb-4"
+            >
               3 TRILHAS • 1 PROPÓSITO
-            </div>
-            <h2 className="text-[36px] md:text-[54px] font-bold leading-[0.95] tracking-[-0.04em]">
+            </motion.div>
+            <motion.h2
+              variants={fadeUp}
+              className="text-[36px] md:text-[54px] font-bold leading-[0.95] tracking-[-0.04em]"
+            >
               Escolha seu <span className="text-foreground/30">lado.</span>{" "}
               Ou viva os três.
-            </h2>
+            </motion.h2>
           </div>
-          <p className="max-w-[380px] text-[14px] leading-[1.6] text-foreground/50">
+          <motion.p
+            variants={staggerItem}
+            className="max-w-[380px] text-[14px] leading-[1.6] text-foreground/50"
+          >
             Cada trilha é um palco dedicado, com curadoria independente e
             labs práticos. Você circula livre.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-[1px] rounded-[28px] overflow-hidden bg-foreground/10 p-[1px]">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          variants={staggerContainer(0.12)}
+          className="grid lg:grid-cols-3 gap-[1px] rounded-[28px] overflow-hidden bg-foreground/10 p-[1px]"
+        >
           {trilhas.map((t) => {
             const Icon = t.icon
             return (
-              <div
+              <motion.div
                 key={t.id}
+                variants={staggerItem}
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className="group relative bg-card p-7 md:p-8 flex flex-col min-h-[480px] hover:bg-foreground/[0.03] transition-colors"
               >
                 <div
@@ -85,10 +113,10 @@ export function TrilhasSection() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

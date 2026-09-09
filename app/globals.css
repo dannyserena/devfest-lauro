@@ -225,6 +225,16 @@
   }
 }
 
+/* DevFest 2026 — hero: neutraliza via CSS (não via JS, pra não gerar
+   mismatch de hidratação com o Framer Motion) as animações de entrada
+   dos elementos que usam `variants` com transform/opacity inline. */
+@media (prefers-reduced-motion: reduce) {
+  .rm-static {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
