@@ -90,6 +90,7 @@ export function SpeakersSection() {
             </p>
           </motion.div>
 
+          {/* Cards dos palestrantes ocultos por enquanto — só o keynote aparece.
           {speakers.map((s) => {
             const trilha = trilhas.find((t) => t.id === s.trilha)
             const color = trilha?.color ?? "#F4B400"
@@ -117,7 +118,7 @@ export function SpeakersSection() {
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
                     />
 
-                    {/* shine sweep */}
+                    // shine sweep
                     <div className="pointer-events-none absolute inset-0 overflow-hidden">
                       <div className="absolute -inset-y-8 -left-1/3 w-1/3 -translate-x-[200%] rotate-12 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-[420%]" />
                     </div>
@@ -162,7 +163,7 @@ export function SpeakersSection() {
                 </div>
               </motion.div>
             )
-          })}
+          })} */}
         </motion.div>
       ) : (
         <motion.div
