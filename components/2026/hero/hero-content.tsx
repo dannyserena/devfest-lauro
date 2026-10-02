@@ -66,7 +66,7 @@ export function HeroContent() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 h-[48px] px-6 rounded-full bg-trilha-build text-black font-bold text-[15px] hover:brightness-110 transition"
           >
-            Garantir ingresso 1º lote
+            Garantir ingresso 2º lote
             <span className="w-6 h-6 rounded-full bg-black text-trilha-build grid place-items-center transition-transform group-hover:translate-x-0.5">
               <ArrowUpRight className="w-4 h-4" />
             </span>

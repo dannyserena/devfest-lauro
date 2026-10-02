@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Send } from "lucide-react"
+import { Send, Sparkles, BadgeCheck } from "lucide-react"
 import { motion } from "framer-motion"
 import { speakers } from "@/content/2026/speakers"
 import { trilhas } from "@/content/2026/trilhas"
@@ -60,45 +60,109 @@ export function SpeakersSection() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={viewportOnce}
-          variants={staggerContainer(0.08)}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          viewport={{ once: true, amount: 0 }}
+          variants={staggerContainer(0.06)}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
         >
-          {speakers.map((s) => (
-            <motion.div
-              key={s.id}
-              variants={staggerItem}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="rounded-2xl overflow-hidden bg-card border border-foreground/10 group"
-            >
-              <div className="aspect-[4/3] relative bg-foreground/[0.03]">
-                <Image
-                  src={s.photo}
-                  alt={s.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4">
+          {/* Vaga de keynote reservada — headliner ainda não anunciado.
+              Ocupa a linha inteira pra puxar o olho antes dos cards confirmados. */}
+          <motion.div
+            variants={staggerItem}
+            className="relative overflow-hidden rounded-2xl border-2 border-dashed border-trilha-build/40 bg-gradient-to-br from-trilha-build/[0.07] via-transparent to-trilha-scale/[0.06] p-6 md:p-7 col-span-full flex flex-col justify-center min-h-[180px]"
+          >
+            <div className="pointer-events-none absolute -top-16 -right-10 h-48 w-48 rounded-full bg-trilha-build/20 blur-[80px]" />
+            <div className="pointer-events-none absolute -bottom-16 -left-10 h-48 w-48 rounded-full bg-trilha-scale/15 blur-[80px]" />
+
+            <div className="relative inline-flex w-fit items-center gap-2 pl-1.5 pr-3 py-1 rounded-full bg-foreground/[0.06] border border-foreground/10 mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-trilha-build animate-pulse motion-reduce:animate-none" />
+              <Sparkles className="w-3 h-3 text-trilha-build" />
+              <span className="font-mono text-[11px] font-bold tracking-[0.14em] text-foreground/70">
+                KEYNOTE · A CONFIRMAR
+              </span>
+            </div>
+            <h3 className="relative text-[24px] md:text-[30px] font-bold tracking-[-0.03em] leading-[1.1] max-w-[520px]">
+              Guardamos o palco principal pra um nome{" "}
+              <span className="text-foreground/30">grande.</span>
+            </h3>
+            <p className="relative mt-2 text-[14px] leading-[1.6] text-foreground/55 max-w-[480px]">
+              O headliner 2026 ainda está fechando agenda. Anúncio sai aqui e
+              nas redes do GDG Lauro assim que confirmar.
+            </p>
+          </motion.div>
+
+          {speakers.map((s) => {
+            const trilha = trilhas.find((t) => t.id === s.trilha)
+            const color = trilha?.color ?? "#F4B400"
+            return (
+              <motion.div
+                key={s.id}
+                variants={staggerItem}
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="group relative rounded-2xl p-[1.5px] overflow-hidden transition-shadow duration-300"
+                style={{
+                  background: `linear-gradient(160deg, ${color}, color-mix(in srgb, ${color} 15%, transparent) 45%, transparent 70%)`,
+                }}
+              >
                 <div
-                  className="font-mono text-[10px] font-bold tracking-[0.12em]"
-                  style={{ color: `var(--trilha-${s.trilha.toLowerCase()}-on-surface)` }}
+                  className="relative rounded-[15px] overflow-hidden bg-card h-full transition-shadow duration-300 group-hover:shadow-[0_20px_45px_-18px_var(--card-glow)]"
+                  style={{ ["--card-glow" as string]: `${color}70` }}
                 >
-                  {s.trilha}
+                  <div className="aspect-square relative bg-foreground/[0.03] overflow-hidden">
+                    <Image
+                      src={s.photo}
+                      alt={s.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+                    />
+
+                    {/* shine sweep */}
+                    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                      <div className="absolute -inset-y-8 -left-1/3 w-1/3 -translate-x-[200%] rotate-12 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-[420%]" />
+                    </div>
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/5" />
+
+                    <div className="absolute top-2 left-2">
+                      <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/50 backdrop-blur-md border border-white/15">
+                        <span
+                          className="w-1.5 h-1.5 rounded-full"
+                          style={{ backgroundColor: color }}
+                        />
+                        <span className="font-mono text-[9px] font-bold tracking-[0.12em] text-white">
+                          {s.trilha}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="absolute top-2 right-2">
+                      <BadgeCheck
+                        className="w-5 h-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
+                        fill={color}
+                        stroke="white"
+                        strokeWidth={2}
+                      />
+                    </div>
+
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <div className="font-bold text-[13px] md:text-[14px] text-white leading-tight truncate">
+                        {s.name}
+                      </div>
+                      <div className="text-[10px] md:text-[11px] text-white/60 mt-0.5 truncate">
+                        {s.role} · {s.company}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3">
+                    <div className="text-[11px] md:text-[12px] text-foreground/70 leading-[1.35] line-clamp-2">
+                      {s.talk}
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-1 font-semibold text-[15px] text-foreground">
-                  {s.name}
-                </div>
-                <div className="text-[13px] text-foreground/50">
-                  {s.role} · {s.company}
-                </div>
-                <div className="mt-2 text-[13px] text-foreground/70 leading-[1.4]">
-                  {s.talk}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            )
+          })}
         </motion.div>
       ) : (
         <motion.div
