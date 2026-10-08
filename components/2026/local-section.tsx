@@ -46,7 +46,7 @@ export function LocalSection() {
               </div>
               <div>
                 <div className="font-semibold text-[14px]">
-                  SENAI CIMATEC Lauro de Freitas
+                  SENAI Lauro de Freitas
                 </div>
                 <div className="text-[13px] text-foreground/50 leading-[1.4] mt-1">
                   Av. Santos Dumont, 3000 - Centro
@@ -67,7 +67,7 @@ export function LocalSection() {
                   07 de Novembro de 2026 • Sábado
                 </div>
                 <div className="text-[13px] text-foreground/50 mt-1">
-                  08h credenciamento • 09h abertura • 18h encerramento + happy
+                  08h credenciamento • 09h abertura • 17h encerramento 
                   hour
                 </div>
               </div>
