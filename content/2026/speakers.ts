@@ -10,8 +10,8 @@ export interface Speaker {
 }
 
 // Primeira leva do line-up 2026, a partir das propostas confirmadas no CFP.
-// Fotos baixadas das URLs enviadas no formulário. Emanuele, Tata e Manoeli
-// ainda sem foto acessível (link do LinkedIn / Drive privado) — usam iniciais.
+// Fotos baixadas das URLs enviadas no formulário (ou enviadas depois).
+// Manoeli ainda sem foto acessível (pasta privada no Drive) — usa iniciais.
 export const speakers: Speaker[] = [
   {
     id: "elienaide-machado",
@@ -36,6 +36,7 @@ export const speakers: Speaker[] = [
     name: "Emanuele Rangel",
     role: "Consultora de Desenvolvimento",
     company: "ThoughtWorks",
+    photo: "/speakers/2026/emanuele-rangel.jpeg",
     talk: "Refatoração Kamu: 10 Anos em 10 Dias",
     trilha: "BUILD",
   },
@@ -53,6 +54,7 @@ export const speakers: Speaker[] = [
     name: "Tata Ribeiro",
     role: "Fundadora & Gerente de Projetos",
     company: "Black XP",
+    photo: "/speakers/2026/tata-ribeiro.jpeg",
     talk: "Do player ao builder: o que aprendemos formando novos talentos para a indústria de games",
     trilha: "SCALE",
   },
