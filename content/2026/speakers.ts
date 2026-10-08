@@ -111,4 +111,13 @@ export const speakers: Speaker[] = [
     talk: "Tudo que aprendi em 23 anos como Engenheiro de Software",
     trilha: "SCALE",
   },
+  {
+    id: "ghabryel-ferreira",
+    name: "Ghabryel Henrique Ferreira",
+    role: "AI Engineer",
+    company: "Google Developer Expert Angular",
+    photo: "/speakers/2026/ghabryel-ferreira.jpeg",
+    talk: "Arquitetura Limpa no Frontend: Escalando Aplicações para o Mundo Real",
+    trilha: "BUILD",
+  },
 ]
