@@ -11,7 +11,6 @@ export interface Speaker {
 
 // Primeira leva do line-up 2026, a partir das propostas confirmadas no CFP.
 // Fotos baixadas das URLs enviadas no formulário (ou enviadas depois).
-// Manoeli ainda sem foto acessível (pasta privada no Drive) — usa iniciais.
 export const speakers: Speaker[] = [
   {
     id: "elienaide-machado",
@@ -72,6 +71,7 @@ export const speakers: Speaker[] = [
     name: "Manoeli Morais",
     role: "Instrutora e Treinadora",
     company: "Comunicação, Gestão & TI",
+    photo: "/speakers/2026/manoeli-morais.jpeg",
     talk: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
     trilha: "SCALE",
   },
