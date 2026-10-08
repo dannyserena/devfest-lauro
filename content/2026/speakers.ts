@@ -3,15 +3,15 @@ export interface Speaker {
   name: string
   role: string
   company: string
-  /** photo em /public/speakers/2026/<arquivo> */
-  photo: string
+  /** photo em /public/speakers/2026/<arquivo>; sem foto → card mostra as iniciais */
+  photo?: string
   talk: string
   trilha: "BUILD" | "SECURE" | "SCALE"
 }
 
 // Primeira leva do line-up 2026, a partir das propostas confirmadas no CFP.
-// Fotos aguardando envio — ver /public/speakers/2026/README (arquivos
-// esperados com os mesmos nomes usados abaixo em `photo`).
+// Fotos baixadas das URLs enviadas no formulário. Emanuele, Tata e Manoeli
+// ainda sem foto acessível (link do LinkedIn / Drive privado) — usam iniciais.
 export const speakers: Speaker[] = [
   {
     id: "elienaide-machado",
@@ -36,7 +36,6 @@ export const speakers: Speaker[] = [
     name: "Emanuele Rangel",
     role: "Consultora de Desenvolvimento",
     company: "ThoughtWorks",
-    photo: "/speakers/2026/emanuele-rangel.jpeg",
     talk: "Refatoração Kamu: 10 Anos em 10 Dias",
     trilha: "BUILD",
   },
@@ -54,7 +53,6 @@ export const speakers: Speaker[] = [
     name: "Tata Ribeiro",
     role: "Fundadora & Gerente de Projetos",
     company: "Black XP",
-    photo: "/speakers/2026/tata-ribeiro.jpeg",
     talk: "Do player ao builder: o que aprendemos formando novos talentos para a indústria de games",
     trilha: "SCALE",
   },
@@ -72,7 +70,6 @@ export const speakers: Speaker[] = [
     name: "Manoeli Morais",
     role: "Instrutora e Treinadora",
     company: "Comunicação, Gestão & TI",
-    photo: "/speakers/2026/manoeli-morais.jpeg",
     talk: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
     trilha: "SCALE",
   },

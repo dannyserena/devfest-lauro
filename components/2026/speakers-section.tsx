@@ -90,7 +90,6 @@ export function SpeakersSection() {
             </p>
           </motion.div>
 
-          {/* Cards dos palestrantes ocultos por enquanto — só o keynote aparece.
           {speakers.map((s) => {
             const trilha = trilhas.find((t) => t.id === s.trilha)
             const color = trilha?.color ?? "#F4B400"
@@ -110,15 +109,31 @@ export function SpeakersSection() {
                   style={{ ["--card-glow" as string]: `${color}70` }}
                 >
                   <div className="aspect-square relative bg-foreground/[0.03] overflow-hidden">
-                    <Image
-                      src={s.photo}
-                      alt={s.name}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
-                    />
+                    {s.photo ? (
+                      <Image
+                        src={s.photo}
+                        alt={s.name}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                        className="object-cover object-[50%_25%] transition-transform duration-500 group-hover:scale-[1.06]"
+                      />
+                    ) : (
+                      // Foto ainda não recebida — iniciais na cor da trilha
+                      <div
+                        className="absolute inset-0 grid place-items-center pb-10 text-[48px] md:text-[64px] font-bold tracking-[-0.04em] text-white/90"
+                        style={{
+                          background: `radial-gradient(circle at 30% 20%, ${color}, color-mix(in srgb, ${color} 35%, #0a0a0a) 70%)`,
+                        }}
+                      >
+                        {s.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .slice(0, 2)
+                          .join("")}
+                      </div>
+                    )}
 
-                    // shine sweep
+                    {/* shine sweep */}
                     <div className="pointer-events-none absolute inset-0 overflow-hidden">
                       <div className="absolute -inset-y-8 -left-1/3 w-1/3 -translate-x-[200%] rotate-12 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-[420%]" />
                     </div>
@@ -163,7 +178,7 @@ export function SpeakersSection() {
                 </div>
               </motion.div>
             )
-          })} */}
+          })}
         </motion.div>
       ) : (
         <motion.div
