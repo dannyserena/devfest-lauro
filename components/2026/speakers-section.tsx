@@ -165,7 +165,7 @@ export function SpeakersSection() {
                         {s.name}
                       </div>
                       <div className="text-[10px] md:text-[11px] text-white/60 mt-0.5 truncate">
-                        {s.role} · {s.company}
+                        {[s.role, s.company].filter(Boolean).join(" · ")}
                       </div>
                     </div>
                   </div>
