@@ -156,13 +156,15 @@ export const speakers: Speaker[] = [
     talk: "AI-Native by Design: por que segurança precisa nascer com o produto, não depois dele",
     trilha: "SECURE",
   },
-  {
-    id: "ghabryel-ferreira",
-    name: "Ghabryel Henrique Ferreira",
-    role: "AI Engineer",
-    company: "Google Developer Expert Angular",
-    photo: "/speakers/2026/ghabryel-ferreira.jpeg",
-    talk: "Arquitetura Limpa no Frontend: Escalando Aplicações para o Mundo Real",
-    trilha: "BUILD",
-  },
 ]
+
+// Keynote fica fora da grade — tem card próprio, em destaque, no topo da seção.
+export const keynote: Speaker = {
+  id: "ghabryel-ferreira",
+  name: "Ghabryel Henrique Ferreira",
+  role: "AI Engineer",
+  company: "Google Developer Expert Angular",
+  photo: "/speakers/2026/ghabryel-ferreira.jpeg",
+  talk: "Arquitetura Limpa no Frontend: Escalando Aplicações para o Mundo Real",
+  trilha: "BUILD",
+}

@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Send, Sparkles, BadgeCheck } from "lucide-react"
 import { motion } from "framer-motion"
-import { speakers } from "@/content/2026/speakers"
+import { keynote, speakers } from "@/content/2026/speakers"
 import { trilhas } from "@/content/2026/trilhas"
 import { PALESTRANTES_FORM_URL } from "@/content/2026/links"
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
@@ -64,30 +64,46 @@ export function SpeakersSection() {
           variants={staggerContainer(0.06)}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
         >
-          {/* Vaga de keynote reservada — headliner ainda não anunciado.
-              Ocupa a linha inteira pra puxar o olho antes dos cards confirmados. */}
+          {/* Keynote — ocupa a linha inteira pra puxar o olho antes dos demais cards. */}
           <motion.div
             variants={staggerItem}
-            className="relative overflow-hidden rounded-2xl border-2 border-dashed border-trilha-build/40 bg-gradient-to-br from-trilha-build/[0.07] via-transparent to-trilha-scale/[0.06] p-6 md:p-7 col-span-full flex flex-col justify-center min-h-[180px]"
+            className="relative col-span-full rounded-2xl p-[1.5px] overflow-hidden bg-gradient-to-br from-trilha-build via-trilha-build/30 to-trilha-scale/40"
           >
-            <div className="pointer-events-none absolute -top-16 -right-10 h-48 w-48 rounded-full bg-trilha-build/20 blur-[80px]" />
-            <div className="pointer-events-none absolute -bottom-16 -left-10 h-48 w-48 rounded-full bg-trilha-scale/15 blur-[80px]" />
+            <div className="relative overflow-hidden rounded-[15px] bg-card flex flex-col sm:flex-row sm:items-stretch">
+              <div className="pointer-events-none absolute -top-16 -right-10 h-48 w-48 rounded-full bg-trilha-build/20 blur-[80px]" />
+              <div className="pointer-events-none absolute -bottom-16 left-1/3 h-48 w-48 rounded-full bg-trilha-scale/15 blur-[80px]" />
 
-            <div className="relative inline-flex w-fit items-center gap-2 pl-1.5 pr-3 py-1 rounded-full bg-foreground/[0.06] border border-foreground/10 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-trilha-build animate-pulse motion-reduce:animate-none" />
-              <Sparkles className="w-3 h-3 text-trilha-build" />
-              <span className="font-mono text-[11px] font-bold tracking-[0.14em] text-foreground/70">
-                KEYNOTE · A CONFIRMAR
-              </span>
+              <div className="relative aspect-square sm:aspect-auto sm:w-[240px] md:w-[280px] shrink-0 bg-foreground/[0.03]">
+                {keynote.photo && (
+                  <Image
+                    src={keynote.photo}
+                    alt={keynote.name}
+                    fill
+                    sizes="(min-width: 768px) 280px, (min-width: 640px) 240px, 100vw"
+                    className="object-cover object-[50%_25%]"
+                  />
+                )}
+              </div>
+
+              <div className="relative flex flex-col justify-center p-6 md:p-8">
+                <div className="inline-flex w-fit items-center gap-2 pl-1.5 pr-3 py-1 rounded-full bg-foreground/[0.06] border border-foreground/10 mb-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-trilha-build animate-pulse motion-reduce:animate-none" />
+                  <Sparkles className="w-3 h-3 text-trilha-build" />
+                  <span className="font-mono text-[11px] font-bold tracking-[0.14em] text-foreground/70">
+                    KEYNOTE
+                  </span>
+                </div>
+                <h3 className="text-[26px] md:text-[34px] font-bold tracking-[-0.03em] leading-[1.05]">
+                  {keynote.name}
+                </h3>
+                <div className="mt-1.5 text-[13px] md:text-[14px] text-foreground/55">
+                  {[keynote.role, keynote.company].filter(Boolean).join(" · ")}
+                </div>
+                <p className="mt-4 text-[16px] md:text-[19px] font-semibold leading-[1.35] tracking-[-0.01em] text-foreground/85 max-w-[620px]">
+                  {keynote.talk}
+                </p>
+              </div>
             </div>
-            <h3 className="relative text-[24px] md:text-[30px] font-bold tracking-[-0.03em] leading-[1.1] max-w-[520px]">
-              Guardamos o palco principal pra um nome{" "}
-              <span className="text-foreground/30">grande.</span>
-            </h3>
-            <p className="relative mt-2 text-[14px] leading-[1.6] text-foreground/55 max-w-[480px]">
-              O headliner 2026 ainda está fechando agenda. Anúncio sai aqui e
-              nas redes do GDG Lauro assim que confirmar.
-            </p>
           </motion.div>
 
           {speakers.map((s) => {
