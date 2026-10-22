@@ -8,9 +8,9 @@ import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/component
 // Logos sempre sobre fundo claro (#f7f7f7 = fundo do JPG do SENAI), inclusive
 // no dark mode — as versões coloridas não têm variante pra fundo escuro.
 const apoiadores = [
-  { name: "SENAI Bahia", logo: "/sponsors/2026/senai.jpg", width: 436, height: 110, href: "https://www.instagram.com/senaibahia/" },
+  { name: "SENAI Lauro de Freitas", logo: "/sponsors/2026/senai.jpg", width: 436, height: 110, href: "https://www.instagram.com/senailaurodefreitas/" },
   { name: "Casa do Código", logo: "/sponsors/2026/casa-do-codigo.svg", width: 330, height: 96, href: "https://www.casadocodigo.com.br/" },
-  { name: "LAMIT — Liga Acadêmica de Maratonas, Inovação e Tecnologia", logo: "/sponsors/2026/lamit.png", width: 488, height: 800, href: "https://www.instagram.com/lamitufba/" },
+  { name: "LAMIT — Liga Acadêmica de Maratonas, Inovação e Tecnologia", logo: "/sponsors/2026/lamit.png", width: 488, height: 800, href: "https://www.instagram.com/lamit.ucsal/" },
   { name: "AWS Student Builder Group SENAI CIMATEC", logo: "/sponsors/2026/cimatec.png", width: 711, height: 800, href: "https://www.instagram.com/awscloudclubsenaicimatec/" },
 ]
 
