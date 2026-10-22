@@ -8,10 +8,10 @@ import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/component
 // Logos sempre sobre fundo claro (#f7f7f7 = fundo do JPG do SENAI), inclusive
 // no dark mode — as versões coloridas não têm variante pra fundo escuro.
 const apoiadores = [
-  { name: "SENAI", logo: "/sponsors/2026/senai.jpg", width: 436, height: 110 },
-  { name: "Casa do Código", logo: "/sponsors/2026/casa-do-codigo.svg", width: 330, height: 96 },
-  { name: "LAMIT — Liga Acadêmica de Maratonas, Inovação e Tecnologia", logo: "/sponsors/2026/lamit.png", width: 488, height: 800 },
-  { name: "CIMATEC", logo: "/sponsors/2026/cimatec.png", width: 711, height: 800 },
+  { name: "SENAI Bahia", logo: "/sponsors/2026/senai.jpg", width: 436, height: 110, href: "https://www.instagram.com/senaibahia/" },
+  { name: "Casa do Código", logo: "/sponsors/2026/casa-do-codigo.svg", width: 330, height: 96, href: "https://www.casadocodigo.com.br/" },
+  { name: "LAMIT — Liga Acadêmica de Maratonas, Inovação e Tecnologia", logo: "/sponsors/2026/lamit.png", width: 488, height: 800, href: "https://www.instagram.com/lamitufba/" },
+  { name: "AWS Student Builder Group SENAI CIMATEC", logo: "/sponsors/2026/cimatec.png", width: 711, height: 800, href: "https://www.instagram.com/awscloudclubsenaicimatec/" },
 ]
 
 export function SponsorsCtaSection() {
@@ -32,10 +32,14 @@ export function SponsorsCtaSection() {
         </motion.div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {apoiadores.map((a) => (
-            <motion.div
+            <motion.a
               key={a.name}
+              href={a.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={a.name}
               variants={staggerItem}
-              className="rounded-2xl bg-[#f7f7f7] border border-foreground/10 h-[120px] md:h-[140px] grid place-items-center px-6"
+              className="rounded-2xl bg-[#f7f7f7] border border-foreground/10 h-[120px] md:h-[140px] grid place-items-center px-6 transition hover:-translate-y-1 hover:shadow-[0_12px_30px_-14px_rgba(0,0,0,0.35)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-trilha-build"
             >
               <Image
                 src={a.logo}
@@ -44,7 +48,7 @@ export function SponsorsCtaSection() {
                 height={a.height}
                 className="h-auto max-h-[72px] md:max-h-[88px] w-auto max-w-full"
               />
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </motion.div>
