@@ -10,6 +10,8 @@ import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/component
 const apoiadores = [
   { name: "SENAI", logo: "/sponsors/2026/senai.jpg", width: 436, height: 110 },
   { name: "Casa do Código", logo: "/sponsors/2026/casa-do-codigo.svg", width: 330, height: 96 },
+  { name: "LAMIT — Liga Acadêmica de Maratonas, Inovação e Tecnologia", logo: "/sponsors/2026/lamit.png", width: 488, height: 800 },
+  { name: "CIMATEC", logo: "/sponsors/2026/cimatec.png", width: 711, height: 800 },
 ]
 
 export function SponsorsCtaSection() {
@@ -28,19 +30,19 @@ export function SponsorsCtaSection() {
         >
           APOIO
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[720px]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {apoiadores.map((a) => (
             <motion.div
               key={a.name}
               variants={staggerItem}
-              className="rounded-2xl bg-[#f7f7f7] border border-foreground/10 h-[120px] md:h-[140px] grid place-items-center px-8"
+              className="rounded-2xl bg-[#f7f7f7] border border-foreground/10 h-[120px] md:h-[140px] grid place-items-center px-6"
             >
               <Image
                 src={a.logo}
                 alt={a.name}
                 width={a.width}
                 height={a.height}
-                className="h-auto max-h-[64px] md:max-h-[72px] w-auto max-w-full"
+                className="h-auto max-h-[72px] md:max-h-[88px] w-auto max-w-full"
               />
             </motion.div>
           ))}

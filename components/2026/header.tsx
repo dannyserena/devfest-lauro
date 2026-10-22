@@ -36,16 +36,8 @@ export function Header() {
     >
       <div className="mx-auto max-w-[1280px] px-6 py-3 md:py-4 flex items-center justify-between">
         <div className="flex items-center gap-10">
-          <Link href="/" className="flex flex-col leading-none group">
-            <div className="flex items-center gap-2">
-              <DevFestLogo className="h-6 w-auto shrink-0 text-foreground" />
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-foreground text-background tracking-wide">
-                2026
-              </span>
-            </div>
-            <span className="mt-1.5 text-xs font-medium uppercase tracking-wider text-foreground/45">
-              Lauro de Freitas
-            </span>
+          <Link href="/" aria-label="DevFest Lauro de Freitas 2026 — início" className="flex items-center">
+            <DevFestLogo className="h-9 md:h-11" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

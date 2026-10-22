@@ -1,11 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import { Send, Sparkles, BadgeCheck } from "lucide-react"
+import { Sparkles, BadgeCheck } from "lucide-react"
 import { motion } from "framer-motion"
 import { keynote, speakers } from "@/content/2026/speakers"
 import { trilhas } from "@/content/2026/trilhas"
-import { PALESTRANTES_FORM_URL } from "@/content/2026/links"
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
 // Enquanto a curadoria não fecha, mostra 6 "vagas" com a cor das
@@ -230,46 +229,6 @@ export function SpeakersSection() {
         </motion.div>
       )}
 
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={viewportOnce}
-        variants={fadeUp}
-        className="mt-8 relative rounded-[24px] p-[1px] overflow-hidden bg-gradient-to-r from-trilha-build via-orange-500 to-trilha-secure shadow-[0_20px_60px_-20px_rgba(244,180,0,0.35)]"
-      >
-        <div className="relative overflow-hidden rounded-[23px] bg-zinc-950 px-6 py-8 md:px-10 md:py-10">
-          <div className="pointer-events-none absolute -top-24 -right-16 h-64 w-64 rounded-full bg-trilha-build/25 blur-[100px]" />
-          <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-trilha-secure/20 blur-[100px]" />
-
-          <div className="relative flex flex-col items-center gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
-            <div className="max-w-[560px]">
-              <div className="inline-flex items-center gap-2 pl-1 pr-3 py-1 rounded-full bg-white/10 border border-white/10 mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-trilha-community animate-pulse motion-reduce:animate-none" />
-                <span className="font-mono text-[11px] font-bold tracking-[0.14em] text-white/80">
-                  CALL FOR PAPERS ABERTO
-                </span>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold tracking-[-0.02em] leading-[1.1] text-white">
-                Submeta sua palestra para o DevFest Lauro 2026
-              </h3>
-              <p className="mt-3 text-[14px] md:text-[15px] leading-[1.6] text-white/60">
-                Trilhas Build, Secure ou Scale. Compartilhe seu conhecimento
-                com a maior comunidade da RMS.
-              </p>
-            </div>
-
-            <a
-              href={PALESTRANTES_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-14 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-amber-400 px-8 text-[15px] font-bold text-black shadow-[0_8px_30px_rgba(244,180,0,0.4)] transition hover:bg-amber-300 md:w-auto"
-            >
-              <Send className="w-4 h-4" />
-              Submeter Proposta (CFP)
-            </a>
-          </div>
-        </div>
-      </motion.div>
     </section>
   )
 }

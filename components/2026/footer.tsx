@@ -17,12 +17,7 @@ export function Footer() {
       >
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div>
-            <div className="flex items-center gap-2.5">
-              <DevFestLogo className="h-6 w-auto shrink-0 text-foreground" />
-              <span className="font-black tracking-[-0.02em]">
-                Lauro de Freitas
-              </span>
-            </div>
+            <DevFestLogo className="h-12 md:h-14" />
             <div className="mt-3 text-[13px] leading-[1.5] text-foreground/45 max-w-[320px]">
               Uma iniciativa GDG Lauro de Freitas. Organizado pela comunidade,
               para a comunidade. Não afiliado ao Google LLC.
