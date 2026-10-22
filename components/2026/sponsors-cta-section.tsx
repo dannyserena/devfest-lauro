@@ -5,9 +5,21 @@ import { motion } from "framer-motion"
 import { MEDIA_KIT_URL } from "@/content/2026/links"
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
+interface LogoParceiro {
+  name: string
+  logo: string
+  width: number
+  height: number
+  href: string
+}
+
+const patrocinadores: LogoParceiro[] = [
+  { name: "Google Developers", logo: "/sponsors/2026/google-developers.png", width: 1193, height: 151, href: "https://developers.google.com/" },
+]
+
 // Logos sempre sobre fundo claro (#f7f7f7 = fundo do JPG do SENAI), inclusive
 // no dark mode — as versões coloridas não têm variante pra fundo escuro.
-const apoiadores = [
+const apoiadores: LogoParceiro[] = [
   { name: "SENAI Lauro de Freitas", logo: "/sponsors/2026/senai.jpg", width: 436, height: 110, href: "https://www.instagram.com/senailaurodefreitas/" },
   { name: "Casa do Código", logo: "/sponsors/2026/casa-do-codigo.svg", width: 330, height: 96, href: "https://www.casadocodigo.com.br/" },
   { name: "LAMIT — Liga Acadêmica de Maratonas, Inovação e Tecnologia", logo: "/sponsors/2026/lamit.png", width: 488, height: 800, href: "https://www.instagram.com/lamit.ucsal/" },
@@ -17,41 +29,18 @@ const apoiadores = [
 export function SponsorsCtaSection() {
   return (
     <section id="patrocinadores" className="mx-auto max-w-[1280px] px-6 py-20">
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={viewportOnce}
-        variants={staggerContainer(0.1)}
-        className="mb-10"
-      >
-        <motion.div
-          variants={staggerItem}
-          className="font-mono text-[11px] tracking-[0.16em] text-foreground/40 mb-4"
-        >
-          APOIO
-        </motion.div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {apoiadores.map((a) => (
-            <motion.a
-              key={a.name}
-              href={a.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={a.name}
-              variants={staggerItem}
-              className="rounded-2xl bg-[#f7f7f7] border border-foreground/10 h-[120px] md:h-[140px] grid place-items-center px-6 transition hover:-translate-y-1 hover:shadow-[0_12px_30px_-14px_rgba(0,0,0,0.35)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-trilha-build"
-            >
-              <Image
-                src={a.logo}
-                alt={a.name}
-                width={a.width}
-                height={a.height}
-                className="h-auto max-h-[72px] md:max-h-[88px] w-auto max-w-full"
-              />
-            </motion.a>
-          ))}
-        </div>
-      </motion.div>
+      <LogoGrupo
+        titulo="PATROCINADORES"
+        itens={patrocinadores}
+        gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4"
+        logoClassName="max-h-[40px] md:max-h-[48px]"
+      />
+      <LogoGrupo
+        titulo="APOIO"
+        itens={apoiadores}
+        gridClassName="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4"
+        logoClassName="max-h-[72px] md:max-h-[88px]"
+      />
 
       <motion.div
         initial="hidden"
@@ -104,5 +93,55 @@ export function SponsorsCtaSection() {
         </motion.div>
       </motion.div>
     </section>
+  )
+}
+
+function LogoGrupo({
+  titulo,
+  itens,
+  gridClassName,
+  logoClassName,
+}: {
+  titulo: string
+  itens: LogoParceiro[]
+  gridClassName: string
+  logoClassName: string
+}) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={viewportOnce}
+      variants={staggerContainer(0.1)}
+      className="mb-10"
+    >
+      <motion.div
+        variants={staggerItem}
+        className="font-mono text-[11px] tracking-[0.16em] text-foreground/40 mb-4"
+      >
+        {titulo}
+      </motion.div>
+      <div className={gridClassName}>
+        {itens.map((a) => (
+          <motion.a
+            key={a.name}
+            href={a.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={a.name}
+            variants={staggerItem}
+            className="rounded-2xl bg-[#f7f7f7] border border-foreground/10 h-[120px] md:h-[140px] grid place-items-center px-6 transition hover:-translate-y-1 hover:shadow-[0_12px_30px_-14px_rgba(0,0,0,0.35)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-trilha-build"
+          >
+            <Image
+              src={a.logo}
+              alt={a.name}
+              width={a.width}
+              height={a.height}
+              className={`h-auto w-auto max-w-full ${logoClassName}`}
+            />
+          </motion.a>
+        ))}
+      </div>
+    </motion.div>
   )
 }
