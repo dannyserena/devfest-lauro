@@ -8,7 +8,6 @@ import { SpeakersSection } from "@/components/2026/speakers-section"
 import { Legacy2025Section } from "@/components/2026/legacy-2025-section"
 import { LocalSection } from "@/components/2026/local-section"
 import { SponsorsCtaSection } from "@/components/2026/sponsors-cta-section"
-import { OrganizersSection } from "@/components/2026/organizers-section"
 import { Footer } from "@/components/2026/footer"
 
 export const metadata: Metadata = {
@@ -29,7 +28,6 @@ export default function HomePage() {
         <Legacy2025Section />
         <LocalSection />
         <SponsorsCtaSection />
-        <OrganizersSection />
       </main>
       <Footer />
     </ThemeScope>

@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { MEDIA_KIT_URL } from "@/content/2026/links"
+import { OrganizersSection } from "@/components/2026/organizers-section"
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
 interface LogoParceiro {
@@ -35,6 +36,7 @@ export function SponsorsCtaSection() {
         gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4"
         logoClassName="max-h-[40px] md:max-h-[48px]"
       />
+      <OrganizersSection />
       <LogoGrupo
         titulo="APOIO"
         itens={apoiadores}
