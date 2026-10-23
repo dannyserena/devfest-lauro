@@ -243,7 +243,6 @@ export const agenda: AgendaBlock[] = [
     subtitle: "20 min",
     space: "Área de Convivência",
     icon: "coffee",
-    span: "tracks",
   },
   {
     id: "t1530",
@@ -313,8 +312,8 @@ export const labItems: AgendaLabItem[] = [
   },
   {
     id: "workshop-2",
-    time: "14:30 – 16:10",
-    from: "t1430",
+    time: "15:30 – 16:30",
+    from: "t1530",
     to: "t1530",
     tag: "WORKSHOP 2",
     title: "Engenharia do Caos e escalabilidade de sistemas distribuídos com GCP: uma abordagem pedagógica",
