@@ -64,9 +64,13 @@ export function HeroContent() {
             href={INSCRICAO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 h-[48px] px-6 rounded-full bg-trilha-build text-black font-bold text-[15px] hover:brightness-110 transition"
+            className="group relative inline-flex items-center gap-2 h-[48px] px-6 rounded-full bg-trilha-build text-black font-bold text-[15px] hover:brightness-110 transition"
           >
             Garantir ingresso 2º lote
+            <span className="pointer-events-none absolute -top-2.5 -right-2 inline-flex items-center gap-1 rounded-full bg-red-600 px-2 py-0.5 font-mono text-[9px] font-bold tracking-[0.1em] text-white shadow-md">
+              <span className="h-1 w-1 rounded-full bg-white animate-pulse motion-reduce:animate-none" />
+              ÚLTIMAS UNIDADES
+            </span>
             <span className="w-6 h-6 rounded-full bg-black text-trilha-build grid place-items-center transition-transform group-hover:translate-x-0.5">
               <ArrowUpRight className="w-4 h-4" />
             </span>
