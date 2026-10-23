@@ -276,6 +276,7 @@ export const agenda: AgendaBlock[] = [
     title: "Encerramento geral, sorteios & foto oficial",
     subtitle: "Organização GDG & WTM",
     space: "Auditório Unificado",
+    span: "tracks",
   },
 ]
 
@@ -312,9 +313,9 @@ export const labItems: AgendaLabItem[] = [
   },
   {
     id: "workshop-2",
-    time: "15:30 – 16:30",
+    time: "15:30 – 17:00",
     from: "t1530",
-    to: "t1530",
+    to: "encerramento",
     tag: "WORKSHOP 2",
     title: "Engenharia do Caos e escalabilidade de sistemas distribuídos com GCP: uma abordagem pedagógica",
     who: "Rafael Levi",
