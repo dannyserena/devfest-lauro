@@ -11,6 +11,7 @@ import { INSCRICAO_URL } from "@/content/2026/links"
 const navItems = [
   { href: "#trilhas", label: "Trilhas" },
   { href: "#palestrantes", label: "Palestrantes" },
+  { href: "#programacao", label: "Programação" },
   { href: "#local", label: "Local" },
   { href: "#patrocinadores", label: "Patrocinadores" },
 ]

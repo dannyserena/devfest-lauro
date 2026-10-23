@@ -37,7 +37,7 @@ export const speakers: Speaker[] = [
     company: "ThoughtWorks",
     photo: "/speakers/2026/emanuele-rangel.jpeg",
     talk: "Refatoração Kamu: 10 Anos em 10 Dias",
-    trilha: "BUILD",
+    trilha: "SCALE",
   },
   {
     id: "esdras-jesus",
@@ -46,7 +46,7 @@ export const speakers: Speaker[] = [
     company: "Unidas",
     photo: "/speakers/2026/esdras-jesus.jpeg",
     talk: "Como arquivos .md se tornaram o cérebro do desenvolvimento",
-    trilha: "BUILD",
+    trilha: "SECURE",
   },
   {
     id: "tata-ribeiro",
@@ -55,7 +55,7 @@ export const speakers: Speaker[] = [
     company: "Black XP",
     photo: "/speakers/2026/tata-ribeiro.jpeg",
     talk: "Do player ao builder: o que aprendemos formando novos talentos para a indústria de games",
-    trilha: "SCALE",
+    trilha: "BUILD",
   },
   {
     id: "danielle-teixeira",
@@ -73,7 +73,7 @@ export const speakers: Speaker[] = [
     company: "Comunicação, Gestão & TI",
     photo: "/speakers/2026/manoeli-morais.jpeg",
     talk: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
-    trilha: "SCALE",
+    trilha: "SECURE",
   },
   {
     id: "gabriel-maia",
