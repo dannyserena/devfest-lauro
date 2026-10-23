@@ -73,7 +73,7 @@ export const speakers: Speaker[] = [
     company: "Comunicação, Gestão & TI",
     photo: "/speakers/2026/manoeli-morais.jpeg",
     talk: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
-    trilha: "SECURE",
+    trilha: "BUILD",
   },
   {
     id: "gabriel-maia",
@@ -118,7 +118,7 @@ export const speakers: Speaker[] = [
     company: "Target Sistemas",
     photo: "/speakers/2026/brenda-costa.jpeg",
     talk: "Do Design System ao código: como a IA está mudando a construção de interfaces",
-    trilha: "BUILD",
+    trilha: "SECURE",
   },
   {
     id: "poliana-lima",

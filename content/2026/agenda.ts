@@ -192,9 +192,9 @@ export const agenda: AgendaBlock[] = [
     sessions: [
       {
         track: "BUILD",
-        who: "Brenda Costa",
-        speakerId: "brenda-costa",
-        title: "Do Design System ao código: como a IA está mudando a construção de interfaces",
+        who: "Manoeli Morais",
+        speakerId: "manoeli-morais",
+        title: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
       },
       {
         track: "SECURE",
@@ -223,9 +223,9 @@ export const agenda: AgendaBlock[] = [
       },
       {
         track: "SECURE",
-        who: "Manoeli Morais",
-        speakerId: "manoeli-morais",
-        title: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
+        who: "Brenda Costa",
+        speakerId: "brenda-costa",
+        title: "Do Design System ao código: como a IA está mudando a construção de interfaces",
       },
       {
         track: "SCALE",
@@ -277,7 +277,6 @@ export const agenda: AgendaBlock[] = [
     title: "Encerramento geral, sorteios & foto oficial",
     subtitle: "Organização GDG & WTM",
     space: "Auditório Unificado",
-    span: "tracks",
   },
 ]
 
@@ -318,16 +317,6 @@ export const labItems: AgendaLabItem[] = [
     from: "t1430",
     to: "t1530",
     tag: "WORKSHOP 2",
-    title: "Red Team sem Hollywood: como uma simulação controlada revela riscos reais",
-    who: "João Victor Vasconcelos",
-    person: true,
-  },
-  {
-    id: "workshop-3",
-    time: "16:15 – 17:15",
-    from: "encerramento",
-    to: "encerramento",
-    tag: "WORKSHOP 3",
     title: "Engenharia do Caos e escalabilidade de sistemas distribuídos com GCP: uma abordagem pedagógica",
     who: "Rafael Levi",
     speakerId: "rafael-levi",
