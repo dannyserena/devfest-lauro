@@ -19,6 +19,8 @@ export interface AgendaSession {
   person?: boolean
   /** espaço aberto sem palestrante (Q&A, mentoria) */
   community?: boolean
+  /** vaga ainda sem palestrante confirmado */
+  curation?: boolean
 }
 
 interface BlockBase {
@@ -173,9 +175,9 @@ export const agenda: AgendaBlock[] = [
       },
       {
         track: "SECURE",
-        who: "Isaac Santiago",
-        person: true,
-        title: "IA nas empresas: como proteger dados sem impedir a inovação",
+        who: "Palestrante a confirmar",
+        curation: true,
+        title: "Em curadoria",
       },
       {
         track: "SCALE",

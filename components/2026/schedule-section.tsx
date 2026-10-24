@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Coffee, FlaskConical, HandHeart, Sparkles, Utensils } from "lucide-react"
+import { CircleDashed, Coffee, FlaskConical, HandHeart, Sparkles, Utensils } from "lucide-react"
 import { motion } from "framer-motion"
 import {
   agenda,
@@ -86,7 +86,7 @@ function SessionCard({ s, dim }: { s: AgendaSession; dim?: boolean }) {
   return (
     <div
       className={`flex h-full flex-col gap-3 rounded-xl border p-3.5 transition-opacity duration-300 ${
-        s.community
+        s.community || s.curation
           ? "border-dashed border-foreground/20 bg-transparent"
           : "border-foreground/10 bg-card"
       } ${dim ? "opacity-25" : ""}`}
@@ -98,11 +98,19 @@ function SessionCard({ s, dim }: { s: AgendaSession; dim?: boolean }) {
       >
         {s.track} · {trackSpace[s.track].toUpperCase()}
       </div>
-      <div className="text-[13px] font-semibold leading-[1.35] tracking-[-0.01em] text-foreground">
+      <div
+        className={`text-[13px] font-semibold leading-[1.35] tracking-[-0.01em] ${
+          s.curation ? "text-foreground/50" : "text-foreground"
+        }`}
+      >
         {s.title}
       </div>
       <div className="mt-auto flex items-center gap-2">
-        {s.community ? (
+        {s.curation ? (
+          <span className="grid h-[26px] w-[26px] shrink-0 place-items-center rounded-full bg-foreground/[0.06]">
+            <CircleDashed className="h-3.5 w-3.5 text-foreground/50" />
+          </span>
+        ) : s.community ? (
           <span className="grid h-[26px] w-[26px] shrink-0 place-items-center rounded-full bg-foreground/[0.06]">
             <HandHeart className="h-3.5 w-3.5 text-foreground/50" />
           </span>
