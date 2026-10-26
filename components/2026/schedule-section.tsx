@@ -124,7 +124,7 @@ function SessionCard({ s, dim }: { s: AgendaSession; dim?: boolean }) {
 }
 
 function LabCard({ item, dim }: { item: AgendaLabItem; dim?: boolean }) {
-  const photo = item.speakerId ? photoById.get(item.speakerId) : undefined
+  const photo = item.photo ?? (item.speakerId ? photoById.get(item.speakerId) : undefined)
   if (item.prep) {
     return (
       <div

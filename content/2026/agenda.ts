@@ -60,6 +60,8 @@ export interface AgendaLabItem {
   title: string
   who: string
   speakerId?: string
+  /** foto avulsa, pra quem ainda não está em content/2026/speakers.ts */
+  photo?: string
   person?: boolean
   /** bastidores (preparação/testes): aparece discreto */
   prep?: boolean
@@ -312,6 +314,17 @@ export const labItems: AgendaLabItem[] = [
     title: "Transformando Dados em Produto - Governança Automatizada com Power BI, MCP e Antigravity",
     who: "Bernardo Nogueira",
     speakerId: "bernardo-nogueira",
+  },
+  {
+    id: "workshop-light",
+    time: "14:25 – 15:10",
+    from: "t1430",
+    to: "t1430",
+    tag: "WORKSHOP LIGHT · 45 MIN",
+    title: "O futuro da IA Generativa: tendências, desafios, impactos nas profissões e na sociedade",
+    who: "Breno Holanda",
+    // foto da edição 2025 (mesma pessoa)
+    photo: "/speakers/breno.jpeg",
   },
   {
     id: "workshop-2",
