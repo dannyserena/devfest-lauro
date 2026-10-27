@@ -156,6 +156,15 @@ export const speakers: Speaker[] = [
     talk: "AI-Native by Design: por que segurança precisa nascer com o produto, não depois dele",
     trilha: "SECURE",
   },
+  {
+    id: "breno-holanda",
+    name: "Breno Holanda",
+    role: "Cientista de Dados",
+    company: "",
+    photo: "/speakers/2026/breno-holanda.jpeg",
+    talk: "O futuro da IA Generativa: tendências, desafios, impactos nas profissões e na sociedade",
+    trilha: "BUILD",
+  },
 ]
 
 // Keynote fica fora da grade — tem card próprio, em destaque, no topo da seção.

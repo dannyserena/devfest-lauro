@@ -323,8 +323,7 @@ export const labItems: AgendaLabItem[] = [
     tag: "WORKSHOP LIGHT · 45 MIN",
     title: "O futuro da IA Generativa: tendências, desafios, impactos nas profissões e na sociedade",
     who: "Breno Holanda",
-    // foto da edição 2025 (mesma pessoa)
-    photo: "/speakers/breno.jpeg",
+    speakerId: "breno-holanda",
   },
   {
     id: "workshop-2",
