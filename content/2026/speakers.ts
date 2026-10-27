@@ -165,6 +165,15 @@ export const speakers: Speaker[] = [
     talk: "O futuro da IA Generativa: tendências, desafios, impactos nas profissões e na sociedade",
     trilha: "BUILD",
   },
+  {
+    id: "paulo-sampaio",
+    name: "Paulo Sampaio",
+    role: "Fundador",
+    company: "Kirimure.io",
+    photo: "/speakers/2026/paulo-sampaio.jpeg",
+    talk: "Containers mais leves, apps mais resilientes",
+    trilha: "SCALE",
+  },
 ]
 
 // Keynote fica fora da grade — tem card próprio, em destaque, no topo da seção.
