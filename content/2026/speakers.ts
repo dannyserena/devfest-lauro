@@ -37,7 +37,7 @@ export const speakers: Speaker[] = [
     company: "ThoughtWorks",
     photo: "/speakers/2026/emanuele-rangel.jpeg",
     talk: "Refatoração Kamu: 10 Anos em 10 Dias",
-    trilha: "BUILD",
+    trilha: "SCALE",
   },
   {
     id: "esdras-jesus",
@@ -46,7 +46,7 @@ export const speakers: Speaker[] = [
     company: "Unidas",
     photo: "/speakers/2026/esdras-jesus.jpeg",
     talk: "Como arquivos .md se tornaram o cérebro do desenvolvimento",
-    trilha: "BUILD",
+    trilha: "SECURE",
   },
   {
     id: "tata-ribeiro",
@@ -55,7 +55,7 @@ export const speakers: Speaker[] = [
     company: "Black XP",
     photo: "/speakers/2026/tata-ribeiro.jpeg",
     talk: "Do player ao builder: o que aprendemos formando novos talentos para a indústria de games",
-    trilha: "SCALE",
+    trilha: "BUILD",
   },
   {
     id: "danielle-teixeira",
@@ -73,7 +73,7 @@ export const speakers: Speaker[] = [
     company: "Comunicação, Gestão & TI",
     photo: "/speakers/2026/manoeli-morais.jpeg",
     talk: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
-    trilha: "SCALE",
+    trilha: "BUILD",
   },
   {
     id: "gabriel-maia",
@@ -118,7 +118,7 @@ export const speakers: Speaker[] = [
     company: "Target Sistemas",
     photo: "/speakers/2026/brenda-costa.jpeg",
     talk: "Do Design System ao código: como a IA está mudando a construção de interfaces",
-    trilha: "BUILD",
+    trilha: "SECURE",
   },
   {
     id: "poliana-lima",
@@ -155,6 +155,24 @@ export const speakers: Speaker[] = [
     photo: "/speakers/2026/amanda-couto.jpeg",
     talk: "AI-Native by Design: por que segurança precisa nascer com o produto, não depois dele",
     trilha: "SECURE",
+  },
+  {
+    id: "breno-holanda",
+    name: "Breno Holanda",
+    role: "Cientista de Dados",
+    company: "",
+    photo: "/speakers/2026/breno-holanda.jpeg",
+    talk: "O futuro da IA Generativa: tendências, desafios, impactos nas profissões e na sociedade",
+    trilha: "BUILD",
+  },
+  {
+    id: "paulo-sampaio",
+    name: "Paulo Sampaio",
+    role: "Fundador",
+    company: "Kirimure.io",
+    photo: "/speakers/2026/paulo-sampaio.jpeg",
+    talk: "Containers mais leves, apps mais resilientes",
+    trilha: "SCALE",
   },
 ]
 

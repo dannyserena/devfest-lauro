@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/2026/hero-section"
 import { ManifestoSection } from "@/components/2026/manifesto-section"
 import { TrilhasSection } from "@/components/2026/trilhas-section"
 import { SpeakersSection } from "@/components/2026/speakers-section"
+import { ScheduleSection } from "@/components/2026/schedule-section"
 import { Legacy2025Section } from "@/components/2026/legacy-2025-section"
 import { LocalSection } from "@/components/2026/local-section"
 import { SponsorsCtaSection } from "@/components/2026/sponsors-cta-section"
@@ -25,6 +26,7 @@ export default function HomePage() {
         <ManifestoSection />
         <TrilhasSection />
         <SpeakersSection />
+        <ScheduleSection />
         <Legacy2025Section />
         <LocalSection />
         <SponsorsCtaSection />
