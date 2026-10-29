@@ -177,9 +177,9 @@ export const agenda: AgendaBlock[] = [
       },
       {
         track: "SECURE",
-        who: "Palestrante a confirmar",
-        curation: true,
-        title: "Em curadoria",
+        who: "Brenda Costa",
+        speakerId: "brenda-costa",
+        title: "Do Design System ao código: como a IA está mudando a construção de interfaces",
       },
       {
         track: "SCALE",
@@ -227,9 +227,9 @@ export const agenda: AgendaBlock[] = [
       },
       {
         track: "SECURE",
-        who: "Brenda Costa",
-        speakerId: "brenda-costa",
-        title: "Do Design System ao código: como a IA está mudando a construção de interfaces",
+        who: "Palestrante a confirmar",
+        curation: true,
+        title: "Em curadoria",
       },
       {
         track: "SCALE",
