@@ -3,11 +3,11 @@ export type AgendaTrack = "BUILD" | "SECURE" | "SCALE"
 /** Sala fixa de cada trilha — vira o subtítulo do cabeçalho de coluna. */
 export const trackSpace: Record<AgendaTrack, string> = {
   BUILD: "Auditório",
-  SECURE: "Bloco C",
-  SCALE: "Bloco A",
+  SECURE: "Sala A8",
+  SCALE: "Sala A9",
 }
 
-export const labSpace = "Laboratório de Informática"
+export const labSpace = "Laboratório B8"
 
 export interface AgendaSession {
   track: AgendaTrack

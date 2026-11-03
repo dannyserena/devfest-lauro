@@ -237,7 +237,7 @@ function DesktopGrid({ filter }: { filter: Filter }) {
         <span className="font-mono text-[11px] font-bold tracking-[0.14em]" style={{ color: WORKSHOP_TEXT }}>
           WORKSHOPS
         </span>
-        <span className="text-[12px] text-foreground/45">Laboratório</span>
+        <span className="text-[12px] text-foreground/45">{labSpace}</span>
       </div>
 
       {agenda.map((b, i) => {
