@@ -91,7 +91,7 @@ export const agenda: AgendaBlock[] = [
     kind: "geral",
     time: "09:15 – 10:00",
     tag: "KEYNOTE DE ABERTURA",
-    title: "Novidades & Ecossistema Google",
+    title: "Arquitetura Limpa no Frontend: Escalando Aplicações para o Mundo Real",
     subtitle: "Ghabryel Henrique Ferreira (GDE Angular)",
     space: "Auditório Unificado",
     speakerId: "ghabryel-ferreira",
