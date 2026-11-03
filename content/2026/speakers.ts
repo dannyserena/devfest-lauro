@@ -177,8 +177,8 @@ export const speakers: Speaker[] = [
   {
     id: "edy-borges",
     name: "Edy Borges",
-    role: "",
-    company: "",
+    role: "CTO",
+    company: "Netra",
     photo: "/speakers/2026/edy-borges.jpeg",
     talk: "Carreira em Transformação: O que a História nos Ensina sobre a Era da Inteligência Artificial?",
     trilha: "SECURE",
