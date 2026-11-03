@@ -228,6 +228,7 @@ export const agenda: AgendaBlock[] = [
       {
         track: "SECURE",
         who: "Edy Borges",
+        speakerId: "edy-borges",
         title: "Carreira em Transformação: O que a História nos Ensina sobre a Era da Inteligência Artificial?",
       },
       {

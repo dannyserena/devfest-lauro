@@ -174,6 +174,15 @@ export const speakers: Speaker[] = [
     talk: "Containers mais leves, apps mais resilientes",
     trilha: "SCALE",
   },
+  {
+    id: "edy-borges",
+    name: "Edy Borges",
+    role: "",
+    company: "",
+    photo: "/speakers/2026/edy-borges.jpeg",
+    talk: "Carreira em Transformação: O que a História nos Ensina sobre a Era da Inteligência Artificial?",
+    trilha: "SECURE",
+  },
 ]
 
 // Keynote fica fora da grade — tem card próprio, em destaque, no topo da seção.
