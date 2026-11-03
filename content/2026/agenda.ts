@@ -227,9 +227,8 @@ export const agenda: AgendaBlock[] = [
       },
       {
         track: "SECURE",
-        who: "Palestrante a confirmar",
-        curation: true,
-        title: "Em curadoria",
+        who: "Edy Borges",
+        title: "Carreira em Transformação: O que a História nos Ensina sobre a Era da Inteligência Artificial?",
       },
       {
         track: "SCALE",
