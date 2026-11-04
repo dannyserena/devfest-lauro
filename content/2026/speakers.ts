@@ -163,7 +163,7 @@ export const speakers: Speaker[] = [
     company: "",
     photo: "/speakers/2026/breno-holanda.jpeg",
     talk: "O futuro da IA Generativa: tendências, desafios, impactos nas profissões e na sociedade",
-    trilha: "BUILD",
+    trilha: "SECURE",
   },
   {
     id: "paulo-sampaio",
@@ -180,7 +180,7 @@ export const speakers: Speaker[] = [
     role: "CTO",
     company: "Netra",
     photo: "/speakers/2026/edy-borges.jpeg",
-    talk: "Carreira em Transformação: O que a História nos Ensina sobre a Era da Inteligência Artificial?",
+    talk: "Mesa Redonda: Carreira em Transformação: O que a História nos Ensina sobre a Era da Inteligência Artificial?",
     trilha: "SECURE",
   },
 ]
