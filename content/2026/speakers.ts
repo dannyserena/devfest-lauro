@@ -81,7 +81,7 @@ export const speakers: Speaker[] = [
     role: "Desenvolvedor Full Stack",
     company: "Prefeitura de Lauro de Freitas",
     photo: "/speakers/2026/gabriel-maia.jpeg",
-    talk: "LinkedIn além do currículo: como construir oportunidades através da sua presença profissional",
+    talk: "Arquitetura Limpa no Frontend: Escalando Aplicações para o Mundo Real",
     trilha: "SCALE",
   },
   {
@@ -192,6 +192,6 @@ export const keynote: Speaker = {
   role: "AI Engineer",
   company: "Google Developer Expert Angular",
   photo: "/speakers/2026/ghabryel-ferreira.jpeg",
-  talk: "Arquitetura Limpa no Frontend: Escalando Aplicações para o Mundo Real",
+  talk: "Deploy Serverless de Angular SSR: Escalabilidade Automática com Google Cloud Run",
   trilha: "BUILD",
 }
