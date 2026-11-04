@@ -50,7 +50,7 @@ export function SpeakersSection() {
           className="max-w-[380px] text-[14px] leading-[1.6] text-foreground/50"
         >
           {hasLineup
-            ? "15 builders curados a dedo, um por trilha por horário. Sem enrolação, sem venda disfarçada de palestra."
+            ? "Gente que constrói de verdade, contando o que aprendeu no caminho. Histórias reais, ideias práticas e a inspiração pra você sair daqui com algo novo pra criar."
             : "15 vagas, curadoria brutal, um por trilha por horário. As confirmações saem aqui assim que fecharem — e nas redes do GDG Lauro."}
         </motion.p>
       </motion.div>
