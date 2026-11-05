@@ -3,3 +3,5 @@ export const INSCRICAO_URL =
 export const PALESTRANTES_FORM_URL = "https://forms.gle/uYftUxeKAGehRmTZ9"
 export const MEDIA_KIT_URL =
   "https://drive.google.com/file/d/1HXnq0XTI2Q-7ke2N8xQCzTWnAjeiaTH4/view?usp=drive_link"
+export const APP_URL =
+  "https://play.google.com/store/apps/details?id=com.dtcoders.gdgtalks"

@@ -12,6 +12,7 @@ const navItems = [
   { href: "#trilhas", label: "Trilhas" },
   { href: "#palestrantes", label: "Palestrantes" },
   { href: "#programacao", label: "Programação" },
+  { href: "#aplicativo", label: "App" },
   { href: "#local", label: "Local" },
   { href: "#patrocinadores", label: "Patrocinadores" },
 ]
