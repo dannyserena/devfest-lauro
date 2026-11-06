@@ -148,15 +148,6 @@ export const speakers: Speaker[] = [
     trilha: "SCALE",
   },
   {
-    id: "amanda-couto",
-    name: "Amanda Couto",
-    role: "Senior Product Manager",
-    company: "AI Product & Growth",
-    photo: "/speakers/2026/amanda-couto.jpeg",
-    talk: "AI-Native by Design: por que segurança precisa nascer com o produto, não depois dele",
-    trilha: "SECURE",
-  },
-  {
     id: "breno-holanda",
     name: "Breno Holanda",
     role: "Cientista de Dados",

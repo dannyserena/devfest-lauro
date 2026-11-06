@@ -143,12 +143,6 @@ export const agenda: AgendaBlock[] = [
         title: "IA Agêntica na Prática: Conhecendo o Agentforce",
       },
       {
-        track: "SECURE",
-        who: "Amanda Couto",
-        speakerId: "amanda-couto",
-        title: "AI-Native by Design: por que segurança precisa nascer com o produto, não depois dele",
-      },
-      {
         track: "SCALE",
         who: "Emanuele Rangel",
         speakerId: "emanuele-rangel",
