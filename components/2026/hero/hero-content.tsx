@@ -1,10 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { ArrowUpRight } from "lucide-react"
 import { motion, type Variants } from "framer-motion"
-import { INSCRICAO_URL } from "@/content/2026/links"
-import { LOTE_INICIAL, loteAtual } from "@/content/2026/lotes"
 
 const container: Variants = {
   hidden: {},
@@ -25,11 +21,6 @@ const words = [
 ]
 
 export function HeroContent() {
-  // A página é estática: o servidor sempre gera o lote inicial e o navegador
-  // troca pelo lote vigente (virada do 3º lote em 1º/nov), sem erro de hidratação.
-  const [lote, setLote] = useState(LOTE_INICIAL)
-  useEffect(() => setLote(loteAtual()), [])
-
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="max-w-[1080px]">
       <motion.div
@@ -67,28 +58,12 @@ export function HeroContent() {
         </motion.p>
 
         <motion.div variants={item} className="rm-static flex flex-wrap gap-3">
-          <a
-            href={INSCRICAO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2 h-[48px] px-6 rounded-full bg-trilha-build text-black font-bold text-[15px] hover:brightness-110 transition"
+          <span
+            aria-disabled="true"
+            className="inline-flex items-center h-[48px] px-6 rounded-full bg-background/85 backdrop-blur-md border border-foreground/15 text-foreground/60 font-bold text-[15px] shadow-xl cursor-not-allowed select-none"
           >
-            {lote.label}
-            {lote.preco && (
-              <span className="rounded-full bg-black/10 px-2 py-0.5 text-[13px] font-extrabold">
-                {lote.preco}
-              </span>
-            )}
-            {lote.selo && (
-              <span className="pointer-events-none absolute -top-2.5 -right-2 inline-flex items-center gap-1 rounded-full bg-red-600 px-2 py-0.5 font-mono text-[9px] font-bold tracking-[0.1em] text-white shadow-md">
-                <span className="h-1 w-1 rounded-full bg-white animate-pulse motion-reduce:animate-none" />
-                {lote.selo}
-              </span>
-            )}
-            <span className="w-6 h-6 rounded-full bg-black text-trilha-build grid place-items-center transition-transform group-hover:translate-x-0.5">
-              <ArrowUpRight className="w-4 h-4" />
-            </span>
-          </a>
+            Vendas encerradas
+          </span>
           <a
             href="#patrocinadores"
             className="inline-flex items-center h-[48px] px-6 rounded-full bg-white/70 border border-white/20 text-foreground font-medium text-[15px] shadow-xl backdrop-blur-md transition hover:bg-white/90"

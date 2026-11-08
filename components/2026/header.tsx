@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import { ArrowUpRight, ChevronDown, Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme2026 } from "@/components/2026/theme-scope"
 import { DevFestLogo } from "@/components/2026/devfest-logo"
-import { INSCRICAO_URL } from "@/content/2026/links"
 
 const navItems = [
   { href: "#trilhas", label: "Trilhas" },
@@ -78,14 +77,12 @@ export function Header() {
           >
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          <a
-            href={INSCRICAO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex h-9 px-5 rounded-full bg-trilha-build text-black text-[13.5px] font-bold tracking-[-0.01em] items-center hover:brightness-110 transition"
+          <span
+            aria-disabled="true"
+            className="hidden md:inline-flex h-9 px-5 rounded-full bg-foreground/10 text-foreground/50 text-[13.5px] font-bold tracking-[-0.01em] items-center cursor-not-allowed select-none"
           >
-            Ingressos
-          </a>
+            Vendas encerradas
+          </span>
           <button
             onClick={() => setIsMenuOpen((v) => !v)}
             className="lg:hidden w-9 h-9 rounded-full bg-foreground/[0.08] flex items-center justify-center text-foreground"
@@ -131,16 +128,13 @@ export function Header() {
                   Edições Anteriores • 2025
                 </Link>
               </motion.div>
-              <motion.a
-                href={INSCRICAO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMenuOpen(false)}
+              <motion.span
+                aria-disabled="true"
                 variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0 } }}
-                className="block mt-2 h-11 px-5 rounded-full bg-trilha-build text-black text-[14px] font-bold items-center justify-center flex"
+                className="mt-2 h-11 px-5 rounded-full bg-foreground/10 text-foreground/50 text-[14px] font-bold items-center justify-center flex cursor-not-allowed select-none"
               >
-                Ingressos
-              </motion.a>
+                Vendas encerradas
+              </motion.span>
             </motion.div>
           </motion.div>
         )}

@@ -4,7 +4,6 @@ import { useState } from "react"
 import { ArrowUpRight, Play, Quote } from "lucide-react"
 import { motion } from "framer-motion"
 import { stats2025 } from "@/content/2026/stats"
-import { INSCRICAO_URL } from "@/content/2026/links"
 import { fadeIn, fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/components/2026/motion"
 
 const RECAP_2025_VIDEO_ID = "Wr0RiuX9dLY"
@@ -93,20 +92,12 @@ export function Legacy2025Section() {
                   variants={staggerItem}
                   className="mt-8 flex flex-wrap items-center gap-5"
                 >
-                  <a
-                    href={INSCRICAO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative inline-flex items-center gap-2 h-11 px-5 rounded-full bg-trilha-build text-black font-bold text-[14px] overflow-hidden transition hover:brightness-110"
+                  <span
+                    aria-disabled="true"
+                    className="inline-flex items-center h-11 px-5 rounded-full bg-foreground/10 border border-foreground/10 text-foreground/50 font-bold text-[14px] cursor-not-allowed select-none"
                   >
-                    <span className="relative z-10">
-                      Garantir meu lugar em 2026
-                    </span>
-                    <span className="relative z-10 w-6 h-6 rounded-full bg-black text-trilha-build grid place-items-center transition-transform group-hover:translate-x-0.5">
-                      <ArrowUpRight className="w-4 h-4" />
-                    </span>
-                    <span className="absolute inset-0 -translate-x-[120%] skew-x-12 bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-[120%]" />
-                  </a>
+                    Vendas encerradas
+                  </span>
                   <a
                     href={RECAP_2025_INSTAGRAM_URL}
                     target="_blank"
