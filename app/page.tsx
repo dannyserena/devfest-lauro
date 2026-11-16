@@ -7,6 +7,7 @@ import { TrilhasSection } from "@/components/2026/trilhas-section"
 import { SpeakersSection } from "@/components/2026/speakers-section"
 import { ScheduleSection } from "@/components/2026/schedule-section"
 import { AppSection } from "@/components/2026/app-section"
+import { MemoriasSection } from "@/components/2026/memorias-section"
 import { Legacy2025Section } from "@/components/2026/legacy-2025-section"
 import { LocalSection } from "@/components/2026/local-section"
 import { SponsorsCtaSection } from "@/components/2026/sponsors-cta-section"
@@ -29,6 +30,7 @@ export default function HomePage() {
         <SpeakersSection />
         <ScheduleSection />
         <AppSection />
+        <MemoriasSection />
         <Legacy2025Section />
         <LocalSection />
         <SponsorsCtaSection />
