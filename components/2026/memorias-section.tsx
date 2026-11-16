@@ -16,7 +16,7 @@ export function MemoriasSection() {
             <h2 className="text-5xl font-bold leading-[0.9] tracking-tighter sm:text-7xl md:text-8xl">
               OBRIGADO,
               <br />
-              <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">BUILDERS.</span>
+              <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">DEVS.</span>
             </h2>
             <p className="mt-4 max-w-[38ch] text-sm font-light text-foreground/60 sm:text-base">
               Mais de 200 pessoas fizeram o DevFest Lauro de Freitas 2026 acontecer. Role a página e atravesse
@@ -30,7 +30,7 @@ export function MemoriasSection() {
               exit code 0
             </p>
             <p className="text-4xl font-bold tracking-tighter sm:text-6xl">
-              Até a próxima <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">build.</span>
+              Até o próximo <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">DevFest.</span>
             </p>
           </>
         }

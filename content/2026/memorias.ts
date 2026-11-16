@@ -1,17 +1,15 @@
 import type { TunnelItem } from "@/components/ui/perspective-tunnel"
 
 // Fotos enviadas pelos próprios participantes.
-// Para publicar uma foto: copie o arquivo para public/memorias/ e preencha
-// o `src` (ex.: "/memorias/foto-01.jpg"). Itens sem `src` aparecem como
-// placeholders "a revelar" — pode manter, trocar ou apagar à vontade.
+// Arquivos em public/memorias/. Itens sem `src` viram placeholders.
 export const memorias: TunnelItem[] = [
-  { title: "IMG_001 // palco" },
-  { title: "IMG_002 // networking" },
-  { title: "IMG_003 // hands-on" },
-  { title: "IMG_004 // comunidade" },
-  { title: "IMG_005 // coffee break" },
-  { title: "IMG_006 // lab" },
-  { title: "IMG_007 // builders" },
-  { title: "IMG_008 // plateia" },
-  { title: "IMG_009 // até a próxima" },
+  { src: "/memorias/foto-01.jpeg", title: "trilha build" },
+  { src: "/memorias/foto-02.jpeg", title: "trilha build" },
+  { src: "/memorias/foto-03.jpeg", title: "trilha secure" },
+  { src: "/memorias/foto-04.jpeg", title: "trilha scale" },
+  { src: "/memorias/foto-05.jpeg", title: "hands-on" },
+  { src: "/memorias/foto-06.jpeg", title: "build with ai · workshop" },
+  { src: "/memorias/foto-07.jpeg", title: "organização" },
+  { src: "/memorias/foto-08.jpeg", title: "reencontros" },
+  { src: "/memorias/foto-09.jpeg", title: "mesa redonda e plateia" },
 ]
