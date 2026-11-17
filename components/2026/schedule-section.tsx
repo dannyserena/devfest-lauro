@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { CircleDashed, Coffee, FlaskConical, HandHeart, Sparkles, Utensils } from "lucide-react"
+import { CircleDashed, Coffee, FileDown, FlaskConical, HandHeart, Sparkles, Utensils } from "lucide-react"
 import { motion } from "framer-motion"
 import {
   agenda,
@@ -80,6 +80,21 @@ function Avatar({ name, photo, size = 26 }: { name: string; photo?: string; size
   )
 }
 
+function SlidesLink({ href }: { href?: string }) {
+  if (!href) return null
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-fit items-center gap-1.5 rounded-full border border-foreground/15 px-2.5 py-1 font-mono text-[10px] font-bold tracking-[0.1em] text-foreground/60 transition hover:border-trilha-scale/50 hover:text-foreground"
+    >
+      <FileDown className="h-3 w-3" />
+      SLIDES
+    </a>
+  )
+}
+
 function SessionCard({ s, dim }: { s: AgendaSession; dim?: boolean }) {
   const t = trilhaById[s.track]
   const photo = s.speakerId ? photoById.get(s.speakerId) : undefined
@@ -119,6 +134,7 @@ function SessionCard({ s, dim }: { s: AgendaSession; dim?: boolean }) {
         )}
         <span className="text-[12px] leading-tight text-foreground/60">{s.who}</span>
       </div>
+      <SlidesLink href={s.slides} />
     </div>
   )
 }
@@ -163,6 +179,7 @@ function LabCard({ item, dim }: { item: AgendaLabItem; dim?: boolean }) {
         <Avatar name={item.who} photo={photo} />
         <span className="text-[12px] leading-tight text-foreground/60">{item.who}</span>
       </div>
+      <SlidesLink href={item.slides} />
     </div>
   )
 }
@@ -187,6 +204,11 @@ function GeralCard({ b }: { b: AgendaGeral }) {
               {b.title}
             </div>
             <div className="mt-0.5 text-[12.5px] text-foreground/60">{b.subtitle}</div>
+            {b.slides && (
+              <div className="mt-2">
+                <SlidesLink href={b.slides} />
+              </div>
+            )}
           </div>
         </div>
       </div>

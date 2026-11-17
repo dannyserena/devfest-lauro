@@ -21,6 +21,8 @@ export interface AgendaSession {
   community?: boolean
   /** vaga ainda sem palestrante confirmado */
   curation?: boolean
+  /** link público dos slides (Drive/Google Slides) */
+  slides?: string
 }
 
 interface BlockBase {
@@ -40,6 +42,7 @@ export interface AgendaGeral extends BlockBase {
   highlight?: boolean
   /** "tracks" deixa a coluna do laboratório livre pro workshop que atravessa o bloco */
   span?: "all" | "tracks"
+  slides?: string
 }
 
 export interface AgendaSessoes extends BlockBase {
@@ -65,6 +68,7 @@ export interface AgendaLabItem {
   person?: boolean
   /** bastidores (preparação/testes): aparece discreto */
   prep?: boolean
+  slides?: string
 }
 
 // Fonte: "Grade DevFest Lauro de Freitas 2026.csv". Evento: sábado, 07/11/2026.
@@ -106,18 +110,21 @@ export const agenda: AgendaBlock[] = [
         track: "BUILD",
         who: "Danielle Teixeira",
         speakerId: "danielle-teixeira",
+        slides: "https://docs.google.com/presentation/d/1p20tv85A0GLesoFh-2Vf7HCs7Ntpum1D/edit?usp=sharing",
         title: "Mobile Multimodal: Quando o Aplicativo Começa a Ver, Ouvir e Entender (SDCE)",
       },
       {
         track: "SECURE",
         who: "Marcus Vinicius",
         speakerId: "marcus-vinicius",
+        slides: "https://drive.google.com/file/d/1tfXDbKQx7KGq10-uwQLxy4CQHbtP8zre/view?usp=sharing",
         title: "Potência sem controle é risco: Harness e Guardrails para domar a Era Agêntica",
       },
       {
         track: "SCALE",
         who: "Lucas Lion",
         speakerId: "lucas-lion",
+        slides: "https://drive.google.com/file/d/172Y4TqA4-d4JNDlGxpY6df0mvZqNUdqi/view?usp=sharing",
         title: "A IA escreveu o código. Mas quem decidiu a arquitetura?",
       },
     ],
@@ -192,12 +199,14 @@ export const agenda: AgendaBlock[] = [
         track: "BUILD",
         who: "Manoeli Morais",
         speakerId: "manoeli-morais",
+        slides: "https://drive.google.com/file/d/15BJOJiFv3RSAxuPz-kHUA9q7vVK3U-Il/view?usp=sharing",
         title: "Prompt é Diálogo: o que a Engenharia de Prompt tem a ensinar sobre Comunicação Humana",
       },
       {
         track: "SECURE",
         who: "Esdras Jesus",
         speakerId: "esdras-jesus",
+        slides: "https://drive.google.com/file/d/1hzMRwhuVBHVuOtR05cxiXpZiV8vRJ9yN/view?usp=sharing",
         title: "Como arquivos .md se tornaram o cérebro do desenvolvimento",
       },
       {
@@ -229,6 +238,7 @@ export const agenda: AgendaBlock[] = [
         track: "SCALE",
         who: "Paulo Sampaio",
         speakerId: "paulo-sampaio",
+        slides: "https://drive.google.com/file/d/1Pp7OSKpZMAe-HfefGCzosAXOa8JMKwe4/view?usp=sharing",
         title: "Containers mais leves, apps mais resilientes",
       },
     ],
@@ -252,6 +262,7 @@ export const agenda: AgendaBlock[] = [
     subtitle: "Tata Ribeiro",
     space: "Auditório Unificado",
     speakerId: "tata-ribeiro",
+    slides: "https://drive.google.com/file/d/1WdBnlTpneicyoJ4a_uiaHEYakWPLuQc3/view?usp=sharing",
     highlight: true,
   },
   {
@@ -304,6 +315,7 @@ export const labItems: AgendaLabItem[] = [
     title: "Transformando Dados em Produto - Governança Automatizada com Power BI, MCP e Antigravity",
     who: "Bernardo Nogueira",
     speakerId: "bernardo-nogueira",
+    slides: "https://drive.google.com/file/d/1woRcFCLwUk1IF3uz0agLSdiI_dlreAtD/view?usp=sharing",
   },
   {
     id: "workshop-2",
@@ -314,5 +326,6 @@ export const labItems: AgendaLabItem[] = [
     title: "Engenharia do Caos e escalabilidade de sistemas distribuídos com GCP: uma abordagem pedagógica",
     who: "Rafael Levi",
     speakerId: "rafael-levi",
+    slides: "https://docs.google.com/presentation/d/1ZFq2LtFR_5cQRQTn3qJNdIUmEqaKoTtx/edit?usp=sharing",
   },
 ]
